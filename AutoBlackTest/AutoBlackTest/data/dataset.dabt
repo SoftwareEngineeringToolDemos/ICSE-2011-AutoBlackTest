@@ -1,0 +1,39 @@
+// Versione di prova file dataset per AutoBlackTest
+// I dati devono essere nella forma: metadata::value1,value2,...,valuen
+// Se non sono indicati metadati allora i valori saranno considerati di "tipo generico"
+
+
+e-mail::pippo@pluto.com,sette@mailtre.it,gazzetta@sport.it, gaz@%%erroneous%%
+phone::024678562,085678982,059387456
+name::Marco, Filippo, Laura,Matteo,Federica,Lucia,prova.pdf
+
+// zip code corretti
+zip-code::20090,41121,41721, 56788974 %%erroneous%%
+
+// zip code sopra la lunghezza massima
+zip-code::2009033,411212,4172133432
+
+// zip code inferiori alla lunghezza minima
+zip-code::2,411,4172,14
+
+// credit card corrette
+credit-card::2345673823497583,7463946284592374,2762649364833516
+
+// credit card non corrette
+credit-card::23456738,7463946284592374544567778864
+
+
+::senza-argomento-con-2-punti
+stringa senza argomento senza punti
+
+generic-panel-data::generic string text panel
+
+password::password
+
+file:: C:\Users\Gio_87\Documents\pdfsamDocuments\ch1.pdf,C:\Users\Gio_87\Documents\pdfsamDocuments\ch3.pdf,C:\Users\Gio_87\Documents\pdfsamDocuments\ch7.pdf,C:\Users\Gio_87\Documents\pdfsamDocuments\nuovo.pdf,C:\Users\Gio_87\Documents\pdfsamDocuments\prova.pdf,C:\Users\Gio_87\Documents\pdfsamDocuments\merge.pdf
+
+number:: 20,34,56
+
+prefix::pdf_
+
+

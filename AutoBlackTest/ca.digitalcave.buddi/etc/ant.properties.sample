@@ -1,0 +1,24 @@
+# Sample properties file for building the project.  Ensure you have all needed tools, and 
+#  modify the paths as needed to reflect your project.
+# You won't need this if you are just building a .jar; this is for the more advanced
+#  release builds, such as .exe, installer, .deb, etc.
+########################
+
+#SSH Configuration
+SSH_KEY=/home/user/.ssh/id_dsa
+SSH_KEY_PASSPHRASE=password
+
+#SVN Configuration
+SVN_USER=johnsmith
+SVN_PASSWORD=password
+
+#Launch4J (http://launch4j.sourceforge.net/) - Creates Windows .exe files as a wrapper for Java .jar
+LAUNCH4J_PATH=/Users/Wyatt/Documents/Programming/Workplace/build_tools/launch4j
+#JarBundler (http://fjep.sourceforge.net/) - Creates OS X application bundles
+JARBUNDLER_JAR=/Users/Wyatt/Documents/Programming/Workplace/build_tools/jarbundler/jarbundler-1.9.jar
+#JDeb (http://vafer.org/projects/jdeb) - Create Debian packages
+JDEB_JAR=/Users/Wyatt/Documents/Programming/Workplace/build_tools/jdeb/jdeb-0.3.jar
+#SVN Ant (http://vafer.org/projects/jdeb) - Include SVN abilities in Ant
+SVNANT_PATH=/Users/wyatt/Documents/Programming/Workplace/build_tools/svnant/lib
+#IzPack Ant - Cross platform installer
+IZPACK_PATH=/Users/wyatt/Documents/Programming/Workplace/build_tools/izpack

@@ -1,0 +1,15 @@
+The .tgz package is a 'generic Unix' package, as much as can possibly be expected.  It should
+be able to run on almost any Unix OS with a minimum of fuss.
+
+The main program is contained in the .jar file.  However, since Java programs can occasionally be
+difficult to initialize properly, I have created a wrapper shell script to launch it.  This
+is the file buddi.
+
+You will probably have to modify this slightly to customize for your own machine.  I won't go into
+details here, as if you are running on Unix, you probably already know what you are doing.  At a
+high level, though, you will need to set the following options in the 'buddi' script:
+
+1) Set the Java location
+2) Set the JAR_DIR variable, where the .jar will be located
+3) Verify the launch command.  This should be fine for most people, although you may want to 
+modify some directories here.

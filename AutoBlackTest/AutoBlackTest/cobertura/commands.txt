@@ -1,0 +1,20 @@
+TO INSTRUMENT
+
+cobertura-instrument.bat --destination E:\IBM\jaolt_svn\trunk\instrumented E:\IBM\jaolt_svn\trunk\bin
+
+cobertura-instrument.bat --destination C:\workspace\pdfsam-basic\pdfsam-main\instrumented C:\workspace\pdfsam-basic\pdfsam-main\bin
+
+cobertura-instrument.bat --destination C:\workspace\ca.digitalcave.buddi\instrumented C:\workspace\ca.digitalcave.buddi\bin
+
+TO EXECUTE
+
+java -cp %CLASSPATH%;E:\IBM\jaolt_svn\trunk\instrumented;E:\IBM\jaolt_svn\trunk\bin;E:\IBM\jaolt_svn\trunk\bin de.shandschuh.jaolt.launcher.ApplicationLauncher
+
+TO REPORT
+
+cobertura-report.bat --format html --datafile "H:\esperimenti ABT\experiment_20111009_1035\coverage\ser\totalCobertura.ser" --destination "H:\esperimenti ABT\experiment_20111009_1035\coverage\coberturaResults" "C:\workspace\pdfsam-basic\pdfsam-main\src"
+
+
+
+UPM
+cobertura-instrument.bat --destination C:\workspace\upm\instrumented C:\workspace\upm\bin

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<!-- 
+This file is meant to override the warning message that another version has already been installed.  
+It gives more specific information to users on how to uninstall and reinstall. 
+ -->
+<langpack>
+    <str id="CheckedHelloPanel.productAlreadyExist0" txt="<html>Buddi is already installed at '"/>
+    <str id="CheckedHelloPanel.productAlreadyExist1" txt="'.<br/>You should not install over top of an existing installation.  You should either install to a<br/>different location, or uninstall Buddi and then run this installer again.  You can uninstall<br/>Buddi by going to the Add / Remove Programs screen.<br/><br/>Do you want to continue re-installing Buddi?  You must be sure to install to a different location!</html>"/> 
+</langpack>

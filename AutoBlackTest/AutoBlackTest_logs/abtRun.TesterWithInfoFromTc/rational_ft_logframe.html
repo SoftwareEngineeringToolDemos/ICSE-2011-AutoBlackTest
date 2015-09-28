@@ -1,0 +1,79 @@
+﻿<HTML>
+<HEAD>
+<META HTTP-EQUIV="charset" CONTENT="utf-8">
+<TITLE>Playback Log for abtRun.TesterWithInfoFromTc</TITLE>
+<STYLE TYPE="text/css">
+<!--
+  table caption {color: darkblue; font-size: x-large; font-weight: bold}
+  td {align: left; font-weight: bold}
+  td.fail {color: darkred; width: 10% }
+  td.warn {color: darkgoldenrod; width: 10% }
+  td.pass {color: darkgreen; width: 10% }
+  td.unkn {color: darkcyan; width: 10% }
+  td.info {width: 10% }
+  td.time {width: 30%; font-weight: normal}
+  td.note {align: left; font-weight: bold}
+  li {font-weight: normal}
+-->
+</STYLE>
+<SCRIPT>
+<!--
+function comparator(logDir,base,exp,act)
+{
+	try{
+		document.ComparatorApplet.startComparatorEx(base,exp,act,logDir);
+	}
+	catch(e){
+		alert("CRFCN0309E: Error creating verification point display:\nAn enabled JRE (1.3.1_02 or better) must be associated with the browser to view VP results");
+	}
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" border="1" rules="rows" summary="Log Events">
+<SCRIPT>
+<!--
+if (self == top)
+	document.write('<CAPTION>Log: abtRun.TesterWithInfoFromTc</CAPTION>')
+//-->
+</SCRIPT>
+<TR>
+<TD>&nbsp;</TD>
+<TD CLASS="time">04-Nov-2012 11:38:19.255 AM</TD>
+<TD CLASS="note">Script start [abtRun.TesterWithInfoFromTc]</TD>
+</TR>
+<TR><TD COLSPAN=3><UL>
+<LI><I>line_number = </I>1</LI>
+<LI><I>script_iter_count = </I>0</LI>
+<LI><I>script_name = </I>abtRun.TesterWithInfoFromTc</LI>
+<LI><I>script_id = </I>abtRun.TesterWithInfoFromTc.java</LI>
+</UL>
+</TD></TR>
+<TR>
+<TD ID="fail0" CLASS="fail">FAIL</TD>
+<TD CLASS="time">05-Nov-2012 04:09:53.467 PM</TD>
+<TD CLASS="note">CRFCN0718E: abtRun.TesterWithInfoFromTc.testMain had an unhandled error.</TD>
+</TR>
+<TR><TD COLSPAN=3><UL>
+<LI><I>exception_name = </I>java.lang.OutOfMemoryError</LI>
+<LI><I>exception_message = </I>Java heap space</LI>
+<LI><I>script_name = </I>abtRun.TesterWithInfoFromTc</LI>
+<LI><I>script_id = </I>abtRun.TesterWithInfoFromTc.java</LI>
+<LI><I>line_number = </I>198</LI>
+<LI><I>exception_stack = </I>	at com.sun.org.apache.xerces.internal.util.XMLStringBuffer.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.parsers.SAXParser.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.parsers.SAXParser.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.<init>(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl.newSAXParserImpl(Unknown Source)<BR>	at com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl.setFeature(Unknown Source)<BR>	at com.rational.test.ft.script.RationalTestScript.setScriptName(RationalTestScript.java:187)<BR>	at resources.TesterHelper.<init>(TesterHelper.java:952)<BR>	at autoblacktest.actions.simple.ComboBoxUI.<init>(ComboBoxUI.java:10)<BR>	at java.lang.Class.newInstance0(Unknown Source)<BR>	at java.lang.Class.newInstance(Unknown Source)<BR>	at autoblacktest.TestEnvironment.doSimpleAction(TestEnvironment.java:292)<BR>	at autoblacktest.TestEnvironment.doAction(TestEnvironment.java:125)<BR>	at autoblacktest.TestExperimentByTime.run(TestExperimentByTime.java:122)<BR>	at abtRun.TesterWithInfoFromTc.testMain(TesterWithInfoFromTc.java:198)<BR></LI>
+</UL>
+</TD></TR>
+<TR>
+<TD CLASS="fail">FAIL</TD>
+<TD CLASS="time">05-Nov-2012 04:09:53.572 PM</TD>
+<TD CLASS="note">Script end [abtRun.TesterWithInfoFromTc]</TD>
+</TR>
+<TR><TD COLSPAN=3><UL>
+<LI><I>script_name = </I>abtRun.TesterWithInfoFromTc</LI>
+<LI><I>script_id = </I>abtRun.TesterWithInfoFromTc.java</LI>
+</UL>
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

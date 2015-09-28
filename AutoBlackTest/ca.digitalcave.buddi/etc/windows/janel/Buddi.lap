@@ -1,0 +1,4 @@
+# This is a .lap file comment
+-Djava.class.path=Buddi.jar
+janel.main.class=org.homeunix.thecave.buddi.Buddi
+janel.memory.max.upper.limit=65536

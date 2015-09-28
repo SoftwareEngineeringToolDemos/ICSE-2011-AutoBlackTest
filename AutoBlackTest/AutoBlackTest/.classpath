@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.rational.test.ft.libraries.FT_LIBRARIES"/>
+	<classpathentry kind="con" path="com.rational.test.ft.libraries.FT_TESTOBJECT"/>
+	<classpathentry kind="con" path="com.rational.test.ft.libraries.FT_CUSTOMIZATION"/>
+	<classpathentry excluding="AppScript/|cobertura/|lib/|resources/visuals/|log/|stdOut_Err/|templates/|outputs/experiment_20110309_0645/coverage/|outputs/experiment_20110309_0645/coverage/ser/|outputs/experiment_20110309_0645/dots/episode/|outputs/experiment_20110309_0645/dots/global/|outputs/experiment_20110309_0645/models/episode/|outputs/experiment_20110309_0645/models/global/|outputs/experiment_20110309_0645/recording/|outputs/experiment_20110309_0645/state/|outputs/experiment_20110309_0645/stdErr/|outputs/experiment_20110309_0645/stdOut/|outputs/experiment_20110309_0648/coverage/|outputs/experiment_20110309_0648/coverage/ser/|outputs/experiment_20110309_0648/dots/episode/|outputs/experiment_20110309_0648/dots/global/|outputs/experiment_20110309_0648/models/episode/|outputs/experiment_20110309_0648/models/global/|outputs/experiment_20110309_0648/recording/|outputs/experiment_20110309_0648/state/|outputs/experiment_20110309_0648/stdErr/|outputs/experiment_20110309_0648/stdOut/|outputs/experiment_20110309_0645/|outputs/experiment_20110309_0645/dots/|outputs/experiment_20110309_0645/models/|outputs/experiment_20110309_0648/|outputs/experiment_20110309_0648/dots/|outputs/experiment_20110309_0648/models/|outputs/" kind="src" path=""/>
+	<classpathentry kind="lib" path="lib/guava-r06.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/workspace/AutoBlackTest/doc/guava/javadoc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/jgraph.jar"/>
+	<classpathentry kind="lib" path="lib/jgrapht-jdk1.6.jar"/>
+	<classpathentry kind="lib" path="cobertura/lib/asm-3.0.jar"/>
+	<classpathentry kind="lib" path="cobertura/lib/asm-tree-3.0.jar"/>
+	<classpathentry kind="lib" path="cobertura/lib/jakarta-oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="cobertura/lib/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="cobertura/cobertura.jar"/>
+	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/jdbm-2.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6"/>
+	<classpathentry kind="lib" path="lib/TeachingBoxAPI_build-650.jar"/>
+	<classpathentry kind="lib" path="lib/powermock-easymock-1.4.12-full.jar"/>
+	<classpathentry kind="lib" path="lib/jmockit/jmockit.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

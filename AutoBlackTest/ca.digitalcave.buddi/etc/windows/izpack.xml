@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+
+<!-- 
+	A sample installation file.
+	Use it as a base for your own installers :-)
+	
+	To compile it :
+	- go in the bin directory where you installed IzPack
+	- call "compile ../sample/install.xml -b ../sample"
+-->
+
+<installation version="1.0">
+	<info>
+		<appname>Buddi</appname>
+		<appversion>(Personal Budget Software)</appversion>
+		<authors>
+			<author name="Wyatt Olson" email="wyatt.olson@gmail.com" />
+		</authors>
+		<url>http://buddi.digitalcave.ca/</url>
+        <javaversion>1.5</javaversion>
+        <requiresjdk>no</requiresjdk>
+        <pack2000/>
+
+	</info>
+
+	<guiprefs width="640" height="480" resizable="no">
+		<modifier key="langDisplayType" value="native" />
+<!-- 
+		<laf name="looks">
+			<os family="windows"/>
+			<param name="variant" value="windows"/>
+		</laf>
+-->
+	</guiprefs>
+
+	<locale>
+		<langpack iso3="eng"/>		
+	</locale>
+	<langpack>
+	</langpack>
+
+	<resources>
+		<!-- The following resources must be copied in from build.xml first -->
+		<res id="Installer.image" src="BuddiAboutLogo.png" />
+		<res id="RegistrySpec.xml" src="RegistrySpec.xml" />
+		<res id="shortcutSpec.xml" src="ShortcutSpec.xml"/>   
+	</resources>
+
+	<panels>
+		<!-- <panel classname="CheckedHelloPanel" /> -->
+		<panel classname="HelloPanel" id="hello_panel"/>
+		<panel classname="TargetPanel" id="target_panel"/>
+		<panel classname="SummaryPanel" id="summary_panel"/>
+		<panel classname="InstallPanel" id="install_panel"/>
+		<panel classname="ShortcutPanel" id="shortcut_panel"/>
+		<panel classname="SimpleFinishPanel" id="simple_finish_panel"/>
+	</panels>
+
+    <variables>
+        <variable name="DesktopShortcutCheckboxEnabled" value="true"/>
+    </variables>
+
+	<packs>
+		<pack name="Base" required="yes">
+			<description>Buddi Program Files</description>
+			<file src="Buddi.exe" targetdir="$INSTALL_PATH" />
+			<file src="Buddi.jar" targetdir="$INSTALL_PATH" />
+			<file src="Buddi.lap" targetdir="$INSTALL_PATH" />
+			<file src="msvcr71.dll" targetdir="$INSTALL_PATH" />
+			<file src="Buddi.ico" targetdir="$INSTALL_PATH" />
+			<file src="BuddiData.ico" targetdir="$INSTALL_PATH" />
+			<file src="BuddiPlugin.ico" targetdir="$INSTALL_PATH" />
+			<file src="BuddiLanguage.ico" targetdir="$INSTALL_PATH" />
+			<file src="License.rtf" targetdir="$INSTALL_PATH" />
+			<file src="Licenses" targetdir="$INSTALL_PATH" />
+			<file src="Readme.rtf" targetdir="$INSTALL_PATH" />
+			<file src="Changelog.txt" targetdir="$INSTALL_PATH" />
+		</pack>
+	</packs>
+	
+	<listeners>
+		<listener installer="RegistryInstallerListener" uninstaller="RegistryUninstallerListener">
+			<os family="windows" />
+		</listener>
+	</listeners>
+
+	<native type="izpack" name="ShellLink.dll"/>
+	<native type="3rdparty" name="COIOSHelper.dll" stage="both">
+		<os family="windows" />
+	</native>
+</installation>

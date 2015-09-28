@@ -1,0 +1,1025 @@
+3.4.0.8 (January 31 2011)
+-Fixed a bug in the account total math where splits were not handled correctly.
+-Updated German translation (thanks to Jan Beekhuis)
+
+3.4.0.7
+-Fixed a bug introduced in 3.4.0.6 where in some conditions you could not select sources for new transactions
+-Fixed a bug where the first item in the report pulldowns could not be selected
+
+3.4.0.6 (December 22 2010)
+-Merry Christmas!
+-Further improved the Net Worth over Time report when there are opening balances. 
+-Fixed a bug which linked to a dead page when downloading plugins
+
+3.4.0.5 (December 5 2010)
+-Fixed a bug with Net Worth over Time built in plugin not taking into account opening balances.
+
+3.4.0.4 (November 3 2010)
+-Fixed a bug which could corrupt scheduled transactions at save / load time under certain circumstances
+-Upgraded Quaqua version
+-Upgraded Moss dependencies
+-Switched from WINLAF to default Swing look and feel when running on Windows.  This should hopefully eliminate the black menu problem on Windows Vista.
+
+3.4.0.3 (September 9 2010)
+-Updated translations
+-Added optional icons to repository for UK Pounds instead of dollar symbol
+
+3.4.0.2 (June 28 2010)
+-Fixed bug with split transaction set To / From (thanks to belmakor for pointing out this fix)
+
+3.4.0.1 (June 17 2010)
+-Fixed bug with split transactions and filtering
+
+3.4.0.0 (June 10 2010)
+-Same as 3.3.4.0 development version; moving to stable branch now.
+
+3.3.4.0 (June 8 2010)
+-Added semi monthly budget category period
+-Updated to Quaqua 6.3.1, for various bugfixes and Snow Leopard support
+-Updated to SwingX 1.0
+-Updated to JFreeChart 1.0.13 / JCommon 1.0.16
+
+3.3.3.0 (February 3 2010)
+-Fixed misc. bugs related to split transactions
+-Fixed bug #2807502 (sort order of transactions doesn't include number)
+-Fixed URLs for help system
+-Changed domain name from thecave.homeunix.org to digitalcave.ca
+-Changed from launch4j to janel for .exe wrappers
+-Updated French translation
+-Added Brazilian localization of Portuguese translation (thanks to Fausto Trentini for this)
+-Added openjdk support for Debian package
+-Updated Norwegian translation
+
+3.3.2.0 (March 24 2009)
+UNSTABLE VERSION FOR TESTING ONLY.  USE AT YOUR OWN RISK
+-Updated reports to work correctly for split transactions
+-Fixed edge case NPE exception in ConciseTransactionCellRenderer (thanks to Matthew Lieder for the patch)
+-Fixed various split-related bugs
+-Fixed UI bug which set new transaction to changed, and presented a warning dialog.  Thanks to Raphael Charwot for this patch. 
+
+3.3.1.0 (January 24 2009)
+UNSTABLE VERSION FOR TESTING ONLY.  USE AT YOUR OWN RISK
+-Added support in GUI for split transactions.  
+-Added report interval for This Semi Month and Last Semi Month
+-Added transaction filter interval This Semi Month and Last Semi Month
+-Remove C / R check boxes from All Transactions view, as they are not able to be used here.
+-Updated Portugese translation (thanks to Adonai Jr for this)
+-Fixed bug with Semi Monthly period which did not set the time correctly for the start / end date.
+
+3.3.0.0 (December 14 2008)
+-Added support for split transactions
+-Added feature request to include available funds on the main window
+-Added feature request #1799063 (Add 'Memo' column to reports).
+-Added support for scheduled transactions on 'Last Day of Month'.  Thanks to Mauricio Peccorini for this patch.
+-Added support for semi-monthly budget period.  Thanks to Mauricio Peccorini for this patch.
+-Added interest rate to the account definition again (optionally enabled by the Show Interest Rate option in Preferences).  This is for information only; it does *not* automatically calculate interest.
+-Added checks at the model level to verify that Income BC's can only be used in From position, and Expense BC's can only be used in To
+-Added JUnit tests for both splits and BC sanity checks.
+-Added Download Plugins to Help Menu
+-Added --lnf option to specify certain Java look and feel.  You still must manually add the specified LnF .jar to the classpath at launch.
+-Added Concise Transaction Renderer (another rendering option for showing transactions).  Thanks to Matthew "IGx89" Lieder for this patch.
+-Added Hebrew translation and support for Right-to-Left languages in reports (thanks to Yoni Bar-Lavie for this)
+-Added true Mac Universal support for Java Application Stub (no performance difference, but now shows up as Universal in process listings)
+-Fixed bug #2146327 (Esc confirms exit, not cancels it)
+-Fixed bug #2174651 (End date still set, even if unchecked the end date option).
+-Fixed bug #2212486 (Get Info on Mac doesn't show version number, shows ${PROJECT_COPYRIGHT} instead)
+-Fixed bug #2347862 (Crash on startup possible with bad Runnable plugins)
+-Fixed bug with new installer which did not create Start Menu icon (Windows)
+-Fixed GUI bug where Accounts / BCs don't roll down again automatically after modifying one of them.
+-Fixed problem with saving files on WebDAV server (thanks to Sascha for bug report and patch)
+-Updated Russian translation (Thanks to Michael Krekin for this)
+-Updated Norwegian translation (Thanks to Gudbrand Hegge for this)
+-Updated to SwingX 0.9.4
+-Updated to JFreeChart 1.0.11 / JCommon 1.0.14
+
+3.2.2.1 (October 3 2008)
+-Added 'All Time' as a plugin interval option.  This will return the date range from the beginning of the year of the first transaction, to one week after today.  If you have no transactions yet, it will return the range from the beginning of this year to one week from today.
+-Fixed bug #2021995 (Deleted sources still show up in To / From dropdowns).  I Changed the transaction to / from pulldowns to not show deleted sources.  If you select a transaction for which one of the sources has already been deleted, we will add it on the fly, but you cannot choose a deleted source for a new transaction (unless the "Show Deleted" is selected in Preferences, of course).
+-Fixed bug #1977195 (Wrong message when adding plugin)   
+-Updated French translation (thanks to Stéphane Bouchet for this)
+
+3.2.2.0 (September 27 2008)
+-Added new Windows installer method, using the excellent IzPack software (http://izpack.org/).  This should now prevent the problems which some people had experienced with my home-rolled installer package, as well as new features (such as a real uninstaller, etc).
+-Added support for new schedule interval: Every X Days. 
+
+3.2.1.5 (September 19 2008) (Happy Talk Like A Pirate Day!) 
+-Updated Quaqua library to 4.4.7.  This helps improve some tree table rendering bugs (still not perfect, but closer).
+-Added a check to the transaction editor, which does not allow years less than 1900 or greater than 3000.  If someone has a need of this, let me know and I can extend the dates a bit.  This is added to prevent people from typing '08' as '2008', and having their transactions turn out being from 2000 years ago.  
+
+3.2.1.4 (August 23 2008)
+-Updated some dependent libraries (SwingX, Moss).
+
+3.2.1.3 (July 27 2008)
+-Fixed a bug in the MutableModelFactory which did not set the starting balance, even if one was passed in.
+
+3.2.1.2 (June 30 2008)
+-Fixed a bug which would sometimes delete the wrong transaction in a list (thanks to Ravenpolaris for noticing this) 
+-Fixed bug #2003076 (Usability issue with update notifications).
+-Fixed a bug which showed 'null' for the plugin version if a plugin.properties text file is not included at the root of the .jar file.  Now I just don't attempt to show a version number in this case.  
+
+3.2.1.1. (June 19 2008)
+-Fixed a bug with the new CSS features, which did not properly include the .css in the .jar file.
+
+3.2.1.0 (June 17 2008) 
+-Added ability to customize the CSS for reports.  If the files 'screen.css' and 'print.css' exist in the Buddi data folder (~/Library/Application Support/Buddi on a Mac, C:\Documents and Settings\<User Name>\Application Data\Buddi on Windows, ~/.buddi on Unix), then we use those files instead of the default ones.
+-Implemented feature request #1971340 (Add percentage to pie graph reports)
+-Implemented feature request #1973890 (Add shortcut to reconcile / clear, and advance to next transaction)
+-Updated Norsk translation (Thanks to Gudbrand Hegge)
+-Removed crash notification - for months, the only crashes I have seen reported are either a) out of my control (in a third party library), or b) due to a known multi-threading issue which I am working on.  Will re-enable this if I branch to Development again.
+
+3.2.0.1 (May 14 2008)
+-Removed 'Import Test Data' plugin - this was for a very particular test, and does not apply to most users.
+
+3.2.0.0 (May 12 2008)
+-This is the first minor stable release since the 3.0 branch.  It includes some incremental improvements over the 3.0 branch, including better performance, improved UI and HCI, and some bug fixes.  
+-For now, I am combining the Development and Stable branches into this 3.2 branch.  The reason for this is because the majority of my large / disruptive plans for Buddi are already implemented, and there is currently no point in maintaining two separate revisions.  If, in the future, I see a need to make some major changes, I will branch out a new Development version. 
+
+3.1.4.1 (May 6 2008)
+-Fixed misc. bug updating combo box, as found in a crash report
+-Fixed bug #1959755 (Add report flag to specify report loction)
+-Fixed bug #1959751 (Add space after amount with trailing currency symbol) 
+
+3.1.4.0 (April 25 2008)
+-Changed Moss to improve encryption / decryption across platforms.  In particular, this should fix the problem with Leopard upgrades not being able to open the data files.  ***IMPORTANT*** While you can open files created before this version, you may not be able to open files created with this version (or later) with previous versions of Buddi.  Please make a backup of your data file before saving your files in this.
+
+3.1.3.5 (April 25 2008)
+-Fixed bug when checking version number if the branch version is not found
+
+3.1.3.4 (April 9 2008)
+-Updated Swedish translation for 3.0 (Thanks to Gustav Stenberg for this)
+
+3.1.3.3 (March 8 2008)
+-Fixed bug #1890746 (Thanks to Bryan Larson and group for this fix)
+
+3.1.3.2
+-Updated Spanish translation for 3.0 (Thanks to Ignacio Baca and Rafael Rodriguez for this)
+-Updated French translation for 3.0 (Thanks to Jean-José Mayol for this)
+
+3.1.3.1 (February 16 2008)
+-Updated the Russian translation for 3.0 (Thanks to Michael Krekin for this)
+-Fixed bug #1888523 (Thanks to Bryan Larson for submitting the patch for this)
+
+3.1.3.0 (February 3 2008)
+-Added a check for background saves when quitting - if you try to quit when a background save thread is running, we block until the save is completed.  Normally this will be within a second or two at most, but for large (> 100,000 transactions) it can be substantially longer.
+-(Windows Installer Only) Added an 'Uninstall from Registry' script for the Windows installer.  This script will remove associations between Buddi and data files, translations, and plugins.  You will still need to manually delete the rest of the program files, preferences, etc. 
+
+3.1.2.0 (January 25 2008)
+-Added method List<Date> getBudgetedDates() in BudgetCategory (and associated API objects).  This allows plugins to return a list of all dates for the given budget category which have a budget set to anything other than zero.
+-Added clone() method to Document.  This will do a deep clone of the document, resulting in an entirely new Document object (with all associated component objects), but with all the user defined values (names, amounts, etc) being the same.  Hidden values (UID, modified time, etc) may not be identical.  The new object and the old object are guaranteed to not be identical (newObject != oldObject) and are guaranteed not to be equal (newObject.equals(oldObject) == false). 
+-Implemented feature request #1861222 (Add shortcut / hotkeys for Create / Edit Account / Budget Category).
+-Implemented feature request #1847620 (Add shortcut keys for changing to different budget periods).  Also implemented shortcuts for copying values to previous / next periods.
+-Fixed bug #1859807 (Program freezes when saving / autosaving large data files).  I now clone the data files before saving; the clone operation is much shorter than the save.
+-Fixed a bug in Moss which could result in a NPE when using SmartFileChooser
+
+3.1.1.1 (January 5 2008)
+-Fixed a bug which did not correctly show transaction on Jan 1 2008 as "This Year".
+-Fixed a bug which caused stack overflow exception when handling certain configurations of categories.
+-Fixed a bug which could potentially cause a Concurrent Modification Exception
+-Fixed a bug which could cause a Null Pointer Exception
+
+3.1.1.0 (December 30 2007)
+-Added feature request #1846845 (Remember date ranges in 'Other' report interval)
+-Added a "Data File Stats" option in the View menu to see how many transactions, accounts, etc are defined.  This can help to diagnose performance issues, if there are tens of thousands of transactions.
+-Fixed bug #1859806 (Set the max VM memory to 512 MB for all packaged installations - this includes Windows, OS X, Debian, Slackware, and the generic .tgz.  If running from source or from .jar, you must include the VM argument '-Xmx512m' to set this.  This is only a problem for large data files, but there has been at least one reported case of this happening, so I figured I may as well increase the memory.  The memory will only be used as needed, so you don't need to worry about Buddi using more memory than it did before.)
+-Fixed bug #1858672 (Even when tooltips are disabled, it still showed a tooltip for transactions).
+-Fixed a bug which may prevent new or updated transactions from using the currently entered date.  The JXDatePicker widget does not 'commit' the date until focus is lost; this means that if you enter / change a date, and hit the OK button immediately, you will be using the last committed date, instead of the currently entered one.  This can potentially affect both the transaction editor panel, as well as custom report date pickers.
+-Fixed a bug which did not correctly sum account type totals on the "My Accounts" tab, if the sum of all accounts of that type was more than about $14 million.  I am not aware of anyone running into this bug in real life - if someone has, I would be happy to take the extra money which causes this bug to manifest itself! 8-)
+-Fixed a bug in which a NPE may be thrown when comparing transactions with null descriptions.
+-Fixed a bug in which an IllegalArgumentException may be thrown if an invalid value has been saved to Prefs for a filter state.
+-Fixed another bug which incorrectly caused a "Crash Report" email to be sent, when there was no reason to do so.
+
+3.1.0.1 (December 28 2007)
+-Fixed a bug which incorrectly caused a "Crash Report" email to be sent, when there was no reason to do so. 
+-Fixed a potential null pointer exception caused by a null selected item in some Transaction Frame operations.
+-Updated Spanish translation to better work with 3.0 branch (Thanks to Rafael Rodriguez for this)
+
+3.1.0.0 (December 26 2007)
+-Branching 3.1, for new development
+-Currently equivalent to 3.0 Stable, but with the legacy data support removed.  You can (or at least you will be able to shortly) download the Legacy data import plugin from the Plugins download page.  
+
+3.0.0.0 (December 24 2007)
+Merry Christmas!
+
+I am proud to announce the release of the 3.0 Stable branch of Buddi!  This version is the result of almost 5 months of active development, and includes many new features and changes.  The data model has been re-written from scratch, along with most of the user interface.  Some of the major changes are listed below; for a complete list, please view all changes in the 2.9 Development branch.
+-Much more powerful budgeting capabilities.  You can now specify different budgets for different months, as well as have multiple budget periods (e.g., Month, Quarter, Week, etc) for different budget items.
+-Many improvements to the user interface, and the UI architecture
+-Complete re-write of the backup / restore interface
+-New plugin API, which models the actual data much more closely than before, and should allow for more powerful plugins
+-New installer for Windows, which can set up Buddi and associate data files, translations, and plugins with the program.
+
+2.9.23.0 (3.0 RC 8) (December 17 2007)
+-In regards to bug #1852735, I reverted net worth calculations to summing all transactions, instead of transactions up to today.  I feel that the correct method would be to use the net worth as of today; however, due to the confusion this may cause, I have postponed the addition of this feature to a later version.
+-Fixed NullPointerException when switching budget periods
+-Removed debug System.out.println() statements
+
+2.9.22.0 (3.0 RC 7) (December 15 2007)
+-Updated Norsk.lang (thanks to Gudbrand Hegge for this)
+-Fixed bug #1851068 (Exception when viewing all transactions)
+-Fixed bug #1847211 when "Flat account format" was selected.
+
+2.9.21.0 (3.0 RC 6) (December 13 2007)
+-Fixed memory / listener leak by using weak references in document listener list.  This means that once all references to the object which created the document change listener are removed, the object can be GC'd.  Before, the listener list itself counted as a reference, so all filtered lists and wrapper lists would not be GC'd.
+-Fixed bug #1847211 (Preference "Show deleted accounts and budget categories" doesn't seem to work properly")
+-Fixed bug where NetWorth includes deleted accounts, when it is not supposed to.
+-Fixed bug where AccountType totals include deleted accounts, when they are not supposed to.
+-Fixed bug where new transactions did not get displayed in the transactions window immediately (race condition with the list model and its update method, vs the document change listener).
+
+2.9.20.1 (3.0 RC 5.1) (December 8 2007)
+-Fixed bug #1847095 (RC 5 does not save files correctly)
+
+2.9.20.0 (3.0 RC 5) (December 6 2007)
+-Fixed bug #1837673 (Massive performance enhancements to transactions screen.  The delay when adding transactions, as well as the auto complete box with lots of transactions, have been improved considerably as far as performance goes.  Also I now cache the plugins, which greatly speeds the program up in the event of many active plugins)
+-Fixed bug #1845864 (About window should be centered)
+
+2.9.19.0 (3.0 RC 4) (December 4 2007)
+-Fixed a few more potential performance issues (thanks to Andrew Nichols for pointing these out)
+-Fixed bug #1843584 (Set both C / R when one of the To / From sources is a Budget Category or Prepaid account.  These sources do not logically have their own separate cleared / reconciled flag, so it makes no sense to include that it in the model.)
+-Fixed bug #1843332 (Revert to Saved in Windows with one data file open exits Buddi)
+-Fixed bug #1842787 (Opened windows too close to corner)
+-Fixed bug with newer SwingX distros, which removed cell renderers from the table columns (thanks greatly to the good folks on the java.net forums for showing me the ColumnFactory, which solved the issue).
+-Updated to SwingX 0.9.1, now that the above issue is resolved.
+
+2.9.18.0 (3.0 RC 3) (December 1 2007)
+-Fixed bug which could potentially autosave when the model was in an inconsistent state, during a batch change.  Added a check to autosave which only saves if the batch change is complete.
+-Updated the Help -> Tutorial link to the new tutorial page on the website
+-Fixed bug which did not show ellipses (...) for oversized text in the Account / Category pulldown boxes on the transaction screen.
+
+2.9.17.0 (3.0 RC 2) (November 28 2007)
+-Ran through YourKit profiler, and optimized some parameters to make UI faster
+-Fixed bug #1838237 (Transaction filters should persist, as an option)
+-Fixed bug #1838240 (Transaction filter list after changing sort order)
+-Fixed bug #1838281 (Set parent of new budget category to selected item)
+
+2.9.16.0 (3.0 RC 1) (November 18 2007)
+-Added more padding to Transaction cell sum / balance formats.
+-Added a check for the last day of scheduled transactions.  During development, I had found an instance where the last scheduled day was deleted from scheduled transactions, which resulted in duplicates.  I don't think that this is a common occurrance, and I could not reproduce it, but I added code to double check this regardless.
+-Implemented feature request #1824669 (Show cheque number in transaction cell renderer)
+-Fixed bug #1830078 (Problems copying budget categories)
+-Fixed a display bug which included the parent category even without duplicates
+
+2.9.15.0 (November 14 2007)
+-Added new plugin type: BuddiTransactionCellRendererPlugin.  This allows third parties to override the default Transaction list cell renderer, and provides a simple method to allow the end user to select their preferred renderer.
+-Removed command line option --simple.  You can now replicate this behaviour through Preferences -> Advanced.
+-Updated Spanish translation (thanks to Rafael Rodriguez and Ignacio Baca for this)
+-Fixed bug #1830078 (Do not copy over existing values when duplicating budget category values)
+-Fixed bug #1825681 (Problems with duplicate budget category names, even with different parents)
+-Fixed bug #1821645 (Incorrect addition of cleared / reconciled)
+-Fixed bug #1827036 (Honour isDeleted() flag on transactions in built in reports)
+
+2.9.14.0 (November 4 2007)
+-Added feature request #1821378 (Void transactions)
+-Changed the implementation of Account to return 0 if you get the balance before the starting date.  Before it was set to return the starting balance, but this just does not make sense in the reports.  If anyone has a problem with this change, please email me and let me know your situation.
+-Fixed bug #1823787 (Changing transaction dates)
+-Fixed bug #1825143 (Cannot change Budget Category names)
+-Fixed bug #1821626 (Incorrect interval for "This Week" in report pulldown)
+-Fixed bug #1821645 (Incorrect addition of cleared / reconciled)
+-Fixed bug #1823188 (Category duplicate name checks ignore hierarchy)
+
+2.9.13.0 (October 27 2007)
+-Added option to remove negative signs from displaying on currencies.  This option is currently experimental.
+-Added two new filters in Transaction screen: Cleared and Reconciled.  These only show up if you have enabled Cleared and Reconciled entry, respectively.  These work in conjunction with the free form search and the date filter, using an AND condition - all displayed transactions must match all of the conditions.
+-Added collapsible area for searching in transaction frame.  Collapsed state is saved between sessions.
+-Added Feature Request #1808451 (Cleared total).  Added collabsible area in transaction frame for showing totals of Cleared and Reconciled transactions.
+-Fixed bug #1812298 (Cannot modify scheduled transaction)
+-Fixed bug #1818423 (Log file not using %APPDATA% variable)
+-Fixed bug #1819679 (Amounts not showing in Pie graph labels)
+-Fixed bug #1819678 (Cleared / Recociled filters not in Transaction Frame).  I moved these from being options in the Date selection to being in their own pulldowns.  See above for details.
+-Fixed bug in saving last opened data file(s)
+-Fixed bug which prevented saving using Ctrl / Cmd + S when editing budget values.  (The MossDecimalField consume()'d the key stroke before it could be passed to the parent).  Now we explicitly make a new key event to pass to the parent container, if the situation merits it.
+-Fixed Null Pointer Exception in OS X when relaunching application after all windows were closed.
+-Fixed Null Pointer Exception introduced from 2.9.12.1, in DateFunctions.getDaysBetween().
+
+2.9.12.1 (October 21 2007)
+-Fixed a bug in 2.9.12.0 which caused null pointer exceptions in the Transaction frame source cell renderers under some situations
+-Cleaned up the report pulldowns to remove the "Select..." string, as added in 2.9.12.0.  Now you can see this string in the combo box when you don't click on it, but you don't see it in the popup list as well.
+
+2.9.12.0 (October 20 2007)
+-Improved transaction cell renderer to not overlap values, and to display as much of a description and from / to as possible.
+-Implemented feature request #1816525 (Add "Select..." and "<To>" / "<From>" labels to empty combo boxes)
+-Added code to include color to transaction frame source selectors, but commented it out, as I thought that it did not look good.  This feature may appear in future versions, as I am not yet sure if I like how it looks or not... if anyone has any comments on it, please let me know.
+-Added Slackware package (Thanks to Chris Branton for this)
+-Added Windows non-installer package, for those who don't like installers.  Users will need to set up their own file associations and shortcut items if they use this one.
+-Fixed bug #1812875 (Incorrect values in reports during daylight saving time months)
+-Fixed bug #1812906 (Incorrect sorting of accounts)
+-Fixed bug #1812917 (Budget view too busy)
+-Fixed bug #1812911 (Create new data file on Legacy Buddi file import; also included option in BuddiImportPlugin for plugin authors to use this feature as well)
+-Fixed bug #1812907 (Sort transaction combo box accounts)
+-Fixed bug #1812923 (Filled field values in transaction frame are lost when using auto complete)
+-Fixed bug #1816743 (Incorrect balance for some weekly budget intervals)
+-Fixed bug #1815185 (Incomplete transaction to / from lines)
+
+2.9.11.0 (October 11 2007)
+-Fixed bug #1811038 (Cannot transfer data files between time zones).  I changed the format of the HashMap key from "<BUDGET_CATEGORY_TYPE>:<Date as Long>" to "<BUDGET_CATEGORY_TYPE>:<year>:<month>:<day>".  This will eliminate the problems with time zones.  I included a converter function to automatically convert old data files to the new format.  Unfortunately, this means that the newly saved data files from 2.9.11.0 cannot be opened in previous versions.
+-Related to bug #1811038, I changed Transactions to store only the year, month, and day as integers in the XML file.  When loading, they automatically are created via DateFunctions to be the very start of the day (0:00).  This is a preemptive measure to prevent similar timezone issues from happening to Transactions.
+-Added code to remember the last date you were on when switching between budget periods.  For instance, assume you had Monthly selected, and the date was October 2007.  Before, if you switched to Yearly and back to Monthly, it would go to January 2007.  Now, it remembers that you had October selected, and goes back to that.
+-The Language Editor now prompts for save if you have not already done so.
+-Improved on the Menu Plugin's return message MessageBox, as implemented in 2.9.10.0.  Now, you can include a 'longMessage', which will be displayed in a JTextArea below the main message.  This can be useful for long status messages.  For instance, I use this when importing from legacy data files to show all potential conflicts between the files.
+-Fixed bug #1809188 (Import from Legacy file crashing)
+-Fixed a bug which did not update My Budget properly.
+-Related to bug #1809188, I now pass a warning back from the Legacy import if there are any ambiguous conditions.  For instance, assume you import from a file which includes an account "Test", and you already have an account "Test" defined in the new file.  If the starting balances for the two different "Test" accounts do not match, we will prompt the user of this, and that they should verify that we have the correct one.
+
+2.9.10.0 (October 8 2007)
+-Added command line option --nosplash to disable the splash screen
+-Added support to store the locations and sizes of multiple windows in Preferences.  If you quit with three Main Frames open, you will have the same files stored on startup.
+-Improved execution of menu based plugins.  When Import, Export, and Synchronize plugins are run, they are now wrapped within a SwingWorker.  A notification message is shown while the plugins are being run, so that the user does not think that the program has hung.  Any exceptions will show up in the logs, as well as a Message Box dialog.  This should make the plugins simpler to implement (these features are a common request from developers), and can ensure a uniform look to users.
+-Updated Spanish translation (Thanks to Rafael Rodriguez and Ignacio Baca for this)
+-Fixed a bug with Plugins which would cause Buddi to not always find the translations
+
+2.9.9.0 (October 6 2007)
+-Added support for Lists of Strings in plugin preferences.  You can access this with the getListPreference() / putListPreference() methods, accessible from the super class of any plugin.
+-Updated the build script again, to make it easier to build.  Now, you should be able to build the .jar without any extra properties files or third party ant plugins.
+-Updated splash screen to look nicer (the old one was pretty ugly!)
+-Fixed bug #1808426 (Fixed possible null pointer when loading plugins)
+-Removed --lnf option, as it was only useful when using the .jar version.  The new recommended form of settting Look and Feel is by using the Skin Chooser plugin.
+
+2.9.8.1 (October 4 2007)
+-Fixed bug #1807860 (Main frame not updated until mouse over)
+-Fixed another bug with saving (related to bug #1807276).  This one caused a Save As to fail, with a DataFile.buddi3.temp file to remain.  I think that I am just about getting the bugs out of this new saving system - it really is better than before, trust me!  ;-)
+
+2.9.8.0 (October 4 2007)
+-Improved the layout for Plugins Preferences.  Now, instead of the file name, we show the plugin name and the version number (obtained from plugin.properties).
+-Fixed bug #1807276 (Unable to Save existing data files in Windows)
+
+2.9.7.0 (October 3 2007)
+-Added support for plugins using the Translation framework.  Plugin authors should include a folder Languages in the root of the .jar file.  See http://devel.buddi.thecave.homeunix.org/en/bundling.php for more details, and an example plugin with ant build script.
+-Implemented Feature Request #1806525 (Provide option to remove Tooltips)
+-Fixed bug #1805555 (Description field obscured by drop down when close to the bottom of the screen), by changing the maxumum row count from 15 to 5.  It can still be covered if the Transactions window is at the very bottom of the screen, but there is much more leeway now than before.
+-Removed dependency on FatJar Eclipse Plugin for Buddi build.xml ant file.  Now developers should be able to compile Buddi to a .jar without needing any dependencies other than the default Apache Ant installation.  (Note that platform specific builds, like Windows .exe, OS X .app package, etc still need other dependencies).
+
+2.9.6.0 (October 2 2007)
+-Added compression to the data files.  We are still backwards compatible with the old (uncompressed) files, but all new files will be written with compression.  This results in drasitcally smaller files, as most of the data was plain text - one of my data files was reduced from 1.2 MB to 52 KB.  This is especially useful for USB keys, which may have limited space.
+-Added option to run from USB drive.  Use --usb, to put preferences, languages, and plugins into the current working directory.  We do not use the old way of doing this (i.e., checking for working directory, and automatically adjusting paths) since we now make more intelligent decisions about folders for Languages, Plugins, etc, and making assumpions about the USB option would break that.
+-Added getAssociatedAccount() and getAssociatedSource() methods to TransactionFrame.
+-Implemented Feature Request #1805196 (Re-implement Overdraft Feature)
+-Implemented Feature Request #1805197 (Re-implement Credit Limit Feature)
+-Fixed bug #1805345 (Poor save algorithm)
+-Fixed very obscure threading bug, related to http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6231579.  This would result in odd behaviour sometimes, but was not reproducible consistently.  To be sure that I have removed all possiblilty of this bug, please report any stack traces which you see in the logs which start with the location sun.util.calendar.BaseCalendar.getCalendarDateFromFixedDate(BaseCalendar.java:436) or something similar.
+-Fixed NullPointerException bug, as reported by Lawrence
+
+2.9.5.0 (September 30 2007)
+-Implemented feature request #1800526 (Browse transactions by Category)
+-Implemented feature request #1803631 (Better spacing for transaction editor on non-Macintosh operating systems)
+-Added Swedish (Svenska) translation  (Thanks to Ramon Radnoci for this)
+-Added ABOUT_TRANSLATION key for translators to include their name, email, and any comments.
+-Fixed bug #1804985 (Description missing in transaction window)
+-Fixed bug #1804989 (Under certain conditions, duplicate account / budget category / account type names would not be caught)
+
+2.9.4.0 (September 26 2007)
+-Fixed bug which delayed the view updating of copied Budget Category values when copied back / forward a month
+-Added splash screen for non OS X systems (OS X has user feedback via the bouncing dock icon, and a splash screen would not be needed)
+-Updated Norsk translation (Thanks to Gudbrand Hegge for this)
+-Updated Nederlands translation (Thanks to Brent Huisman for this)
+-Implemented feature request #1801407 (Allow flat display of accounts and budget categories)
+-Implemented feature request #1799377 (Include API to save encrypted preferences)
+
+2.9.3.0 (September 24 2007)
+This version should now be stable enough to be considered a normal Development build.  I am now using it for my production finance data, and it should be considered stable enough for all testers to do the same.  Please treat this as you would any Development software, and back up your data on a regular basis.  If you encounter any problems, please submit a bug report on the website.
+Changes:
+-Created a custom installer for Windows; the basic Windows .exe is now this installer.  If there is demand for it, I can make the standalone .exe available as well, but I think the installer is much nicer.  The installer will prompt for a location to install, and extract Buddi there.  It will also set up a shortcut in the start menu, and associate Buddi data, plugin, and language files to Buddi.  NOTE: This installer has only been tested on Windows XP.  Any and all testing which can be done would be most appreciated.
+-Completely rebuild the ant build.xml file.  Now we use this file exclusively for building.  This is cleaner, and it also gives us some new features (such as being able to make .rpm files, at least in the near future).
+-Fixed bug #1800382 (incorrect object in API)
+-Fixed bug #1800388 (incorrect description in Javadocs for API)
+-Fixed bug #1800417
+-Fixed bug #1800429
+-Fixed bug #1800825
+-Fixed numerous small UI issues
+-Fixed user-reported Null Pointer Exception bug.
+
+2.9.2.0 (September 19 2007)
+-Added modified date to API model
+-I think that I fixed bug #1790783 - please verify that this is working for everyone
+-Included some missing libraries into the build (for legacy import)
+-Tons of small enhancements and bug fixes
+
+2.9.1.1 (September 13 2007)
+-Fixed a bug with the last version which caused a stack overflow when opening transaction window.
+
+2.9.1.0 (September 12 2007)
+This is the second (and hopefully last) development preview release.  While the program itself is much more stable and usable than in the last version, there is still the possibility that the data format will change.  Do not use this version for production data.  Assuming continuous positive feedback from testers, the next version will hopefully be back to my 'normal' Development release, where people are free to use it for production data, but the risk of bugs or changes is still quite small.
+Changes:
+-Many bug fixes, feature implementations, enhancements, etc.
+-Finalized (?) the Legacy Import plugin.  Beta testers: please verify that this import method works correctly.  Please send any and all comments or bugs to me ASAP!
+-Small modifications to model and API model.
+
+2.9.0.0 (September 5 2007)
+***DO NOT USE THIS AS A PRODUCTION APPLICATION***
+This is a Development Preview release, and should be considered Alpha quality code.  This is different from all of my other development releases, as it is not intended for end users to run it for production (i.e. real) data.  It is very likely that the data file format will change before I am ready to release it, and if it does, you will lose all your data.  I can not stress this enough: DO NOT USE THIS AS A PRODUCTION APPLICATION.  This release is ONLY meant for developers and end users to review and provide me with feedback (whether it be in regards to architecture, GUI design, etc).  By not promising to provide backwards compatibility with this release in future versions, I am free to make major changes to the data structures if the need arises, and I fully plan on doing so.
+This release uses a different preferences and data format than previous versions, and thus you can run both side by side with no ill effects.
+
+Some of the major changes from an architectural point of view include:
+-Complete rewrite of low level model
+-Complete reimplementation of many core features, especially the My Budget tab
+-More changes than can possibly be listed here.  Changes are, at least a portion of all parts of the program have changed.
+
+I have tried to keep the user interface as similar as possible, unless I had a good reason to change it.  You will notice many differences, but I hope that they will not distract from the simple interface people have come to expect from Buddi.
+
+At this point, I am ready to start accepting bug reports for this version.  Please use the trackers on the SourceForge.net website to submit any bugs which you may find.  If you have general questions, please submit them to the forums, so that others can benefit from the answers.
+
+2.5.9.0 (July 30 2007)
+-Fixed bug which made the description pulldown grow too large for the window, if a long description was entered.  Now in the pulldown, I chop off the text at the same point as I do in the TransactionCellRenderer.
+-Added feature request #1761758 (Update To / From lists when adding / removing new accounts or categories)
+-Removed feature request #1717577 (see 2.5.8.0).  While this could be useful, I don't feel that it is simple enough to work properly.  The main problem is that of inter process communication.  In order for the browser to be able to signal Buddi to do something, I need to open a server on the local host.  This presents security as well as usabiliy problems.  Windows gives warnings, etc.  Furthermore, even if the server listens properly, it will not switch to Buddi when the new transaction window pops up.  The user still has to switch manually.  Unless someone can overcome these issues, I think this is better left un-implmented.
+
+2.5.8.0 (July 29 2007)
+-Implemented feature request #1713577 (Allow linking to transactions window from reports).  There are a couple of caviats to this: 1) it cannot switch the selected applicaton to Buddi; it will stay on the web browser. 2) It currently does not select the correct transaction, although this should be changing as soon as I figure out what I am doing wrong.  I have implemented this feature by opening a server socket in Buddi at launch time, and waiting for a connection.  When something connects, I read the GET request and parse out variables.  I look for an account and transaction which matches these most closely; if found, I open a new transactions frame with that information.  I am nervous about using a server in Buddi; while I have looked it over, and cannot see how anyone malicious could exploit this, I would appreciate it if anyone who has any experience with securing Java programs from malicious attacks take a look at it, and see what they think.  The code in question is at the bottom of org.homeunix.drummer.Buddi, in the method startHTTPTransactionListener().
+-Modified EditableTransaction to use a GridBagLayout for laying out components.  This seems to work better, and has fewer strange scaling bugs when resizing the window.
+-Fixed bug which showed 0.00 as the value for all budget items in some situations.
+-Finished conversion to 2.6 API.  Deprecated 2.4, and replaced all references to it in the plugins with 2.6.
+
+2.5.7.0 (July 26 2007)
+-Updated Date function class in Moss to use my own code (in preparation of new Moss license).  There may be bugs in this class - please check scheduled transactions and reports for accuracy!
+-Added Feature Request #1760045.  Removed the separate list of auto complete transactions.  This is now generated on the fly by using existing transactions.  This will make it much more flexible and less likely to cause problems (and the data files are smaller, too).
+-Added Feature Request #1751361 (Save last used date filter in Preferences)
+-Added Feature Request #1749295 (Show error message if user is behind proxy, not connected, or otherwise not able to check for updates)
+-Made some usability enhancements in the autocomplete code (no strange backspace behaviour now, IMHO)
+-Changed the API version from 2.4 to 2.6.  If you compile plugins against this release, please set the version to 2.6 as well.  I will keep 2.4 compatibility for a while, until all the plugins can be updated.  (Note: I have kept the old API in for backwards compatibility, but it will not be receiving updates and bug fixes).
+
+2.5.6.0 (July 22 2007)
+-Added edit and delete capabilities to the API (requests #1758125 and #1745625)
+-Added feature request #1758617 (Smaller minimum size for transaction windows)
+-Fixed bug #1754527 (Cancel button on New Data Format warning message doesn't exit program)
+-Corrected bug in implementation of request #1745624
+-Updated Russian translation
+
+2.5.5.0 (July 15 2007)
+-Added request #1754141 (Factor debit / credit when sorting transactions)
+-Fixed bug #1745205 (Failure to set account type on MutableAccount creation).  Modified the setType method in MutableAccountImpl.
+-Fixed bug #1747932 (No UID getters / setters in API)
+-Fixed bug #1754401 (Autocomplete usability issues)
+-Fixed bug #1754394 (Don't delete value when hitting + / -, even when value is selected)
+-Fixed bug #1754391 (Negative sign not cleared for new transaction if last transaction had it set)
+
+2.5.4.0 (July 3 2007)
+-Added Serbian translation (Thanks to Zeljko Jovanovic)
+-Updated Spanish translation (Thanks to Rafael Rodriguez and Ignacio Baca)
+-Set defaut log location on OS X to ~/Library/Logs/buddi.log
+-Set default log level on development builds to 'debug'
+-Implemented feature request #1741972 (Dropdown for autocomplete transactions)
+-Added Feature Request #1745624 (Allow for rollback of single Transaction / Type / Account / Category; use rollbackX() method)
+-Moved auto complete entries from Preferences to Data file, for added security and portability of auto complete entries between systems.
+-Fixed bug #1744440 (Added Type to the API)
+-Fixed bug #1745199 (Allow null for minimum API version in plugins)
+
+2.5.3.0 (June 25 2007)
+-Fixed bug #1740710 (Restart after changing currency symbol)
+-Fixed bug #1740709 (Incorrect class name for plugins on Windows)
+-Fixed bug #1741944 (Do not overwrite values when autocompleting)
+-Fixed bug #1741945 (Warn before substantially changing an existing transaction - check to make sure user did not want to create a new one instead)
+-Implemented workaround for bug #1740148.  If you need to use Unicode characters (such as Chinese), start Buddi with the --simpleFont option.  This will use a different cell renderer for the transactions window, without bold and italic fonts.  If there is enough demand for this, I may add it to the Language file, or perhaps the Preferences.  This will suffice for now.
+-Implemented feature request #1741943 (Scroll to most recently added transaction)
+
+2.5.2.0 (June 19 2007)
+-Remember the last directory, for import / export plugins (Request #1736868)
+-Set the maximum width of graphs to 1000px (to avoid massive graphs on widescreen displays)
+-Fixed bug #1737834 (Would not allow IE to recognise the reports as UTF 8)
+-Fixed bug #1736866 (Does not update transactions frame when importing)
+-Fixed bug #1736878 (No copy / paste in number fields) - fixed in Moss 0.7.0.0
+
+2.5.1.0 (June 10 2007)
+-Fixed bug #1733696 (Export plug-in issue with Save dialog)
+-Redirected Exception.printStackTrace()'s to Log's PrintStream (thus including them in the buddi.log file)
+-Added updated Russian translation
+
+2.5.0.0 (June 8 2007)
+-Development branch of 2.4.0.0.
+
+2.4.0.0 (June 7 2007)
+-2.4 Stable branch.  Includes many improvements over the 2.2 branch.
+-Complete rework of the GUI framework, allow a more consistent user interface, and greater speed when opening large data files
+-Moved report / graph output to HTML page, for better printing and easier view.
+-Support OS integration, to open data files directly.  (This works out of the box for OS X and Debian; for Windows and other OS's, you will need to associate .buddi files with Buddi for this to work properly.)
+-More logical dialog sequence for New / Open data files
+-Complete API for third party plugins, allowing Developers to use a more stable interface which will not change as much with future versions.
+-Rewrite of transactions list cell renderer, making this information more easy to read
+-Many other minor features.
+	
+2.3.20.0 (Not publicly released)
+-Added beta quality Slackware package.  Upload is currently disabled for this, as I need everyone currently running 2.2 to upgrade to 2.4, where the .jar file is specified as a .jar extension, not .tgz as it was before.  If you wish to test the .tgz Slackware package (or have more information for me to make it better, such as desktop integration or something), email me.
+
+2.3.19.0 (June 4 2007) - 2.4 RC 6
+-Updated Spanish translation
+-Updated German translation
+-Moved log destination to <Working Dir>/buddi.log (for all OS's but OS X).  This allows easier troubleshooting, as people can just send me this file instead of having to download the .jar version and run using java -jar.  On OS X, Console.app gives easy access to log information, so we don't need to do it here.  You can still override the file name by using --log option.
+-Updated build structure to be more organized; <BuddiSource>/etc now has sub directories debian, osx, windows, and shared, depending on what platforms use the files.  This keeps me from needing the debian_* prefix to the debian files, etc.
+-Fixed bug #1730723 (Lost the space in the To / From pulldown list between Accounts and Categories)
+
+2.3.18.0 (June 1 2007) - 2.4 RC 5
+-Fixed bug #1729658 (Plugins duplicated on Graphs and Reports when loaded from plugin .jar)
+-Fixed bug #1729635 (Clear menu item on transactions frame not working properly)
+-Fixed bug #1729531 (Correct selection of accounts after editing / creating new one)
+
+2.3.17.0 (June 1 2007) - 2.4 RC 4
+-Fixed bug #1729178 (alignment of amounts)
+-Fixed bug #1729200 (HCI issues with Account Type Modification window)
+-Fixed bug #1728931 (Restart after changing "Show Deleted Accounts / Categories" state in Preferences
+-Fixed bug #1729213 (Misunderstanding of overdraft functionality due to poor wording of label)
+-Fixed bug #1728958 (Don't count deleted accounts in Net Worth / Net Budgeted Income calculations).  Also modified the list renderer on the To / From pulldowns to cross out deleted accounts (although they still have to stay in the list for model integrity).
+-Modified the JDecimalInputField to allow '+' to remove negative value (in addition to '-' toggling it).  This is in response to bug #1729438
+-Improved clarity of some labels and tool tips, and added other tool tips to potentially confusing objects.
+
+2.3.16.0 (May 31 2007) - 2.4 RC 3
+-Added support for .rpm and .tgz (Slackware package) types at the download code.  I do not yet bundle these; the added support is in the launch time flags which determine which platform this is running on.  I plan for Slackware support early in 2.5 branch, and Redhat sometime later.
+-Fixed bug #1728346 (Arrow in transaction window not rendering properly on Windows).
+-Explicitly added antialiasing for transaction window.
+
+2.3.15.0 (May 30 2007) - 2.4 RC 2
+-Fixed bug #1728027 (Hitting enter once description is filled in instead of tab does not correctly fill in other fields).
+-Fixed bug #1727875 (German number formatting incorrect)
+-Eliminated package for certain platforms - namely, Windows is now distributed as .exe instead of .zip, and Generic is .jar instead of .tgz.  While this may take a little more space (and longer download), it gives more information about the platform, and allows for other platforms (such as Slackware, which uses .tgz).
+
+2.3.14.3 (May 29 2007) - 2.4 RC 1.3
+-Fixed another bug on the Mac which was re-introduced when fixing the last one.
+
+2.3.14.2 (May 29 2007) - 2.4 RC 1.2
+-Fixed another bug related to working directory which Windows systems did not like.
+
+2.3.14.1 (May 29 2007) - 2.4 RC 1.1
+-Fixed bug which prevented Buddi from running on non-OSX systems
+
+2.3.14.0 (May 28 2007) - 2.4 RC 1
+-There are no outstanding feature requests left which are due to be included in 2.4.0.0.  This means that this version is the first release candidate.  Please report all bugs to me ASAP to get fixed before 2.4.0.0.
+-Fixed bug #1721317 (Can select multiple rows in accounts / categories).  This was due to a bug in JXTreeTable, but I managed to fix it by overriding the list selection model class.
+-Implemented OS X LaunchD listener, to allow opeing Buddi data files by double clicking in Finder
+-Added icon for Buddi data files in OS X
+
+2.3.13.0 (May 23 2007)
+-Added flag on Debian buddi launch script to specify that the .deb is desired, instead of the default Linux .jar file.  I can do similar things for other special platforms as needed.
+-Fixed bug which did not allow some scheduled transactions to run, depending on the relationship between created date, current date, and frequency.  Testers: please check your scheduled transactions, and report and duplicate or missing transactions to me.
+-Renamed getSelected{Account|Category|Transaction} to get{Account|Category|Transaction} in the API, to clarify some confusion about the naming.
+-Added pretty toString() methods to plugins, to make for meaningful console output
+-Bolded the Description in transaction view, and italicized the to / from entry
+-Fixed very intermittent bug in the loading code which could potentially overwrite the newly loaded file with the already loaded file.
+-Changed versioning scheme to X.Y.F.B, where X and Y are still Major and Minor respectively, but F is Feature release and B is Bug Fix.  This allows more information about the release to be shown in the version number, as we differentiate between bug fixes and new feature additions.
+-Fixed bug which would not properly load plugin translations if the plugin directory was similar to the working directory.  For instance, if the plugin was at /home/wyatt/buddi_plugins, and the working directory was /home/wyatt/buddi, then the plugin directory would be saved as _plugins, which would not allow the language to be loaded.  Force the check of the trailing / when matching working directory regex.
+-Fixed bug which did not allow Meta + Enter to activate the record button in a transaction window via the menu option.
+-Added Greek translation (thanks to John Spyrou for this)
+
+2.3.12 (May 14 2007)
+-Added translations for Yes / No / Cancel / OK buttons in JOptionPanes (bug #1697734)
+-Added Italian translation
+-Fixed bug #1716654 (cannot save items in My Documents)
+-Fixed bug #1710575 (Incorrect budget reports for non-30 day months)
+-Updated Norwegian translation
+
+2.3.11 (May 10 2007)
+-Fixed bug which would not show language prompt when creating new Prefs.xml file in some situations
+-Added Debian package and respository.  You can access this from Debian based Linux distributions by adding the line "deb http://buddi.sourceforge.net/debian development main" to your /etc/apt/sources.list file, and selecting Buddi as the package through your favorite package manager.  (Once 2.4.0.0 Stable is released, you can use the same line as above, but replace 'development' with 'stable' to access the Stable version).
+-Added timers to plugins which check the enabled status every 2 seconds, and updates the plugin accordingly.
+-Only load plugins for which the Buddi API Version is greater than or equal to the Plugin API version (only comparing Major.Minor versions).
+
+2.3.10 (May 6 2007)
+-Very many changes, especially to the API.  Plugin developers - please thouroughly test your existing code, and report and errors caused by the changes.
+-Removed Translate.get(TranslateKeys) from API
+-Added support for user.dir system property (allows override of working directory, used for Unix launcher)
+-Merged API plugin tree with non-API plugin tree.  This allows us to use existing plugin loading code to load API plugins, elimintaing the need to duplicate code.
+-Moved some of the helper classes to the API package
+
+2.3.9 (May 2 2007)
+-Scroll to the bottom of the transactions list when searching (Bug #1706872)
+-Can now open data files which are passed as an argument on the command line (as done on Linux / Windows).  Still cannot open files on a Mac, as they use a different framework for opening.
+-Fixed minor translation bugs
+-Fixed bug in transaction window which does not reset Record button after update (Bug #1710111)
+-Fixed bug where C and R were not loaded when opening an old Scheduled Transaction
+-Added console logging of errors / exceptions when loading plugins, for better debugging by third parties (Bug #1711359)
+-Fixed bug which could crash Buddi when loading a plugin from a previous version, with different methods defined in the plugin interface.
+-Added new sanity checks to data files to convert frequency type to correct string (Bug #1711457)
+-Added stable API classes to allow for easier plugin programming (combination of multiple feature requests / bugs).  Many thanks to Mike Kienenberger for submitting all the API code!
+
+2.3.8 (April 23 2007)
+-Honor C and R in scheduled transactions (bug #1705246)
+-Implemented selective windows for Export / Import plugins (request #1590185)
+-Reports / Graphs now generate in their own worker thread (request #1702649)
+-Added search by Date to transaction search (request #1696159)
+-Moved Export to CSV plugin to buddi-plugins
+-Added MinimumVersion tag to plugins, to specify which versions of Buddi are compatible.
+-Rewrote Source deletion code, to be more user friendly and less buggy.  Beta testers: Please test this!  Use a test file for this, not your real data file!  8-)
+-Fixed bug in loading code which could result in unintentional data file encryption.
+-Fixed bug in TransactionCellRenderer which would result in the first line's description and to / from showing up as '...'.
+-Improved code when selecting / updating transactions in the TransactionsFrame.
+
+2.3.7 (April 21 2007)
+-Rewrote transaction list renderer without HTML - now I use Graphics2D to draw the cells.  This results in faster code with fewer display problems.
+-Fixed bug in loading code which could potentially overwrite files which you try to open.
+-Fixed some misc. formatting bugs
+-Fixed bug which prevented proper editing of existing budget categories (bug #1705087)
+-Added manual update check if automatic checks are disabled
+
+2.3.6 (April 17 2007)
+-Added print CSS to make better looking printed reports
+-Fixed bug #1702200 (Budget / Actual graph incorrect)
+-Fixed some translations
+
+2.3.5 (April 16 2007)
+-Updated Russian translation
+-Added three new reports: Average amount / category, UnCleared Transactions, and UnReconciled Transactions.
+-Added BuddiRunnablePlugin, which allows developers to run arbitrary code more easily in a plugin if they want to do something which does not fit as a Menu or Panel plugin.  These plugins are run at startup, in the init() method of MainFrame.
+-Added additional convenience methods for HTML export and Formatting, in HTMLExportHelper and FormatterWrapper.
+-Finished (?) the loading infrastructure.  Now all areas which load / save / backup documents go through one source, DocumentManager.  This allows us to maintain a consistent interface for end users, and prevents duplicate code.
+-Fixed bug which resulted in scheduled transactions to not be added in order.
+-Fixed other miscellaneous small bugs introduced in previous versions.
+
+2.3.4 (April 13 2007)
+-Added the ability to use negative numbers everywhere numbers are used.  To do this, I needed to rewrite the JCurrencyField class in Moss.  This is still a very Beta-quality feature - please provide me with feedback, comments, bug reports, etc on the Feature Request tracker under 
+-Added the ability to search on amounts from Transactions screen
+-Renamed many TranslationKeys to make more logical sense, and be better organized.  Updated translations in source; please use these for future translations, or run the sed scripts modify.sed.* to change the translation keys.
+-Improved formatter.  Now locale (language and country codes) are loaded from within the translation file, which should improve number formats.  Since I already have Date chosen, I guess I won't do that as well...
+-Added Delete button to Edit Types
+-Made the reports / graphs look more pretty - updated the CSS
+-Fixed problem with scheduled transactions introduced in 2.3.1.
+
+2.3.3 (April 10 2007)
+-Fixed some minor bugs introduced in 2.3.2, including report formatting, NullPointer on file creationg, etc).
+-Created dedicated buddi backup files (.buddi.bak) to simplify backups
+-Updated Espanol (ES) translation
+
+2.3.2 (April 8 2007)
+-Complete overhaul of GUI framework.
+	-Corrected MVC architecture.
+		-Moved all GUI classes to the view package
+		-Added static controller classes for specialized data access
+		-Removed all superfluous methods from DataInstance - now it is just the model access layer, with no controller components
+	-This should allow for improved speed and features in future releases, as it has cleaned up the code base substantially.
+-Added thread based Preloader for TransactionsFrames.  This loads all the windows at first, to speed up access later on.
+-Complete overhaul of reports / graphs.  Now these are shown in the web browser, and not in Buddi windows at all.
+-Complete overhaul of printing.  Now longer using Java printing.  All print requests go to a web browser with HTML.
+-Greatly sped up program start, recording transactions, opening windows, etc.
+
+2.3.1 (March 22 2007)
+-Added Search to language editor
+-Added Not Reconciled and Not Cleared to the filters on the transaction window
+-Added an option to show the currency sign before or after the amount (for some European currencies)
+-Updated Norwegian translation
+-Added an optional message to scheduled transactions.  These are now called 'Scheduled Actions', as you can do more than just schedule transactions to be run.  Any message which you specify will be shown on the scheduled day (or the first program execution after that day); this can therefore be used for reminders on bills, credit card payments, etc.
+
+2.3.0 (March 2 2007)
+-Unstable branch of 2.2.0 Stable.
+
+2.2.0 (March 2 2007)
+-Improved display of Accounts and Budget Categories
+-Addition of a much improved Scheduled Transactions dialog (thanks to NCSU students Nicky and Abhik for their help with this)
+-Misc. GUI improvements and tweaks
+
+2.1.13 (February 15 2007)
+-Fixed bug which could potentially corrupt data files
+-Fixed bug which did not allow loading of plugins on Windows
+-Added Javadocs to all methods in DataInstance, to better help plugin developers
+-Fixed GUI bug where dialogs for creating / editing Accounts and Categories had large gap if there existed Accounts / Categories with very long names
+-Added method to TransactionFrame to allow adding multiple transactions at once.  This should avoid the need to update the window multiple times for simple imports.
+
+2.1.12 (February 10 2007)
+-Final (?) revision on the Transaction window layout.  I feel that this new design is much easier to read, and does not display as much information (I removed the Number field, in addition to the Memo field removed earlier).  Many thanks to Rosanne for suggesting new layouts, working off my suggestions, etc.
+-Fixed bug 1653640, where extra characters show in the documents accessed via Help menu.  Thanks to JST for pointing out where the bug was.
+
+2.1.11 (February 8 2007)
+-Fixed a problem with the HTML export on Windows
+-Corrected the highlight color of text
+-Changed the layout of cells in the Transaction window, to (hopefully) make the values more clear
+
+2.1.10 (Feburuary 6 2007)
+-Fixed a display bug where budget categories deeper than 3 or 4 would not show.  Now the tree display column width is dynamically calculated, based on tree depth.
+-Updated BrowserLauncher to 1.0 version
+-Changed the Transaction window to have different columns for Debits and Credits (Request #1649969)
+-Misc. UI improvements (including Request #1649970, #1649972, #1651137)
+
+2.1.9 (February 1 2007)
+-Fixed a bug which would reset the creation date of an account when you modify the name / starting balance.  This would then result in the account not being properly used in net worth and other time senstive graphs.
+-Fixed the Date Format in Transactions Window bug
+-Added a workaround for the bug which only shows 3 levels of Budget categories.  Currently the width is increased to allow users to see about 5 levels; in a future release, I will add logic to automatically expand as needed.
+
+2.1.8 (January 25 2007)
+-Added option to open a new file in the event that you don't have read / write permission to the default data file
+-Added Bi-Weekly schedule option
+-Added shortcuts for transaction editing
+-Added option of offline help
+-Added Ctrl+W shortcut to close windows on Non Mac systems (this was already present on the Macintosh)
+
+2.1.7 (January 22 2007)
+-Added new Norsk.lang to reflect new additions to Buddi
+-Fixed bug which prevented manual file backup
+-Added custom currency input.
+-Added option to prompt for data file at program startup (useful if multiple users are using Buddi on the same account)
+
+2.1.6 (January 5 2007)
+-Fixed another bug which prevents new data files from being created.
+
+2.1.5 (January 4 2007)
+-Fixed bug which could result in data loss, if you did not have write permissions to the data file
+-Added Portuguese and Russian translations
+-Added title bar text to report / graph windows
+-Fixed bug which only showed the name of the account in the Transactions title bar, instead of the name and account type.
+
+2.1.4 (December 17 2006)
+-Fixed bug when loading existing scheduled transactions
+-Fixed bug which cut off text from Actual / Budgeted graph
+
+2.1.3 (December 7 2006)
+-Added the Scheduled Transactions NCSU project, with some GUI / code cleanup changes.  Now there are 7 frequency options: Monthly by Date (every month on a particular date, e.g. 1st), Monthly by Day of Week (every month on the first, e.g., Saturday of the month), Weekly (every week on, e.g., Wednesday), Every Day, Every Weekday, Multiple weeks every month, and Multiple Months every year.  This should cover most people's needs; if there are some that I have missed, the code is now clean enough that it would not be too difficult to add more.
+
+2.1.2 (November 30 2006)
+-Added dialog to add / rename Account Types (look under Advanced Options)
+
+2.1.1 (November 10 2006)
+-Converted the JTable in Account and Categories listing to JXTreeTable to give columns.
+
+2.1.0 (November 4 2006)
+-Unstable branch of 2.0.0 Stable.
+
+2.0.0 (November 4 2006)
+Since 1.8.0:
+-Rewrote the display code for the Transactions window, which results in massive speedups
+-Finalized and enhanced Plugin architecture
+-Improved translation architecture, to make it much easier for localizations and initial translations
+-Added color-coded language editor, to help people make translations (available via Preferences -> Advanced -> Edit Languages)
+-Now the program is one single file; all documenation, languages, etc are within the .jar / .exe / .app.
+-Improved the ability of running from a flash drive.  When setting up the shortcut, just specify the -p option, and give a relative path to the preferences file in the same directory as Buddi executable - the rest is automatic
+
+Since 2.0.0rc5:
+-Fixed translation bug for Scheduled Transactions
+-Removed some un-needed dialogs from showing at startup (such as Created new Data File notice, and Upgrade notice if this is the first time they ran the program)
+
+2.0.0rc5 (November 3 2006)
+-Set default directory for opening files and creating new files to be the same directory that the current one is in.
+-At startup / plugin reload, if there is a bad plugin (plugin which throws an exception while loading, usually due to .jar file being moved / deleted), we remove the plugin entry from the Preferences file.
+
+2.0.0rc4 (November 1 2006)
+-Updated English and Norsk languages
+-Added data file path to title bar
+-Added ability for plugin authors to include their own translations.  These are loaded in the same manner as regular translations, from the root of the Plugin.jar file.
+
+2.0.0rc3 (October 30 2006)
+-Fixed bug which prevented plugins from being loaded from .jar on Windows
+-Fixed bug in install scripts which did not include Buddi.png
+-Added French language
+-Updated German language
+
+2.0.0rc2 (October 24 2006)
+-Fixed Null Pointer Exception bug when running from source (the Documents / Licenses could not load from jar, for obvous reasons).  When running from the binary version, there is no problems.
+-Added labels to the different Language editor text areas, to better define which panel is linked to which data.
+
+2.0.0rc1 (October 20 2006)
+-Updated comments and documentation on most major classes
+-Changed the build script to remove need for keeping Buddi_OSX_Folder.  I now build the .app from scratch.
+-Moved the documentation and licenses into the .jar file.
+
+1.9.5 (October 18 2006)
+-Fixed bug which prevented Buddi from starting on Windows, due to error in the working directory regex.
+
+1.9.4 (October 14 2006)
+-Improved Language Editor, and integrated it into Preferences.  You now edit language directly from preferences, and it saves it automatically to the apropriate Languages directory.
+
+1.9.3 (October 12 2006)
+-Added a Language Editor to Buddi.  Can be invoked by running 'java -jar Buddi.jar --editor'.  (This may be moved separately later, but it is tiny (only one Java file, containing 2 main classes), and I think this is simpler for everyone)
+-Tweaked translation loading so that English is loaded as a 'base' language, and the other languages are applied afterwards, replacing any duplicate keys.  This has the advantages of a) making it easier to make English localizations (you only have to specify the keys which are different), b) makes my life easier, since I only have to add new strings to one file, and c) makes language editors lives easier, as they can use the Language Editor and have it point out differences between English and their language.
+-Working (unsuccessfully so far) on integrating RetroWeaver with the build process, to allow Java 1.4 binary compatibility.
+
+1.9.2 (October 9 2006)
+-Added Plugins to the preferences screen.  Now they load at runtime without modifying Classpath.
+-Cleaned up plugin code extensively
+-Split out many common components into Moss library (http://moss.sourceforge.net)
+-Added better support for USB keychains.  If you save files (including Data files and Plugins) within the working directory, Buddi automatically removes the leading path element.  This allows the files to be easily portable to other paths (different letter mounts of USB drives on different machines, for instance) with little or no problems.
+-Added Dutch translations
+
+1.9.1 (October 6 2006)
+-Considerable speed-up on transactions (after the first load, it is almost instantaneous, compared with a number of seconds before on my machine)
+-Fixed add / remove / update behaviour, and improved upon it from the Stable version (items stay selected when they should, lists scroll properly, etc).
+-Fixed the filters (date and search string).  Added a cool new search widget instead of the clunky button to clear the search from before (based on Elliot's NSSearchField style widget at http://elliotth.blogspot.com/2004/09/cocoa-like-search-field-for-java.html)
+-Added nicer looking highlighting and striping to transactions window
+
+1.9.0 (Sept 30 2006)
+-New development branch.  1.9.0 Development is the same as 1.8.0 Stable.
+
+1.8.0 (Sept 30 2006)
+-The addition of a built in, transparent encryption scheme for Buddi data files
+-A pluggable reporting system, which allows third party developers to add custom report types
+-A Windows-specific distribution package, which includes a single .exe file.  This has the advantage over the previous .jar of showing the proper icon in the toolbar, running under the process name 'buddi' instead of 'javaw', etc.
+-The bundling of Language files into the executable, helping prevent problems related to an incorrect working directory
+-Rotating backup files, instead of relying on users to delete old backups
+-Numerous UI improvements, such as:
+--Reports and graphs being automatically updated whenever the data changes
+--The removal of the Mac-specific LNF and logic from the Windows / Generic bundles.  This allows for a more native design, as well as a smaller file size
+--The ability to specify a specific java LNF at startup, via the --lnf command line option
+--General UI cleanup, with a special focus on ease of use
+
+1.8.0rc2 (Sept 26 2006)
+-Fixed bug where, if you updated (as opposed to recoreded) in transactions window, the selected transaction would change to the new item.  It now keeps the edited transaction selected.
+-Updated Norwegian language
+
+1.8.0rc1 (Sept 24 2006)
+-Fixed bug when switching from old language to new
+-Added rotating backup - instead of making a new backup file every time, and relying on the user to delete old ones, there are now X number of backup files, denoted by Data.X.buddi (where X is a number between 0 and NUMBER_OF_BACKUPS).  Each time you start, the backup files are shuffled up (Data.0.buddi becomes Data.1.buddi), and the current data file is copied to Data.0.buddi.  You can set the number of backup files in Preferences.
+-Update reports / graphs when something changes.
+-Simplified Preferences screen by separating each panel into its own tab.
+-ScheduledTransactions now sorted according to name
+-Code Cleanup (renamed ScheduledTransaction objects to comply with naming convention)
+
+1.7.8 (Sept 23 2006)
+-Moved languages to inside the .jar / .exe file.  This makes is possible to move the .jar anywhere you want, without any additional supporting files.  If you want to use a custom language file, just include it in the Languages directory, and it will override the built in one.
+-Updated Norwegian language
+-Updated the EMF libraries
+-Cleaned up the makefile and workspace.  It is now much simpler (hopefully) to build the files.
+-Included ant script to compile and make fat jar.  You need to point the build.xml file to your installed fat jar Eclipse plugin.
+
+1.7.7 (Sept 20 2006)
+-Added a native .exe file for Windows users.  This makes things much easier - you can copy the entire Buddi folder to Program Files, and then link a shortcut to it, without worrying about boring things like 'Start In' directories.  I still do not have an installer for Windows, and will probably not ever have one (unless someone adamently thinks this is aGood Thing (tm), and wants to create an automated process to make that).  Coming from a Mac / Unix perspective, installers are useless, especially since I don't use the registry at all.
+-Changed language file names to be more user friendly - English instead of en.
+-Misc. GUI fixes for Windows
+-Updated BrowserLauncher library to BrowserLauncher2, which should increase support for Linux
+
+1.7.6 (September 18 2006)
+-Added Export to CSV for all transactions / transactions within a frame (depending on where you export from)
+-Added Date Filter to transactions window, to limit visible transactions to specific date range (thanks to John Didion for the original patch for this feature)
+
+1.7.5 (September 15 2006)
+-Re-did the report / graph architecture.  Now Buddi includes the ability for third parties to create custom reports and graphs.  To do this, implement org.homeunix.drummer.plugins.Buddi{Graph|Report}Plugin, include your compiled classes on the class path, and reference them all in a comma separated list after the --plugins command line option.  For instance, '--plugins com.example.Report1,com.example.Graph2' (without the quotes, of course).  If I have enough interest in this, I will change this to be included in the Preferences file, so that end users don't need to mess with command line options.
+-Tweaked some layout parameters for non Mac OSX systems to look better on Linux / Windows.
+
+1.7.4 (September 14 2006)
+-Cleaned up the UI quite a bit.  This was done for two main reasons: make the UI less cluttered looking, and speed up GUI operations.  The second objective has been met (at least a little; profiling shows a speed increase of about 10%).  Whether or not the GUI looks better is up for debate - if you feel strongly one way or another, please let me know.
+-I am now using a newer version of FatJar, which removes unused classes.  This makese the downloads even smaller - about 3 MB for Mac, and 2 MB for Linux / Windows.
+
+1.7.3 (September 13 2006)
+-Added encryption of data files (thanks to John Didion for creating the actual cipher and associated logic).  This lets you encrypt the data file with strong encryption without relying on the OS to do this for you.
+-Added Overdraft limit for debit accounts (comparable to credit limit)
+-Fixed a bug which did not disable Edit, Delete, and Open buttons after editing / adding / opening an account.
+-Did some more work on Preferences to make the options more clear
+-You can now change languages without having to manually restart the program
+
+1.7.2 (September 10 2006)
+-Fixed bug which would not let To / From fields display all items when too many categories were included.  Now scrollbars are added.
+-Some speed improvements when rendering large numbers of transactions; still room for improvement, though.
+-Added icon to window frame (Thanks to John Didion for this patch)
+-Added option to select a custom look and feel from the command line.  (Thanks to John Didion for this patch)  Please run java -jar Buddi.jar --help for more syntax.
+
+1.7.1 (September 7 2006)
+-Added Spanish translation
+-Added Cleared and Reconciled checkboxes to transactions.  Please let me know all feedback about these features.  Note: Before using them you need to first enable them in the Preferences screen, under 'Show Advanced'.
+
+1.7.0 (September 5 2006)
+-New development branch.  1.7.0 Development is the same as 1.6.0 Stable.
+
+1.6.0 (September 5 2006)
+-Stable release incorporating the 1.5.x development.  The biggest changes since 1.4 are in the preferences window, especially the localization options.  The currency symbol is now separate from the language file, which helps reduce the number of localizations I need to include.  Also, I changed the display format for the Transactions window, which should make for fewer bugs when long strings are entered.  For complete details of differences between 1.4 and 1.6, please see the 1.5 changelog.
+
+1.6.0rc2 (August 31 2006)
+-Updated the EMF libraries to 2.2.1 build 20060824
+-Reorganized package structure to better reflect the MVC architecture.  This should help third party developers to better interface with Buddi, as it is much clearer now what is the model, etc.
+
+1.6.0rc1 (August 27 2006)
+-Updated Norwegian translation
+-First release cantidate for stable version 1.6
+
+1.5.4 (August 22 2006)
+-Reworked the list in the Transaction window.  It now has some intelligence to know where to chop off lines to avoid overflow, but still show as much as the window size allows.  To the testers: please ensure that this works on all platforms, at all screen resolutions, etc, and give me any feedback.  If this works well, I may do a similar thing for the Reports window.
+
+1.5.3 (August 21 2006)
+-Added Interest Rate and Credit Limit to accounts.  Interest Rate is only for your records - it does not calculate interest or anything, and only shows up if you select it in Preferences.  If you enter a Credit Limit, you can see in the Transactions Window how much credit you have left.
+-Improved Preferences user interface.
+-Fixed additional minor problem with JDecimalField.
+-Removed CURRENCY_SYMBOL from the language file, and moved it to preferences.  This lets you choose currency independent of the language settings.
+
+1.5.2 (August 19 2006)
+-The bug fixed earlier today caused another minor one - if you don't type the entire value, e.g. instead of $12.30 you type $12.3, Buddi interprets it as $1.23.  This should now be fixed.
+-Added en-IN to languages
+
+1.5.1 (August 19 2006)
+-Fixed bug related to Double rounding when reading from JDecimalField.  Now JDecimalField parses the long value directly, instead of converting to double first.
+
+1.5.0 (August 17 2006)
+-New development branch.  1.5.0 Development is the same as 1.4.0 Stable.
+
+1.4.0 (August 17 2006)
+-First stable version to include scheduled transactions and HTML export
+
+1.4.0rc3 (August 16 2006)
+-Fixed a number of bugs found in the Scheduled Transactions window
+
+1.4.0rc2 (August 16 2006)
+-Added Autocomplete as an option
+
+1.4.0rc1 (August 15 2006)
+-Code cleanup
+-Norwegian Translation update
+-Data format change notification
+
+1.3.4 (August 15 2006)
+-Fixed a null pointer exception relating to updating transaction window
+-Improved style of report export to HTML, and fixed bug with it
+
+1.3.3 (August 14 2006)
+-Added Scheduled Transactions.  This lets you set up recurring transactions, so that you don't have to repeatedly enter them.  There are some limitations in the current implementation: you can only choose between frequencies of Month and Week, and you can only choose one day for the transactions to occur.  For instance, you can set the transaction to occur every Monday or the 4th day of every month, but you cannot set it for Monday and Wednesday of every week, or every second month, etc.
+-When you record a transaction, Buddi will now update all other transaction windows which are open.  This will reduce the possibility of seeing out of data information in the transactions windows.
+-Removed help from distribution, instead relying on the web page.  This makes the distro smaller, and ensures that all help is current.  If anyone has any comments on this (or would prefer to have it included), let me know.
+
+1.3.2 (August 10 2006)
+-Added Quarter and Year to budget intervals
+-Added This Quarter and Last Quarter to report intervals
+-Added HTML Export options as an alternative to printing (for reports).  This gives you a more customizable, better looking output.
+-Update to Norwegian translation
+
+1.3.1 (August 8 2006)
+-Added Norwegian translation (thanks to Gudbrand Hegge)
+-Fixed incorrect translation key
+-Updated some items in en-US localization
+-Upgraded to EMF 2.2 (used in conjunction with Eclipse 3.2)
+
+1.3.0 (August 6 2006)
+-New development branch.  1.3.0 Development is the same as 1.2.0 Stable.
+
+1.2.0 (August 6 2006)
+-Stable release 1.2.0
+
+1.2.0rc2 (August 4 2006)
+-Updated libraries
+-Fixed bug with hints in JHintTextComponent
+-Minor updates to documentation
+
+1.2.0rc1 (August 3 2006)
+-Added color to the Report by Description based on whether it is income or expense
+-First release cantidate for stable version 1.2
+
+1.1.6 (July 25 2006)
+-Added ability to change budget period
+
+1.1.5 (July 19 2006)
+-Added new report type (Income / Expense by Description)
+-Fixed some UI bugs
+
+1.1.4 (July 17 2006)
+-Added ability to turn on / off account sorting by type
+-Added update notification - when a new version is released, Buddi will look for it at startup; this can be disabled through the preferences
+-Moved source code to SourceForge's SVN servers
+
+1.1.3 (July 13 2006)
+-Accounts are sorted by type, with rollups available for categories. 
+
+1.1.2 (July 12 2006)
+-Added search to transactions
+-Misc. bugfixes
+
+1.1.1 (July 7 2006)
+-Reports show what transactions contribute to the value
+-Reports allow 'hyperlinking' to individual transactions
+
+1.0.1 (July 7 2006)
+-Moved EMF jars to source, for better use of source code
+
+1.1.0 (June 27 2006)
+-Moved EMF jars to source, for better use of source code
+-Automatically completes transaction number, memo, to and from based on description
+-Change of preferences file to support new features; data file format still the same.  Preferences can be upgraded automatically from previous versions, but previous versions will not recognize the new format; if you care about preferences, backup the original file before running the new version.
+
+1.0.0 (June 23 2006)
+-Official stable version
+-Finalized German translation
+
+1.0.0 RC5 (June 20 2006)
+-Added grayed out description fields to empty fields (<Description>, etc)
+-Fixed transactions window to allow smaller window sizes without cutting portions off
+-Fixed problem when recording without all fields, the fields already entered were deleted
+-Fixed translation problems
+-Added the total for expense / income on pie graph title
+-Changed to not show categories in certain graphs that don't have any activity for this time period.
+
+1.0.0 RC 4 (June 19 2006)
+-Made the amount field larger in the transaction edit pane.
+-Sometimes the cents get rounded down, probably due to double rounding errors.  Replaced the JNumberField with a DecimalField class modified from http://rangiroa.essi.fr/cours/turorial%20java/uiswing/components/textfield.html.  I moved the double -> long conversion to this class, as well.
+-Maximum value for decimalField was about 200,000.00, due to int overflow errors; this is fixed, and it is now in the hundred trillions.
+-Changed order of fields on the transactions list screen.  Now it is different from the editable transaction pane, but it seems to flow better.
+-Added German translation (many thanks to Torsten Hinsche).
+
+1.0.0 RC 3 (June 8 2006)
+-The third release cantidate for 1.0 stable.  Please report any bugs that you may find to wyatt.olson@gmail.com
+-Fixed reports screen if there was many categories (scroll bar did not work before)
+-Misc. UI improvements
+
+1.0.0 RC 2 (June 6 2006)
+-The second release cantidate for 1.0 stable.  Please report any bugs that you may find to wyatt.olson@gmail.com
+-Misc. UI improvements
+
+1.0.0 RC 1 (June 4 2006)
+-The first release cantidate for 1.0 stable.  Please report any bugs that you may find to wyatt.olson@gmail.com
+-Warn if you have unsaved changes to a transaction, and you click on another one
+-Changed the transaction edit screen's format to be (hopefully) layed out in a more logical manner.
+-Misc. UI improvements
+-Misc. changes to file layout structure, to prepare for translations.  Put all help documentation (both on the website and offline) under a subfolder matchine the language name (e.g., Help/en/index.html).
+-Change to the preferences file structure.  Buddi will automatically create a new file, but you will lose your preferences (such as data file location, language, screen positions, etc).  It's all OK; don't panic.
+
+0.95 Beta (May 30 2006)
+-Added local help documents
+-Each window remembers size / screen position on close
+-Misc. UI improvements
+-Automatically creates a backup file each day on the first run of the day.
+-Added menu options to create a new data store and restore from a previous backup.
+
+0.91 Beta (May 26 2006)
+-Interim bugfix release, to fix display problem introduced with 0.9.  Windows (and possibly all non-Macintosh Java VMs) did not like the TreeCellRenderer that I included in 0.9, and the accounts and categories lists would not display.
+
+0.9 Beta (May 25 2006)
+-Added printing to all windows: Accounts, Categories, Transactions, Graphs, and Reports
+-Completed online help documentation (http://buddi.sourceforge.net)
+-Many minor improvements to UI
+
+0.8 Beta (May 24 2006) - First public release.
+-Includes ability to edit accounts, categories, and budget amounts
+-Can show reports and graphs on net worth, expenses, etc.
+-Should be stable enough for everday use, although if there are changes to the data format in the future, you may have to convert the data file.

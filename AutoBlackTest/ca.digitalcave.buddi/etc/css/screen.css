@@ -1,0 +1,27 @@
+body { background-color: #a3b8ce; color: #222; min-width: 50em; margin: 1em; padding: 0em; }
+.content { border: 1em solid white; background-color: white; margin: 0em; }
+.header { background-color: #59a1ea; padding-left: 4em; height: 8em; margin: 0em; top: -1em; font-variant: small-caps; font-weight: bold; font-size-adjust: 0.6; border-left: 8em solid #dfc700; }
+.separator { height: 0.4em; background-color: black; color: black; }
+.empty { font-size-adjust: 0; height: 0em; }
+
+
+.red { color: red; }
+
+.right { text-align: right; }
+.center { text-align: center; }
+.left { text-align: left; }
+
+.center_img { display: block; margin-left: auto; margin-right: auto; }
+
+h1 { font-size: x-large; }
+h2 { font-size: large; }
+h3 { font-size: medium; }
+h4 { font-size: small; }
+h5 { font-size: x-small; }
+
+hr { color: black; background-color: black; height: 0.3em; border: 0em; }
+
+table.main { background-color: black; width: 100%; }
+table.main tr { padding-bottom: 1em; }
+table.main th { background-color: #DDE}
+table.main td { background-color: #EEF}

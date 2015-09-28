@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Name=Buddi
+Exec=buddi %F
+Icon=buddi
+Comment=Personal Budget Software
+Terminal=false
+Categories=Application;Office;
+Type=Application
+MimeType=application/x-buddi3data;application/x-buddiplugin;text/x-buddilanguage

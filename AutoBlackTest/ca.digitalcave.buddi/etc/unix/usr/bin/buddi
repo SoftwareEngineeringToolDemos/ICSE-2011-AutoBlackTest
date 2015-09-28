@@ -1,0 +1,67 @@
+#!/bin/sh
+# Jar launch script.
+#
+# Run this to launch the Jar file.  You can put this in your path (/usr/local/bin, 
+# or wherever you desire) and it will work fine.
+#
+# If you don't have Java in your path (or if the Java in your path is GNU Java, which 
+# will not work with Swing Java programs), you can set the JAVA variable below.
+#
+# (c) 2007 Wyatt Olson
+#
+#############################################################
+
+####
+# Start User Configuration
+####
+
+# Find the default java binary.  You may need to change this for 
+JAVA=`which java`
+
+# If you wish to override the default, uncomment and enter the path here.
+#JAVA='/usr/bin/java'
+
+# The working directory.  This is what would be used as the root for any
+# relative paths in the program.
+WORKING_DIR="${HOME}/.buddi"
+
+# The full path and name of the .jar file.
+JAR="/usr/bin/Buddi.jar"
+
+####
+# End User Configuration
+####
+
+
+
+####
+# Check configuration settings
+####
+
+# Check if Java is installed.
+if [ ! -x ${JAVA} ]; then
+	echo "I cannot find your Java executable.  Please set the JAVA variable in this script."
+	exit 1
+fi
+
+# Check that we have the Sun Java version.
+${JAVA} -version 2>&1 | grep -q 'Java(TM)\|OpenJDK'
+if [ ${?} != 0 ]; then
+	echo "The installed Java version does not appear to be a Sun compatible JVM.  Please set the JAVA variable in this script to the correct location of the Sun (or Sun compatible) JVM."
+	exit 1
+fi
+
+# Is the .jar installed
+if [ ! -r ${JAR} ]; then
+        echo "I cannot find ${JAR}.  Please move the .jar to this location, or modify the JAR variable in this script."
+        exit 1
+fi 
+
+# TODO: Check for writable working directory.
+
+
+####
+# Launch Image Tagger
+####
+
+${JAVA} -Duser.dir=${WORKING_DIR} -Xmx512m -jar ${JAR} --[[platform]] $*

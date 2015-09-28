@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<shortcuts>
+	<skipIfNotSupported />
+
+	<programGroup defaultName="Buddi" location="applications" />
+
+	<shortcut 
+		name="Buddi" 
+		programGroup="no" 
+		desktop="yes"
+		applications="no" 
+		startMenu="yes" 
+		startup="no"
+		target="$INSTALL_PATH\Buddi.exe"
+		iconFile="$INSTALL_PATH\Buddi.ico" 
+		workingDirectory="" 
+		commandLine=""
+		type="Application" 
+		encoding="UTF-8"
+		description="Personal Budget Software">
+	</shortcut>
+
+</shortcuts>

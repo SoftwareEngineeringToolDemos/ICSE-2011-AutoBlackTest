@@ -1,0 +1,25 @@
+#!/bin/sh
+if [ "$1" = remove ]; then
+    for X in buddi Buddi.jar; do 
+        dpkg-divert --package buddi --rename --remove /usr/bin/$X
+    done
+
+    dpkg-divert --package buddi --rename --remove /usr/share/applications/buddi.desktop
+
+    for X in 16 22 24 32 36 48 64 72 96 128 192; do 
+        dpkg-divert --package buddi --rename --remove /usr/share/icons/hicolor/${X}x${X}/apps/buddi.png
+    done 
+    dpkg-divert --package buddi --rename --remove /usr/share/pixmaps/buddi.png
+    
+    dpkg-divert --package buddi --rename --remove /usr/share/doc/buddi/README
+
+    dpkg-divert --package buddi --rename --remove /usr/share/mime/packages/buddi.xml
+
+    # Remove Buddi from the defaults list.  If someone knows of a better
+    #  way to do this, please let me know.
+    sed "/buddi\.desktop/d" /usr/share/applications/defaults.list > /usr/share/applications/defaults.list.new
+    mv /usr/share/applications/defaults.list.new /usr/share/applications/defaults.list
+
+    update-mime-database /usr/share/mime
+    update-desktop-database /usr/share/applications    
+fi

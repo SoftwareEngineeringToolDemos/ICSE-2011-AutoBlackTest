@@ -1,0 +1,6 @@
+#Created by Wyatt Olson's Language Editor, included in Moss: http://moss.thecave.homeunix.org
+#Sat Nov 17 01:22:59 MST 2007
+INTERVAL_FORTNIGHT=Two Weeks
+CHEQUING=Checking
+LOCALE_COUNTRY_CODE=US
+DEFAULT_TRANSLATION_CELL_RENDERER_WITH_CHEQUES=Check Number Transaction Renderer

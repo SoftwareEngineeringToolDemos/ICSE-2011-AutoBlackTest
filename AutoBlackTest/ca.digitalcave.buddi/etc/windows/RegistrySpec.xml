@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- The file which defines registry keys to write at install time.  Currently just adds associations for Buddi file types. -->
+<registry>
+	<pack name="Base">
+		<value root="HKCR" keypath=".buddi3" name="" string="BuddiData"/>
+		<value root="HKCR" keypath="BuddiData" name="" string="Buddi Data File"/>
+		<value root="HKCR" keypath="BuddiData\DefaultIcon" name="" string="$INSTALL_PATH\BuddiData.ico"/>
+		<value root="HKCR" keypath="BuddiData\shell\open\command" name="" string='"$INSTALL_PATH\Buddi.exe" --windows-installer "%1"'/>
+
+		<value root="HKCR" keypath=".buddi3plugin" name="" string="BuddiPlugin"/>
+		<value root="HKCR" keypath="BuddiPlugin" name="" string="Buddi Plugin"/>
+		<value root="HKCR" keypath="BuddiPlugin\DefaultIcon" name="" string="$INSTALL_PATH\BuddiPlugin.ico"/>
+		<value root="HKCR" keypath="BuddiPlugin\shell\open\command" name="" string='"$INSTALL_PATH\Buddi.exe" --windows-installer "%1"'/>
+		
+		<value root="HKCR" keypath=".lang" name="" string="BuddiLang"/>
+		<value root="HKCR" keypath="BuddiLang" name="" string="Buddi Translation"/>
+		<value root="HKCR" keypath="BuddiLang\DefaultIcon" name="" string="$INSTALL_PATH\BuddiLang.ico"/>
+		<value root="HKCR" keypath="BuddiLang\shell\open\command" name="" string='"$INSTALL_PATH\Buddi.exe" --windows-installer "%1"'/>
+	</pack>
+</registry>

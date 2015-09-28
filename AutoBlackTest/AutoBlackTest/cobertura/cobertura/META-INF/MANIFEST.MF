@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 1.5.0_12-b04 (Sun Microsystems Inc.)
+Specification-Title: A code coverage analysis tool.
+Specification-Vendor: Cobertura
+Specification-Version: 1.9.4.1
+Implementation-Title: A code coverage analysis tool.
+Implementation-Vendor: Cobertura
+Implementation-Vendor-Id: net.sourceforge.cobertura
+Implementation-Version: 1.9.4.1
+

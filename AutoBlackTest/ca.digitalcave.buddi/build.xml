@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<project name="Buddi" default="all" basedir=".">
+
+	<property name="FULL_NAME" value="Buddi" 
+		description="The full project name.  This can include any character which is valid on the filesystem."/>
+	<property name="SAFE_NAME" value="Buddi" 
+		description="The safe project name.  This must only include alphabetic characters, numbers, period, dash, and underscore."/>
+	<property name="UNIX_NAME" value="buddi" 
+		description="The unix project name.  This must only include lower case characters, numbers, period, dash, and underscore."/>
+	<property name="DESCRIPTION" value="Buddi (Personal Budget Software)" 
+		description="The project description.  This is used on the Start menu in Windows, among other places."/>
+	<property name="MAIN_CLASS" value="org.homeunix.thecave.buddi.Buddi" 
+		description="The package and class name of the .class file which contains the main method."/>
+	<property name="COPYRIGHT_HOLDER" value="Wyatt Olson" 
+		description="The copyright holder."/>
+	<property name="COPYRIGHT" value="Copyright ${COPYRIGHT_HOLDER}" 
+		description="The copyright message"/>
+	<property name="SVN_ROOT" value="https://buddi.svn.sourceforge.net/svnroot/buddi" 
+		description="The path to the head of the SVN repository.  The folders trunk, tags, and branches must be immediately below this location."/>
+	
+	<property name="ROOT" value="."/>
+	<property name="BIN" value="${ROOT}/bin"/>
+	<property name="BUILD" value="${ROOT}/build"/>
+	<property name="DOCS" value="${ROOT}/docs"/>
+	<property name="ETC" value="${ROOT}/etc"/>
+	<property name="IMG" value="${ROOT}/img"/>
+	<property name="LIB" value="${ROOT}/lib"/>
+	<property name="SRC" value="${ROOT}/src"/>
+
+	<property file="${ROOT}/version.txt"/>
+	<property file="${ETC}/ant.properties"/>
+
+	<target name="all" depends="windows,osx,unix,slackware,debian,redhat,source,generic" description="Builds packages for all available platforms."/>
+
+	<target name="windows" depends="jar" description="Builds .exe for Windows, using Launch4J">
+		<taskdef name="izpack" classname="com.izforge.izpack.ant.IzPackTask" classpath="${IZPACK_PATH}/lib/standalone-compiler.jar" />
+
+		<copy todir="${BUILD}/izpack_temp">
+			<fileset dir="${ETC}/windows">
+				<include name="*.xml"/>
+				<include name="izpack.xml"/>
+			</fileset>
+			<fileset dir="${ETC}/windows/janel">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="${IMG}/windows">
+				<exclude name="${UNIX_NAME}.ico"/>
+				<include name="*.ico"/>
+			</fileset>
+			<fileset dir="${IMG}">
+				<include name="BuddiAboutLogo.png"/>
+			</fileset>
+			<fileset dir="${ROOT}/docs">
+				<include name="*.txt"/>
+				<include name="*.rtf"/>
+				<include name="Licenses/*"/>
+			</fileset>
+			<fileset dir="${BUILD}">
+				<include name="Buddi.jar"/>
+			</fileset>
+		</copy>
+		
+		<move file="${BUILD}/izpack_temp/janel.exe" tofile="${BUILD}/izpack_temp/Buddi.exe"/>
+		
+		<zip destfile="${BUILD}/Buddi-${VERSION}.zip">
+			<fileset dir="${BUILD}/izpack_temp">
+				<include name="Buddi.exe"/>
+				<include name="Buddi.jar"/>
+				<include name="Buddi.ico"/>
+				<include name="Buddi.lap"/>
+				<include name="msvcr71.dll"/>
+				<include name="Changelog.txt"/>
+				<include name="License.rtf"/>
+				<include name="Readme.rtf"/>
+				<include name="Licenses/**"/>
+			</fileset>
+		</zip>
+		
+		<mkdir dir="${BUILD}/windows-installer_temp"/>
+		
+		<izpack 
+			input="${BUILD}/izpack_temp/izpack.xml" 
+			output="${BUILD}/windows-installer_temp/Setup.jar" 
+			baseDir="${BUILD}/izpack_temp">
+		</izpack>
+		
+		<copy todir="${BUILD}/windows-installer_temp">
+			<fileset dir="${ETC}/windows/janel">
+				<include name="Setup.lap"/>
+				<include name="janel.exe"/>
+				<include name="msvcr71.dll"/>
+			</fileset>
+		</copy>
+		
+		<move file="${BUILD}/windows-installer_temp/janel.exe" tofile="${BUILD}/windows-installer_temp/Setup.exe"/>
+		
+		<zip destfile="${BUILD}/Buddi-${VERSION}-Installer.zip">
+			<fileset dir="${BUILD}/windows-installer_temp">
+				<include name="**/*"/>
+			</fileset>
+		</zip>
+		
+		<delete dir="${BUILD}/izpack_temp"/>
+		<delete dir="${BUILD}/windows-installer_temp"/>
+	</target>
+
+	<target name="osx" depends="jar" description="Builds an OSX package, using JarBundler.  If on a Mac, will also wrap this in a .dmg; otherwise, will wrap in .zip">
+		<taskdef name="jarbundler" classpath="${JARBUNDLER_JAR}" classname="net.sourceforge.jarbundler.JarBundler"/>
+
+		<mkdir dir="${BUILD}/${FULL_NAME}"/>
+		<jarbundler dir="${BUILD}/${FULL_NAME}" verbose="true" showPlist="false"
+	        name="${FULL_NAME}"
+	        shortname="${FULL_NAME}"
+	        signature="????"
+	        stubfile="${ETC}/osx/JavaApplicationStub"
+	        mainclass="${MAIN_CLASS}"
+	        icon="${IMG}/osx/${FULL_NAME}.icns"
+	        jvmversion="1.5+"
+	        version="${VERSION}"
+	        infostring="${FULL_NAME}, ${PROJECT_COPYRIGHT}"
+	        bundleid="${MAIN_CLASS}"
+			vmoptions="-Xmx512m">
+
+			<jarfileset file="${BUILD}/${FULL_NAME}.jar" />
+			<jarfileset dir="${LIB}">
+				<include name="*quaqua*"/>
+			</jarfileset>
+
+			<!-- Associate document types with this application.  
+			     Unfortunately, I can't figure out a way to 
+			     abstract this functionality into a configuration
+			     file or the properties at the top of the build
+			     script - if someone knows how to do this, so that
+			     I can use a single build script for multiple 
+			     applications and only change the properties, 
+			     please let me know!
+			-->
+			<documenttype name="Buddi Data"
+				extensions="buddi3"
+				iconFile="${IMG}/osx/BuddiData.icns"
+				role="Editor"/>
+				                
+			<documenttype name="Buddi Plugin"
+				extensions="buddi3plugin" 
+				iconFile="${IMG}/osx/BuddiPlugin.icns"
+				role="Editor"/>
+			
+			<documenttype name="Buddi Translation"
+				extensions="lang" 
+				iconFile="${IMG}/osx/BuddiLanguage.icns"
+				role="Editor"/>
+
+		</jarbundler>
+
+		<copy todir="${BUILD}/${FULL_NAME}">
+			<fileset dir="${DOCS}">
+				<include name="*.txt"/>
+				<include name="*.rtf"/>
+				<include name="Licenses/*"/>
+			</fileset>
+		</copy>
+				
+		<condition property="OS_IS_MAC">
+			<os name="Mac OS X"/>
+		</condition>
+
+		<ant target="osx_zip"/>
+		<ant target="osx_dmg"/>
+
+		<delete dir="${BUILD}/${FULL_NAME}"/>
+
+	</target>
+	
+	<target name="osx_dmg" if="OS_IS_MAC">
+		<exec executable="/usr/bin/hdiutil" os="Mac OS X">
+			<arg line="create -format UDZO -srcfolder '${BUILD}/${FULL_NAME}' -o '${BUILD}/${SAFE_NAME}-${VERSION}.dmg'"/>
+		</exec>
+	</target>
+
+	<target name="osx_zip" unless="OS_IS_MAC">
+		<zip destfile="${BUILD}/${SAFE_NAME}-${VERSION}-OSX.zip">
+			<fileset dir="${BUILD}/${FULL_NAME}"/>
+		</zip>
+	</target>
+	
+	<target name="slackware" depends="jar" description="Creates a Slackware package, with a command line capable launcher.">		
+		<mkdir dir="${BUILD}/usr/bin"/>
+		<mkdir dir="${BUILD}/usr/doc"/>
+		<mkdir dir="${BUILD}/install"/>
+		
+		<copy todir="${BUILD}/usr/bin">
+			<fileset dir="${ETC}/unix/usr/bin"/>
+			<filterset begintoken="[[" endtoken="]]">
+				<filter token="platform" value="slackware"/>
+			</filterset>
+		</copy>
+		
+		<copy todir="${BUILD}/usr/doc">
+			<fileset dir="${DOCS}">
+				<include name="*.txt"/>
+				<include name="*.rtf"/>
+				<include name="Licenses/*"/>
+			</fileset>
+		</copy>
+		
+		<copy todir="${BUILD}/install">
+			<fileset dir="${ETC}/unix/linux/slackware/install" />
+		</copy>
+		
+		<copy todir="${BUILD}/usr/bin">
+			<fileset file="${BUILD}/${FULL_NAME}.jar"/>
+		</copy>
+		
+		<tar destfile="${BUILD}/${FULL_NAME}.tar">
+			<tarfileset dir="${BUILD}">
+				<include name="usr/**"/>
+				<include name="install/**"/>
+			</tarfileset>
+		</tar>
+		
+		<gzip zipfile="${BUILD}/${SAFE_NAME}-${VERSION}-Slackware.tgz" src="${BUILD}/${FULL_NAME}.tar"/>
+		
+		<delete dir="${BUILD}/usr"/>
+		<delete dir="${BUILD}/install"/>
+		<delete file="${BUILD}/${FULL_NAME}.tar"/>
+	</target>
+
+	<target name="unix" depends="jar" description="Creates a generic Unix package, with a command line capable launcher.">
+		<copy todir="${BUILD}">
+			<fileset dir="${ETC}/unix/usr/bin"/>
+			<filterset begintoken="[[" endtoken="]]">
+				<filter token="platform" value="unix"/>
+			</filterset>
+		</copy>
+		
+		<tar destfile="${BUILD}/${FULL_NAME}.tar" >
+			<tarfileset dir="${BUILD}" mode="755" prefix="${FULL_NAME}">
+				<include name="${UNIX_NAME}"/>
+			</tarfileset>
+			<tarfileset dir="${BUILD}" prefix="${FULL_NAME}">
+				<include name="${FULL_NAME}.jar"/>
+			</tarfileset>
+
+			<!-- Copy documentation -->
+			<tarfileset dir="${ETC}/unix" prefix="${FULL_NAME}">
+				<include name="Readme.unix"/>
+			</tarfileset>
+			<tarfileset dir="${DOCS}" prefix="${FULL_NAME}">
+				<include name="*.txt"/>
+				<include name="*.rtf"/>
+				<include name="Licenses/*"/>
+			</tarfileset>
+		</tar>
+		<gzip zipfile="${BUILD}/${SAFE_NAME}-${VERSION}.tgz" src="${BUILD}/${FULL_NAME}.tar"/>
+		<delete>
+			<fileset dir="${BUILD}">
+				<include name="${FULL_NAME}.tar"/>
+				<include name="${UNIX_NAME}"/>
+			</fileset>
+		</delete>
+	</target>
+
+
+	<!-- The Debian task. -->
+	<target name="debian" depends="jar" description="Creates a Debian .deb file, with entries for FreeDesktop desktops.">
+		<taskdef name="deb" classpath="${JDEB_JAR}" classname="org.vafer.jdeb.ant.DebAntTask"/>
+
+		<mkdir dir="${BUILD}/deb/data"/>
+		
+		<copy todir="${BUILD}/deb/data/usr">
+			<fileset dir="${ETC}/unix/usr"/>
+			<filterset begintoken="[[" endtoken="]]">
+				<filter token="platform" value="debian"/>
+			</filterset>
+		</copy>
+		
+		<copy todir="${BUILD}/deb/data/usr">
+			<fileset dir="${IMG}/unix/usr"/>
+		</copy>
+		
+		<mkdir dir="${BUILD}/deb/data/usr/share/doc"/>
+		<copy todir="${BUILD}/deb/data/usr/share/doc">
+			<fileset dir="${DOCS}">
+				<include name="*.txt"/>
+				<include name="*.rtf"/>
+				<include name="Licenses/*"/>
+			</fileset>
+		</copy>	
+
+		<copy file="${BUILD}/${FULL_NAME}.jar" todir="${BUILD}/deb/data/usr/bin"/>
+
+		<mkdir dir="${BUILD}/deb/control"/>
+		<copy todir="${BUILD}/deb/control">
+			<fileset dir="${ETC}/unix/linux/debian/control"/>
+			<filterset begintoken="[[" endtoken="]]">
+				<filter token="version" value="${VERSION}"/>
+			</filterset>
+		</copy>
+
+		<deb destfile="${BUILD}/${SAFE_NAME}-${VERSION}.deb" control="${BUILD}/deb/control">
+			<data src="${BUILD}/deb/data">
+				<exclude name="**/.svn"/>
+			</data>
+		</deb>
+
+		<delete includeemptydirs="true" dir="${BUILD}/deb"/>
+	</target>
+
+	<target name="redhat" depends="jar">
+
+	</target>
+
+	<target name="source" depends="clean" description="Exports the source and tars the bundle.  Requires the SVN Ant path to be set up in the ant.properties file.">
+		<path id="SVNANT_CLASSPATH">
+			<fileset dir="${SVNANT_PATH}">
+				<include name="**/*.jar"/>
+			</fileset>
+		</path>
+		<taskdef name="svn" classpathref="SVNANT_CLASSPATH" classname="org.tigris.subversion.svnant.SvnTask"/>
+
+		<svn>
+			<export srcPath="${ROOT}" destPath="${BUILD}/src"/>
+		</svn>
+
+		<tar destfile="${BUILD}/${FULL_NAME}.src.tar">
+			<tarfileset dir="${BUILD}/src">
+				<include name="**/*"/>
+			</tarfileset>
+		</tar>
+		<gzip zipfile="${BUILD}/${SAFE_NAME}-${VERSION}.src.tgz" src="${BUILD}/${FULL_NAME}.src.tar"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${BUILD}">
+				<include name="${FULL_NAME}.src.tar"/>
+			</fileset>
+			<fileset dir="${BUILD}/src"/>
+		</delete>
+	</target>
+
+	<target name="generic" depends="jar" description="Renames the fat jar to the release name (including version number)">
+		<move file="${BUILD}/${FULL_NAME}.jar" tofile="${BUILD}/${FULL_NAME}-${VERSION}.jar"/>
+	</target>
+
+	<target name="release" depends="all" description="Builds all targets architectures, and tags the project version in SVN">
+		<path id="SVNANT_CLASSPATH">
+			<fileset dir="${SVNANT_PATH}">
+				<include name="**/*.jar"/>
+			</fileset>
+		</path>
+		<taskdef name="svn" classpathref="SVNANT_CLASSPATH" classname="org.tigris.subversion.svnant.SvnTask"/>
+		
+		<svn username="${SVN_USER}" password="${SVN_PASSWORD}">
+			<copy srcUrl="${SVN_ROOT}/trunk" destUrl="${SVN_ROOT}/tags/${VERSION}" message="Tagging release ${VERSION}"/>
+		</svn>				
+	</target>
+	
+	<target name="jar" depends="clean,compile">		
+		<mkdir dir="${BUILD}/tmp"/>
+		<unzip dest="${BUILD}/tmp">
+			<fileset dir="${LIB}">
+				<include name="*.jar"/>
+				<exclude name="quaqua*"/>			
+			</fileset>
+		</unzip>
+		
+		<jar destfile="${BUILD}/${FULL_NAME}.jar">
+			<manifest>
+				<attribute name="Main-Class" value="${MAIN_CLASS}"/>
+			</manifest>
+			<fileset dir="${BUILD}/classes" includes="**/*"/>
+			<fileset dir="${BUILD}/tmp" includes="**/*"/>
+			<fileset dir="${ETC}">
+				<include name="Languages/*"/>
+				<include name="css/*"/>
+			</fileset>
+			<fileset dir="${ROOT}">
+				<include name="version.txt"/>
+				<include name="img/*.jpg"/>				
+				<include name="img/*.png"/>
+				<include name="img/*.gif"/>
+				<include name="docs/**.rtf"/>
+				<include name="docs/**.txt"/>
+				<include name="docs/Licenses/**"/>
+			</fileset>
+		</jar>
+		
+		<delete includeemptydirs="true">
+			<fileset dir="${BUILD}/tmp"/>
+			<fileset dir="${BUILD}/classes"/>
+		</delete>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="${BUILD}/classes"/>
+		<javac target="1.5" source="1.5" srcdir="${SRC}" destdir="${BUILD}/classes" debug="true" debuglevel="lines,vars,source">
+			<classpath>
+				<fileset dir="${LIB}">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="clean" description="Removes all files from bin, and build directories">
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="${BUILD}">
+				<include name="**/*"/>
+			</fileset>
+		</delete>
+	</target>
+</project>

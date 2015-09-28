@@ -1,0 +1,15 @@
+/*
+ * Created on Aug 18, 2007 by wyatt
+ */
+package org.homeunix.thecave.buddi.i18n.keys;
+
+public enum ScheduleFrequencyFirstWeekOfMonth {
+	SCHEDULE_DAY_FIRST_SUNDAY,
+	SCHEDULE_DAY_FIRST_MONDAY,
+	SCHEDULE_DAY_FIRST_TUESDAY,
+	SCHEDULE_DAY_FIRST_WEDNESDAY,
+	SCHEDULE_DAY_FIRST_THURSDAY,
+    SCHEDULE_DAY_FIRST_FRIDAY,
+    SCHEDULE_DAY_FIRST_SATURDAY,
+
+}

@@ -1,0 +1,2 @@
+call AppScript\userAdditionalReset.bat
+java -Xbootclasspath/p:C:\workspaceDist\AutoBlackTest\AppScript\lib\abtJFileChooser.jar; -cp %CLASSPATH%;C:\workspaceDist\AutoBlackTest;C:\workspaceDist\ca.digitalcave.buddi\lib\*;C:\workspaceDist\ca.digitalcave.buddi\bin;C:\workspaceDist\AutoBlackTest\lib\jmockit\jmockit.jar; -javaagent:C:\workspaceDist\AutoBlackTest\\lib\jmockit\jmockit.jar org.homeunix.thecave.buddi.Buddi 1> "C:\workspaceDist\AutoBlackTest\stdOut_Err\output.log" 2> "C:\workspaceDist\AutoBlackTest\stdOut_Err\error.log"

@@ -1,0 +1,23 @@
+#!/bin/sh
+if [ "$1" = install ]; then
+
+    echo "Installing files..."
+    for X in buddi Buddi.jar; do
+        dpkg-divert --package buddi --rename --add /usr/bin/$X
+    done
+
+    dpkg-divert --package buddi --rename --add /usr/share/applications/buddi.desktop
+    for X in 16 22 24 32 36 48 64 72 96 128 192; do 
+        dpkg-divert --package buddi --rename --add /usr/share/icons/hicolor/${X}x${X}/apps/buddi.png
+    done
+    dpkg-divert --package buddi --rename --add /usr/share/pixmaps/buddi.png
+    dpkg-divert --package buddi --rename --add /usr/share/doc/buddi/README
+    dpkg-divert --package buddi --rename --add /usr/share/mime/packages/buddi.xml
+
+    echo "Setting default MIME types for Buddi files..."
+    # Update the default applications for Buddi files
+    echo "application/x-buddi=buddi.desktop" >> /usr/share/applications/defaults.list
+    sort /usr/share/applications/defaults.list > /usr/share/applications/defaults.list.new
+    mv /usr/share/applications/defaults.list.new /usr/share/applications/defaults.list
+
+fi

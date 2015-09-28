@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - Order.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../coverage.css'/>
+  <script type='text/javascript' src='../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>orderMngmntWebapp\src\orderMngr\domain\order\Order.java</caption>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/*
+ * Copyright (c) 2006-2011 Rogério Liesenfeld
+ * This file is subject to the terms of the MIT license (see LICENSE.txt).
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package orderMngr.domain.order;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.*;
+import javax.persistence.*;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * A business order to buy products.
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>@Entity</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Order</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>{</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   @Id</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   private int <span class='instance covered' title='Reads: 33 Writes: 16'>number</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   private String <span class='instance covered' title='Reads: 10 Writes: 16'>customerId</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   @OneToMany</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   private Collection&lt;OrderItem> <span class='instance covered' title='Reads: 8 Writes: 16'>items</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l24s0'>   public Order() {}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   public Order(int number, String customerId)</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>16</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l27s0'>   {</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 28, 56</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 66, 78</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 29</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 52</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#removeOrder: 67</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 33</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 107, 172</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 196, 201</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 68</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#removeOrder: 89</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_ExpectationsAPI_Test#submitOrder: 31</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_MockupsAPI_Test#submitOrder: 44</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>16</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l28s0'>      this.number = number;</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 28, 56</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 66, 78</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 29</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 52</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#removeOrder: 67</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 33</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 107, 172</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 196, 201</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 68</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#removeOrder: 89</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_ExpectationsAPI_Test#submitOrder: 31</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_MockupsAPI_Test#submitOrder: 44</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td class='count'>16</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l29s0'>      this.customerId = customerId;</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 28, 56</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 66, 78</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 29</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 52</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#removeOrder: 67</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 33</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 107, 172</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 196, 201</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 68</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#removeOrder: 89</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_ExpectationsAPI_Test#submitOrder: 31</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_MockupsAPI_Test#submitOrder: 44</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td class='count'>16</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l30s0'>      items = new LinkedList&lt;OrderItem>();</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 28, 56</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 66, 78</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 29</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 52</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#removeOrder: 67</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 33</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 107, 172</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 196, 201</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 68</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#removeOrder: 89</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_ExpectationsAPI_Test#submitOrder: 31</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_MockupsAPI_Test#submitOrder: 44</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td class='count'>16</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l31s0'>   }</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 28, 56</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 66, 78</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 29</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 52</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#removeOrder: 67</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 33</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 107, 172</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 196, 201</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 68</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#removeOrder: 89</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_ExpectationsAPI_Test#submitOrder: 31</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_MockupsAPI_Test#submitOrder: 44</li>
+        </ol>
+      </td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>33</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   public int getNumber()</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>28</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l35s0'>      return number;</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 33x2, 56x2, 59</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 68, 78, 80</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 34x2, 46</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 54, 61</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#removeOrder: 69, 76</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 62x3</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 172x2, 174</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 201, 203</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 83</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#removeOrder: 101x2</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_ExpectationsAPI_Test#submitOrder: 41</li>
+          <li>orderMngr.web.submitOrder.OrderEntryPage_MockupsAPI_Test#submitOrder: 44</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>38</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   public String getCustomerId()</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td class='count'>10</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l40s0'>      return customerId;</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 33</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 34, 46</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#updateOrder: 54, 61</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 62x2</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 172</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 201</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#updateOrder: 83</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   public Collection&lt;OrderItem> getItems()</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l45s0'>      return items;</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 30, 56</li>
+          <li>orderMngr.domain.order.OrderRepository_ExpectationsAPI_Test#createOrder: 32, 46</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#createOrder: 35, 62</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 109, 172</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>48</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   @Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   public boolean equals(Object o)</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>5</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#bf4000' onclick='hidePath()'>Path coverage: 1/4</span>
+        <span class='uncovered' onclick="showPath(this,'l51s0 l51s1')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l51s0 l52s0 l52s2')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l51s0 l52s0 l52s1 l52s2')">C: 0</span>
+        <span class='covered' onclick="showPath(this,'l51s0 l52s0 l52s1 l54s0 l56s0 l56s1 l56s3')">D: 5</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td class='count'>5</td>
+      <td><pre class='prettyprint jmp'>      <span id='l51s0' title='Executions: 5' class='covered cp' onclick='showHide(this,0)'>if (this == o)</span> <span id='l51s1' title='Executions: 0' class='uncovered'>return true;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>5</td>
+      <td><pre class='prettyprint jmp'>      <span id='l52s0' title='Executions: 5' class='covered cp' onclick='showHide(this,0)'>if (o == null</span> || <span id='l52s1' title='Executions: 5' class='covered cp' onclick='showHide(this,1)'>getClass() != o.getClass()) return false;</span></pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 59</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 78, 80</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 174</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 203</li>
+        </ol>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 59</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 78, 80</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 174</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 203</li>
+        </ol>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 59</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 78, 80</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 174</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 203</li>
+        </ol>
+      </td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>54</td><td class='count'>5</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l54s0'>      Order order = (Order) o;</pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 59</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 78, 80</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 174</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 203</li>
+        </ol>
+      </td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>5</td>
+      <td><pre class='prettyprint jmp'>      <span id='l56s0' title='Executions: 5' class='covered cp' onclick='showHide(this,0)'>return number == order.getNumber();</span></pre>
+        <ol style='display: none'>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByNumber: 59</li>
+          <li>orderMngr.domain.order.OrderFindersTest#findOrderByCustomer: 78, 80</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByNumber: 174</li>
+          <li>orderMngr.domain.order.OrderRepository_MockupsAPI_Test#findOrderByCustomer: 203</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   @Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   public int hashCode()</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l62s0'>      return number;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>   }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>64</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

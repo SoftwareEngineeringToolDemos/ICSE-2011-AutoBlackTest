@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+        <mime-type type="application/x-buddidata">
+                <sub-class-of type="application/octet-stream"/>
+                <comment>Buddi Data File</comment>
+                <glob pattern="*.buddi3"/>
+        </mime-type>
+        <mime-type type="application/x-buddiplugin">
+                <sub-class-of type="application/zip"/>
+                <comment>Buddi Plugin</comment>
+                <glob pattern="*.buddi3plugin"/>
+        </mime-type>
+        <mime-type type="text/x-buddilanguage">
+                <sub-class-of type="text/plain"/>
+                <comment>Buddi Translation File</comment>
+                <glob pattern="*.buddi3lang"/>
+        </mime-type>        
+</mime-info>

@@ -1,0 +1,4 @@
+Episodes, States:
+#-1,0
+Error
+Error: org.homeunix.thecave.buddi.Buddi mainINFO: Buddi version: 0.0.0.0Error: org.homeunix.thecave.buddi.Buddi mainINFO: Buddi command line arguments: []Error: org.homeunix.thecave.buddi.Buddi mainINFO: Operating System: Windows 10, amd64Error: org.homeunix.thecave.buddi.Buddi mainINFO: Java VM version: 1.8.0_60Error: org.homeunix.thecave.buddi.Buddi mainINFO: Working directory: C:\Users\saurav\AppData\Roaming\Buddi\
