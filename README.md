@@ -5,7 +5,7 @@ This repository _is not_ the original repository for this tool. Here are some li
 * [The Official Project Page, including source code](http://www.lta.disco.unimib.it/tools/AutoBlackTest/AutoBlackTest/Home.html)
 * [A Video of the Tool](https://www.youtube.com/watch?v=svZS7TXJrf4)
 
-In this repository, for Linux Kernel Benchmark for Feature location you will find:
+In this repository, you will find:
 * :white_check_mark: [Source code](http://www.lta.disco.unimib.it/tools/AutoBlackTest/AutoBlackTest/Download_files/workspaceDist.zip) (available)
 * :x: The original tool (no binary version available - RFT Application)
 
