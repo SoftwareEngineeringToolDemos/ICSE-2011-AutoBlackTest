@@ -16,7 +16,3 @@ The tool AutoBlackTest requires [IBM Rational Functional Tester](http://www-03.i
 
 This repository was constructed by [Saurav Shekhar](https://github.com/srvxid) under the supervision of [Emerson Murphy-Hill](https://github.com/CaptainEmerson). Thanks to [Riganelli Oliviero](http://www.disco.unimib.it/go/Home/Italiano/PAGINE-PERSONALI-ASSEGNISTI/Riganelli-Oliviero) for his help in establishing this repository. 
 
-## Attribution
-
-Author of tool: Dr. Riganelli Oliviero
-Personal website: http://www.disco.unimib.it/go/Home/Italiano/PAGINE-PERSONALI-ASSEGNISTI/Riganelli-Oliviero
