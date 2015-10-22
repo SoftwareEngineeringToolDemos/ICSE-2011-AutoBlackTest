@@ -19,5 +19,4 @@ This repository was constructed by [Saurav Shekhar](https://github.com/srvxid) u
 ## Attribution
 
 Author of tool: Dr. Riganelli Oliviero
- 
 Personal website: http://www.disco.unimib.it/go/Home/Italiano/PAGINE-PERSONALI-ASSEGNISTI/Riganelli-Oliviero
