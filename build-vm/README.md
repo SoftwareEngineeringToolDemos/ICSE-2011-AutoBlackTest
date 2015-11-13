@@ -1,4 +1,4 @@
-## VAGRANT Instructions
+## Vagrant Instructions
 
 ### Configuration details :
   * VM OS : _Windows 7_
@@ -8,7 +8,7 @@
   * System Memory : _2048_
   *	Name : Perquimans-sshekha3-AutoBlackTest
 
-### Instructions
+### Instructions : 
 
 1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html).
 2. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
@@ -17,7 +17,7 @@
   * This would install the necessary softwares for the tool. (JRE 1.7 is installed using Chocolatey)
 
 
-### Acknowledgements
+### Acknowledgements : 
 
 Used base box from [Atlas Hashicorp - ModernIE](https://atlas.hashicorp.com/modernIE/boxes/w7-ie10).
 Used [Chocolatey Non-administrative install powershell script](https://github.com/chocolatey/choco/wiki/Installation#command-line) to install Chocolatey.
