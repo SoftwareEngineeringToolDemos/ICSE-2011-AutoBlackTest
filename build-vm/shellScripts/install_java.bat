@@ -1,0 +1,1 @@
+%ALLUSERSPROFILE%\chocolatey\bin\choco install javaruntime -version 7.0.71 -y
