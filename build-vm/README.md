@@ -24,5 +24,5 @@
  * Used Chocolatey to install Java. 
 
 ### Notes
-  * The software pre-requisite is Java 1.7 and it could be verified by going to command prompt and entering 'java -version'
+  * The software pre-requisite is Java 1.7 and it could be verified by going to command prompt and entering `java -version`
   *	The Base box VM license expires on [01-21-2016](https://atlas.hashicorp.com/modernIE/boxes/w7-ie10).
