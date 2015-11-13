@@ -12,7 +12,10 @@
 
 1. Download and install [Vagrant](https://www.vagrantup.com/downloads.html).
 2. Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
-3. Clone the project repository for accessing files: ```git clone https://github.com/SoftwareEngineeringToolDemos/ICSE-2011-AutoBlackTest.git```
+3. Clone the project repository for accessing files: 
+
+ ``git clone https://github.com/SoftwareEngineeringToolDemos/ICSE-2011-AutoBlackTest.git``
+
 4. Once project is cloned, you can go to build-vm folder and start running Vagrant: `vagrant up` ( --provision flag is needed to redo provisions)
   * This would install the necessary softwares for the tool. (JRE 1.7 is installed using Chocolatey)
 
