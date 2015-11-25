@@ -1,0 +1,2 @@
+cd c:\workspaceDist\AutoBlackTest\cobertura
+cobertura-report.bat —format html —datafile C:\workspaceDist\AutoBlackTest\outputs\experiment_20151008_1439\coverage\ser\totalCobertura.ser --destination C:\workspaceDist\AutoBlackTest\CoberturaOutput

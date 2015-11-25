@@ -16,6 +16,8 @@ import net.sourceforge.cobertura.coveragedata.ProjectData;
 
 import org.apache.log4j.Logger;
 
+import com.rational.test.ft.script.RationalTestScript;
+
 import results.analysis.TestCasesFromCoverage;
 
 import abt.conf.EnvironmentalSetter;
@@ -219,8 +221,8 @@ public class ExperimentFileManager {
 		
 		ExperimentFileManager.copyFile(coberturaDirectory + File.separator + "cobertura.ser", 
 				coverageDirectory + File.separator + "ser" + File.separator + "cobertura" + episode + ".ser");
-	
-		//generate test case
+		//+ExperimentDirectories.sharedDate+
+		
 		try {
 			FileWriter testCase = new FileWriter(testCasesDirectory + File.separator + "TestCase_" + episode + ".tc");
 			BufferedWriter out = new BufferedWriter(testCase);
@@ -267,6 +269,16 @@ public class ExperimentFileManager {
 			String fileName = autBackupWorkFile.getAbsolutePath().substring(autBackupWorkFile.getAbsolutePath().lastIndexOf("\\")+1);
 			ExperimentFileManager.copyFile(autBackupWorkFile.getAbsolutePath(), System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments" + File.separator + fileName);
 		}
+		String args[] = {"--format","html","--datafile", "C:\\workspaceDist\\AutoBlackTest\\outputs\\experiment_"+ExperimentDirectories.sharedDate+"\\coverage\\ser\\totalCobertura.ser","--destination", "C:\\workspaceDist\\AutoBlackTest\\CoberturaOutput-"+ExperimentDirectories.sharedDate};
+		try {
+			net.sourceforge.cobertura.reporting.Main.main(args);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		RationalTestScript.shellExecute("C:\\workspaceDist\\AutoBlackTest\\CoberturaOutput-"+ExperimentDirectories.sharedDate+"\\index.html");
+		
 	}
 
 	

@@ -59,7 +59,7 @@ public class AUTMain extends UnicastRemoteObject implements RemoteCoberturaInter
 			System.exit(1);
 		} 
 		
-		Mockit.setUpMocks(new MockSystem());
+		//Mockit.setUpMocks(new MockSystem());
 
 		try {
 			Class<?> autClass = Class.forName(args[0]);

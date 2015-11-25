@@ -23,7 +23,7 @@ public class ExperimentDirectories {
 	private String stdOutExperimentDirectory;		// stdOut log files directory
 	private String stdErrExperimentDirectory;		// stdErr log files directory
 	private String testCasesDirectory;
-
+	public static String sharedDate;
 	private Logger logger = Logger.getLogger(ExperimentDirectories.class);	// class logger
 	
 	public static ExperimentDirectories getInstance() {
@@ -36,6 +36,7 @@ public class ExperimentDirectories {
 	
 	private ExperimentDirectories() {
 		this.experimentDirectory = baseDirectory  + File.separator + "experiment_" + DateUtility.now();
+		sharedDate = DateUtility.now();
 		this.coverageExperimentDirectory = experimentDirectory + File.separator + "coverage";
 		this.stateExperimentDirectory = experimentDirectory + File.separator + "state";
 		this.stdOutExperimentDirectory = experimentDirectory + File.separator + "stdOut";

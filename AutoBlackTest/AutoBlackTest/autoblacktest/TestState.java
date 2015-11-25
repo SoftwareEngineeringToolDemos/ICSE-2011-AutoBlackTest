@@ -23,6 +23,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.Vector;
 import java.util.Map.Entry;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
 
@@ -36,6 +37,7 @@ import org.hswgt.teachingbox.core.rl.env.State;
 import resources.TesterHelper;
 import rmi.RemoteCoberturaInterface;
 
+import abt.conf.EnvironmentalSetter;
 import abt.conf.ExperimentDirectories;
 import autoblacktest.actions.parameters.text.DataContextFinder;
 import autoblacktest.state.PropertyManager;
@@ -455,6 +457,7 @@ public class TestState extends TesterHelper {
 				father = children[0];
 			}
 		} else {
+			
 			long delayTime = System.currentTimeMillis();
 			do {
 				logger.warn("cant find a top level testobject, try to unregister all");
@@ -663,6 +666,9 @@ public class TestState extends TesterHelper {
 		}
 
 		logger.debug("Closing application done");
+		//RationalTestScript.shellExecute(System.getProperty("user.dir") + "\\AppScript\\test.bat");
+		
+		
 	}
 	
 	public void killApplication() {
