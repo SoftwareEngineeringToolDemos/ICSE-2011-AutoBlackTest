@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AgentControllerConfiguration>
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="JAVA_PATH" position="replace" value="C:\Program Files\IBM\SDP\jdk\jre\bin\java.exe"/>
+		<Variable name="RASERVER_HOME" position="replace" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.tptp.platform.ac.win_ia32_4.4.104.v200910140007\agent_controller"/>
+		<Variable name="TPTP_AC_HOME" position="replace" value="%RASERVER_HOME%"/>
+		<Variable name="TPTP_AC_CONFIG_HOME" position="replace" value="C:\workspace3\.metadata\.plugins\org.eclipse.tptp.platform.iac.administrator\config"/>
+		<Variable name="PLUGINS_HOME" position="replace" value="C:\Program Files\IBM\IBMIMShared\plugins"/>
+		<Variable name="PATH" position="prepend" value="%RASERVER_HOME%\bin"/>
+		<Variable name="SYS_TEMP_DIR" position="replace" value="%TEMP%"/>
+		<Variable name="LOCAL_AGENT_TEMP_DIR" position="replace" value="%SYS_TEMP_DIR%"/>
+		<Variable name="CLASSPATH_ORG_APACHE_COMMONS_LOGGING" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.apache.commons.logging_1.0.4.v20080605-1930.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_CORE_COMMANDS" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.core.commands_3.4.0.I20080509-2000.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_CORE_RUNTIME" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.core.runtime_3.4.0.v20080512.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_EQUINOX_COMMON" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.equinox.common_3.4.0.v20080421-2006.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_OSGI" position="append" value="C:\Program Files\IBM\SDP\..\IBMIMShared\plugins\org.eclipse.osgi_3.4.4.R34x_v20091203.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_EMF_COMMON" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.emf.common_2.4.0.v200902171115.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_EMF_ECORE" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.emf.ecore_2.4.2.v200902171115.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_EMF_ECORE_XMI" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.emf.ecore.xmi_2.4.1.v200902171115.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_JFACE" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.jface_3.4.3.M20100415-2030.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_SWT" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.swt.win32.win32.x86_3.4.1.v3452b.jar;C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.swt.win32.win32.x86_3.4.1.v3453g.jar;C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.swt_3.4.2.v3452b.jar;C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.swt_3.4.2.v3453g.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_TPTP_PLATFORM_MODELS" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.tptp.platform.models_4.5.101.v201002041550\tptp-models.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_TPTP_PLATFORM_MODELS_HIERARCHY" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.tptp.platform.models.hierarchy_4.5.101.v200910021227\tptp-models-hierarchy.jar"/>
+		<Variable name="CLASSPATH_ORG_JUNIT" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.junit_3.8.2.v20080602-1318\junit.jar"/>
+		<Variable name="CLASSPATH_COM_IBM_ICU" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.icu_3.8.1.v20100112.jar"/>
+		<Variable name="CLASSPATH_ORG_APACHE_JAKARTA_COMMONS_LOGGING" position="append" value="%CLASSPATH_ORG_APACHE_COMMONS_LOGGING%"/>
+		<Variable name="CLASSPATH" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.core.runtime_3.4.0.v20080512.jar"/>
+		<Variable name="CLASSPATH" position="append" value="C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.equinox.common_3.4.0.v20080421-2006.jar"/>
+		<Variable name="CLASSPATH" position="append" value="C:\Program Files\IBM\SDP\..\IBMIMShared\plugins\org.eclipse.osgi_3.4.4.R34x_v20091203.jar"/>
+	</AgentControllerEnvironment>
+	<ApplicationAliases>
+		<Application configuration="default" executable="java.exe" location="%SYS_TEMP_DIR%" path="%JAVA_PATH%">
+			<Variable name="CLASSPATH" position="append" value="%CLASSPATH_ORG_ECLIPSE_EQUINOX_COMMON%"/>
+			<Variable name="PATH" position="prepend" value="%RASERVER_HOME%\bin"/>
+		</Application>
+	</ApplicationAliases>
+	<Plugin path="C:\workspace3\.metadata\.plugins"/>
+	<Agent path="%TPTP_AC_HOME%\agents"/>
+	<Jvm location="C:\Program Files\IBM\SDP\jdk\jre\bin\classic\jvm.dll"/>
+	<Logging directory="%TPTP_AC_CONFIG_HOME%" format="CBE" level="INFORMATION"/>
+	<ProcessController>%TPTP_AC_HOME%\bin\tptpProcessController.exe</ProcessController>
+	<Connection name="Dev">
+		<TransportLayer loadlib="socketTL" type="TPTP_SOCKET">
+			<Configuration>
+				<Port>10006</Port>
+				<SecurityEnabled>false</SecurityEnabled>
+			</Configuration>
+			<CommandExtractor>tptpCmdExtr</CommandExtractor>
+		</TransportLayer>
+		<TransportLayer loadlib="namedPipeTL" type="TPTP_LOG">
+			<Configuration>
+				<PipeName>acmasterlog</PipeName>
+			</Configuration>
+			<CommandExtractor>tptpCmdExtr</CommandExtractor>
+		</TransportLayer>
+		<TransportLayer loadlib="namedPipeTL" type="TPTP_NAMEDPIPE">
+			<Configuration>
+				<PipeName>acmaster</PipeName>
+			</Configuration>
+			<CommandExtractor>tptpCmdExtr</CommandExtractor>
+		</TransportLayer>
+		<TransportLayer loadlib="sharedMemTL" type="TPTP_SHAREDMEM">
+			<Configuration>
+				<MemName>acbuffer</MemName>
+			</Configuration>
+			<CommandExtractor>tptpCmdExtr</CommandExtractor>
+		</TransportLayer>
+		<TransportLayer loadlib="tptpCCTL" type="TPTP_CCTL">
+			<Configuration>
+				<Port>10002</Port>
+				<SecuredPort>10003</SecuredPort>
+				<FilePort>10005</FilePort>
+				<IsDataMultiplexed>false</IsDataMultiplexed>
+				<ProcessPolling>true</ProcessPolling>
+				<Version>4.4.1</Version>
+				<SecurityEnabled>false</SecurityEnabled>
+				<Hosts configuration="default">
+					<Allow type="LOCAL"/>
+				</Hosts>
+			</Configuration>
+			<CommandExtractor>tptpCmdExtr</CommandExtractor>
+		</TransportLayer>
+		<TransportLayer loadlib="tptpACTL" type="TPTP_ACTL">
+			<Configuration/>
+			<CommandExtractor>tptpCmdExtr</CommandExtractor>
+		</TransportLayer>
+	</Connection>
+	<PeerConnectionTransport>TPTP_CCTL</PeerConnectionTransport>
+</AgentControllerConfiguration>

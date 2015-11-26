@@ -1,0 +1,66 @@
+package teachingbox.actions.parameters;
+
+import java.util.HashMap;
+import java.util.Vector;
+
+import org.apache.log4j.Logger;
+
+import com.rational.test.ft.WindowActivateFailedException;
+import com.rational.test.ft.object.interfaces.GuiSubitemTestObject;
+import com.rational.test.ft.object.interfaces.TestObject;
+import com.rational.test.ft.vp.ITestDataTree;
+import com.rational.test.ft.vp.ITestDataTreeNode;
+import com.rational.test.ft.vp.ITestDataTreeNodes;
+
+public class TreeParameters implements ParametrizedAction {
+
+	private Logger logger = Logger.getLogger(TreeParameters.class);
+
+	public String[] getValues(TestObject to) {
+
+		ITestDataTree cdTree = (ITestDataTree) to.getTestData("tree");
+		ITestDataTreeNodes cdTreeNodes = cdTree.getTreeNodes();
+		ITestDataTreeNode[] cdTreeNode = cdTreeNodes.getRootNodes();
+
+		Vector<String> path = new Vector<String>();
+		//GuiSubitemTestObject to = new GuiSubitemTestObject(testObject);
+		//int position = cdTreeNode.length / 2;
+		System.out.println(cdTreeNode.length);
+		for (int x =0; x<cdTreeNode.length; x++) {
+			if (cdTreeNode.length > 0) {
+				path.add(cdTreeNode[x].getNode().toString());
+				System.out.println(path.lastElement());
+//				try {
+//					to.click(atPath(path));
+//				} catch (WindowActivateFailedException e) {
+//					throw new WindowActivateFailedException();
+//				}
+//				sleep(1);
+//				cdTree=(ITestDataTree)testObject.getTestData("tree");
+
+				//MIO
+				ITestDataTreeNode[] cdChildTreeNode = cdTreeNode;
+				while (cdChildTreeNode[x].getChildCount() != 0) {
+					//cdTree=(ITestDataTree)testObject.getTestData("tree");
+					cdChildTreeNode = cdChildTreeNode[x].getChildren();
+					//position = cdTreeNode.length / 2;
+					//path = path + "->" + cdTreeNode[position].getNode().toString();
+					for(int y = 0; y<cdChildTreeNode.length; y++) {
+						path.add(path.get(x) + "->" + cdChildTreeNode[y].getNode().toString());
+						System.out.println(path.lastElement());
+					}
+//					try {
+//						to.click(atPath(path));
+//					} catch (WindowActivateFailedException e) {
+//						throw new WindowActivateFailedException();
+//					}
+//					sleep(2);
+//					testObject.updateTestData("tree", cdTree);
+					//cdTreeNodes = cdTree.getTreeNodes();
+					//cdTreeNode = cdTreeNodes.getRootNodes();
+				}
+			}
+		}
+		return null;
+	}
+}

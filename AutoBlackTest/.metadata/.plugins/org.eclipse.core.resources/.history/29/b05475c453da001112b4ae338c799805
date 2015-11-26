@@ -1,0 +1,10 @@
+package java.lang;
+
+public class System {
+	
+	public static long currentTimeMillis() {
+		long date = 1343658531312;
+		return date;
+	}
+
+}

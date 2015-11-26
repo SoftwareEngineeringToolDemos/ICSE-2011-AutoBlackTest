@@ -1,0 +1,755 @@
+package autoblacktest;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Vector;
+import java.util.Map.Entry;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.JOptionPane;
+
+import jdbm.PrimaryHashMap;
+import jdbm.RecordManager;
+import jdbm.RecordManagerFactory;
+
+import org.apache.log4j.Logger;
+import org.hswgt.teachingbox.core.rl.env.State;
+
+import resources.TesterHelper;
+import rmi.RemoteCoberturaInterface;
+
+import abt.conf.ExperimentDirectories;
+import autoblacktest.actions.parameters.text.DataContextFinder;
+import autoblacktest.state.PropertyManager;
+import autoblacktest.util.ExperimentFileManager;
+
+import com.google.common.io.Files;
+import com.rational.test.ft.object.interfaces.ProcessTestObject;
+import com.rational.test.ft.object.interfaces.RootTestObject;
+import com.rational.test.ft.object.interfaces.TestObject;
+import com.rational.test.ft.object.interfaces.TopLevelTestObject;
+import com.rational.test.ft.script.Property;
+import com.rational.test.ft.script.RationalTestScript;
+
+/**
+ * This class contains the environment's state.
+ * 
+ * @author oliviero
+ */
+public class TestState extends TesterHelper {
+
+	private String application;
+	/**
+	 * class instance
+	 */
+	private static TestState instance = null;
+
+	/**
+	 * class logger
+	 */
+	private Logger logger = Logger.getLogger(this.getClass());
+
+	/**
+	 * root
+	 */
+	private RootTestObject root;
+
+	/**
+	 * root test object of the current state
+	 */
+	private TestObject lastExecutedTestObject;
+	
+	/**
+	 * Current State
+	 */
+	private State currentState = new State(1);
+	
+	/**
+	 * Current TestObject[]
+	 */
+	private Vector<TestObject> currentTos = null;
+	
+	/**
+	 * Old State
+	 */
+	private State oldState = new State(1);
+	
+	/**
+	 * output from std_err
+	 */
+	private String message_err;
+	
+	/**
+	 * to check std_err
+	 */
+	private boolean check_std_err;
+	
+	/**
+	 * to store all errors (KEY = std_err, VALUE =episode+error_state) in the experiments
+	 */
+	private HashMap<String, String> errorMap = new HashMap<String, String>();
+
+	public void setMessage_err(String std_err) {
+		message_err = std_err;	
+	}
+
+	public void setCheck_std_err(boolean check) {
+		check_std_err = check;
+	}
+	
+	public TestObject[] getCurrentTos() {
+		return currentTos.toArray(new TestObject[currentTos.size()]);
+	}
+
+	public void setCurrentTos(TestObject[] currentTos) {
+		this.currentTos = new Vector<TestObject>(Arrays.asList(currentTos));
+	}
+
+	public State getOldState() {
+		return oldState;
+	}
+
+	public TestObject[] getOldTos() {
+		return oldTos;
+	}
+
+	/**
+	 * Old TestObject[]
+	 */
+	private TestObject[] oldTos = null;
+
+	/**
+	 * Map between state properties and state number
+	 */
+	private HashMap<String, Integer> propertiesSet = new HashMap<String, Integer>();
+	
+	/**
+	 * Properties vector of the Current State
+	 */
+	private String[] propertiesNewState;
+	
+	/**
+	 * Properties vector of the Old State
+	 */
+	private String[] propertiesOldState;
+	
+	public void setPropertiesOldState(String[] propertiesOldState) {
+		this.propertiesOldState = propertiesOldState;
+	}
+
+	public String[] getPropertiesOldState() {
+		return propertiesOldState;
+	}
+
+	public void setPropertiesNewState(String[] propertiesNewState) {
+		this.propertiesNewState = propertiesNewState;
+	}
+
+	public String[] getPropertiesNewState() {
+		return propertiesNewState;
+	}
+	
+	
+	/**
+	 * Map between state pairs (state pair = KEY. After each action we trace the oldState and the newState) and reward values (reward = VALUE)
+	 */
+	private HashMap<String, Double> rewardSet = new HashMap<String, Double>();
+
+	/**
+	 * Map between the state number and a Map between TestObject and his data context
+	 * @param Integer = state number
+	 * @param String[0] = to data context 
+	 * @param String[1] = to data text
+	 * @param String[2] = to data toolTipText
+	 */
+	//Serializzazione DataMap
+	//
+	private HashMap<Integer, HashMap<Integer, String[]>> mapDataContext = new HashMap<Integer,HashMap<Integer, String[]>>();
+
+	/**
+	 * terminal state
+	 */
+	private boolean term = false;
+
+	/**
+	 * number of the episode
+	 */
+	private int episodeNumber = -1;
+
+	/**
+	 * agent actions' recorder
+	 */
+
+	private String lastInvokedMethod;
+
+	private Property[] properties = new Property[3];
+	
+	
+
+	// FIXME check sul synchronized
+	public static synchronized TestState getInstance() {
+		if (instance == null)
+			instance = new TestState();
+		return instance;
+	}
+
+	private TestState() {
+		properties[0] = new Property("showing", "true");
+		properties[1] = new Property("enabled", "true");
+		properties[2] = new Property("visible", "true");
+		application = "";
+	}
+	
+	/**
+	 * 
+	 * @return mapDataContext
+	 */
+	public HashMap<Integer,String[]> getStateMapDataContext(int state){	
+		return mapDataContext.get(state);
+	}
+	
+	/**
+	 * 
+	 * @return mapDataContext for all state
+	 */
+	public HashMap<Integer, HashMap<Integer, String[]>> getMapDataContext(){	
+		return mapDataContext;
+	}
+	
+	/**
+	 * 
+	 * @return mapDataContext for all state
+	 */
+	public void setMapDataContext(HashMap<Integer, HashMap<Integer, String[]>> mapDataContext){	
+		this.mapDataContext = mapDataContext;
+	}
+	
+	public void putMapDataContext(int state, HashMap<Integer,String[]> map){	
+		mapDataContext.put(state, map);
+	}
+	
+	
+
+	/**
+	 * Metodo che ritorna i dati contestuali di to nello stato corrente
+	 * @param to
+	 * @return
+	 */
+	public String[] getDataContextFromCurrentState(TestObject to){		
+			if(mapDataContext.get((int)currentState.get(0)).containsKey(currentTos.indexOf(to))) {
+				String[] dataContext = mapDataContext.get((int)currentState.get(0)).get(currentTos.indexOf(to));
+				if(dataContext[0].equals("") && dataContext[1].equals("") && dataContext[2].equals(""))
+					return null;
+				else
+					return dataContext;
+			}
+			return null;		
+	}
+	
+	/**
+	 * Metodo che ritorna i dati contestuali di to nello stato vecchio
+	 * viene invocato nella data context analisi per ricercare informazioni già presenti nella DataMap
+	 * senza ripetere la LocalAnalysis
+	 * @param to
+	 * @return
+	 */
+	public String[] getDataContextFromOldState(TestObject to){
+		
+		if(oldTos.length == 0)
+			return null;
+		if(mapDataContext.size()>0) {
+			Vector<TestObject> oldTos = new Vector<TestObject>(Arrays.asList(this.oldTos));
+			if(mapDataContext.get((int)oldState.get(0)).containsKey(oldTos.indexOf(to))) {
+				return mapDataContext.get((int)oldState.get(0)).get(oldTos.indexOf(to));
+			}
+			return null;
+		}else {
+			return null;
+		}
+	}
+	
+	/**
+	 * Metodo per l'aggiunta della mappa delle informazioni contestuali per lo
+	 * stato state
+	 * @param state
+	 * @param dataMap
+	 */
+	public void addStateDataMapContext(int state,HashMap<TestObject,String[]> dataMap){
+		HashMap<Integer,String[]> temp = new HashMap<Integer,String[]> ();
+		Set<TestObject> keySet=dataMap.keySet();
+		for(TestObject to : keySet){
+			temp.put(currentTos.indexOf(to), dataMap.get(to));
+		}
+			mapDataContext.put(state,temp);
+	}
+	
+	public HashMap<String, Double> getRewardSet() {
+		return rewardSet;
+	}
+	
+	public void setRewardSet(HashMap<String, Double> rewardSet) {
+		this.rewardSet = rewardSet;
+	}
+	
+	public Double getRewardValue(String key) {
+		
+		return rewardSet.get(key);
+	}
+
+	public void addRewardValue(String key, double reward) {
+		rewardSet.put(key, reward);
+	}
+	
+	/**
+	 * @return root test object
+	 */
+	public RootTestObject getRoot() {
+		if (root == null) {
+			root = getRootTestObject();
+			if (root == null) {
+				logger.error("ROOT IS NULL");
+			}
+		}
+		return root;
+	}
+
+	/**
+	 * set rootTestObject
+	 * 
+	 * @param rootTestObject
+	 */
+	public void setRoot(RootTestObject root) {
+		this.root = root;
+	}
+
+	/**
+	 * 
+	 * @return the application under test name
+	 */
+	public String getApplication() {
+		return application;
+	}
+
+	/**
+	 * set the application under test name
+	 * 
+	 * @param application
+	 */
+	public void setApplication(String application) {
+		this.application = application;
+	}
+
+	/**
+	 * @return current root test object
+	 */
+	public TestObject getLastExecutedTestObject() {
+		return lastExecutedTestObject;
+	}
+
+	/**
+	 * set current root test object
+	 * 
+	 * @param testObject
+	 */
+	public void setLastExecutedTestObject(TestObject testObject) {
+		this.lastExecutedTestObject = testObject;
+	}
+
+	/**
+	 * @return current state
+	 */
+	public State getCurrentState() {
+		return currentState;
+	}
+
+	/**
+	 * 
+	 * @return PropertiesSet
+	 */
+	public HashMap<String, Integer> getPropertiesSet() {
+		return propertiesSet;
+	}
+
+	/**
+	 * set propertiesSet
+	 * 
+	 * @param propertiesSet
+	 */
+	public void setPropertiesSet(HashMap<String, Integer> propertiesSet) {
+		this.propertiesSet = propertiesSet;
+	}
+
+	/**
+	 * 
+	 * @return if the state is terminal state
+	 */
+	public boolean isTerm() {
+		return term;
+	}
+
+	/**
+	 * set the terminal state flag
+	 * 
+	 * @param term
+	 */
+	public void setTerm(boolean term) {
+		this.term = term;
+	}
+
+	/**
+	 * @return the episode number
+	 */
+	public int getEpisodeNumber() {
+		return episodeNumber;
+	}
+
+	/**
+	 * increment the episode number
+	 */
+	public void incrementEpisodeNumber() {
+		episodeNumber++;
+	}
+
+	public String getLastInvokedMethod() {
+		return lastInvokedMethod;
+	}
+
+	public void setLastInvokedMethod(String lastInvokedMethod) {
+		this.lastInvokedMethod = lastInvokedMethod;
+	}
+
+	public TestObject getActiveWindowsTestObject() {
+		TestObject father = null;
+
+		TestObject children[] = root.find(atChild(properties));
+		if (children.length > 0) {
+			// FIXME: better way?
+			if (children[0].getProperty("name") != null && children[0].getProperty("name").toString().contains("overrideRedirect")) {
+				for (TestObject testObject : children) {
+					if (!(testObject.getProperty("name") != null && testObject
+							.getProperty("name").toString().contains(
+							"overrideRedirect"))) {
+						father = testObject;
+						break;
+					}
+				}
+			} else {
+				father = children[0];
+			}
+		} else {
+			
+			long delayTime = System.currentTimeMillis();
+			do {
+				logger.warn("cant find a top level testobject, try to unregister all");
+				TesterHelper.unregisterAll();
+				try {
+				    TimeUnit.SECONDS.sleep(5);
+				} catch (InterruptedException e) {
+				    //Handle exception
+				}
+			}while((root.find(atChild(properties)).length == 0) && (System.currentTimeMillis() - delayTime) < 10000 );
+
+			if (root.find(atChild(properties)).length > 0) {
+				father = root.find(atChild(properties))[0];
+			} else {
+				logger.fatal("getActiveWindowsTestObject found a null value");
+			}
+		}
+		
+		return father;
+
+	}
+	/**
+	 * @return the children of the topleveltestobject
+	 */
+	public TestObject[] getStateTestObjects() {
+
+		TestObject[] windows;
+		if (root.find(atChild(properties)).length > 0) {
+			windows = root.find(atChild(properties));
+		} else {
+
+			long delayTime = System.currentTimeMillis();
+			do {
+				logger.warn("cant find a top level testobject, try to unregister all");
+				TesterHelper.unregisterAll();
+			}while((root.find(atChild(properties)).length == 0) && (System.currentTimeMillis() - delayTime) < 10000 );
+
+			if (root.find(atChild(properties)).length > 0) {
+				windows = root.find(atChild(properties));
+			} else {
+				logger.fatal("method getStateTestObjects found a null value");
+				return null;
+			}
+		}
+		TestObject[] finalTos = null;
+		for (int i=0; i<windows.length;i++){
+			TestObject[] tos = windows[i].find(atDescendant(properties));
+			if (tos.length>0)
+				finalTos = concat(finalTos, tos);
+			
+		}
+		if (finalTos == null) {
+			logger.fatal("method getStateTestObjects foud no testObjects");
+		}
+		
+		return finalTos;
+	}
+	
+	TestObject[] concat(TestObject[] a, TestObject[] b) {
+		if (a==null) return b;
+		TestObject[] c= new TestObject[a.length+b.length];
+		   System.arraycopy(a, 0, c, 0, a.length);
+		   System.arraycopy(b, 0, c, a.length, b.length);
+		   return c;
+	}
+
+	/**
+	 * @param to
+	 * @return children of to, if to has no children return the children of the
+	 *         all active window
+	 */
+	public TestObject[] getActionableTestObjects(TestObject to) {
+		TestObject[] tos = null;
+		if (to==null) return null;
+
+		tos = to.find(atDescendant(properties));
+
+		if (!(tos.length > 0 && !(tos[0].getClass().getName().equals("com.rational.test.ft.object.interfaces.TopLevelTestObject")))) {
+			TestObject activeWindowsTestObject = getActiveWindowsTestObject();
+			if(activeWindowsTestObject != null)
+				tos = activeWindowsTestObject.find(atDescendant(properties));
+		}
+		return tos; 
+	}
+
+	/**
+	 * @param tos
+	 * @return the managed properties
+	 */
+	public String[] getStateProperties(TestObject[] tos) {
+
+		String[] strs = new String[tos.length];
+		for (int i = 0; i < tos.length; i++) {
+			strs[i] = PropertyManager.manageProperties(tos[i]);
+		}
+		return strs;
+	}
+
+	/**
+	 * set the current state
+	 * 
+	 * @param tosNew
+	 */
+	public void setCurrentState(TestObject[] tosNew) {
+		
+		logger.info("Updating actual state");
+
+		//Oliviero: Se tos è null bisogna passare all'episodio successivo (l'applicazione non risponde)
+		if (tosNew==null){
+			currentState.assign((-1));
+			this.setTerm(true);
+			logger.fatal("There are not test objects at episode " + (this.getEpisodeNumber()));
+			
+			return;	
+		}
+
+		// tmp is the current state
+		int tmp = -1;
+
+		setPropertiesOldState(getPropertiesNewState());
+		setPropertiesNewState(getStateProperties(tosNew));
+		
+		if(propertiesSet.containsKey(Arrays.toString(getPropertiesNewState())))
+			tmp = propertiesSet.get(Arrays.toString(getPropertiesNewState()));
+
+		
+		oldState.assign((double) currentState.get(0));
+		oldTos = getCurrentTos();
+		
+		setCurrentTos(tosNew);
+		if (tmp != -1) {
+			currentState.assign((double) tmp);
+			logger.info("OLD STATE");
+		} else {
+
+			currentState.assign((double) propertiesSet.size());
+			logger.info("NEW STATE");
+			propertiesSet.put(Arrays.toString(getPropertiesNewState()), (int) currentState.get(0));
+			
+			//context analysis spostata nel getReward
+			// richiamo l'analisi per la ricerca dei dati contestuali
+			// prima dell'updateAction per poterli eventualmente sfruttare
+			//DataContextFinder.getInstance().doContextAnalysis(DataContextFinder.LOCAL_ANALYSIS);
+			
+			if(oldTos.length == 0) {
+				logger.warn("POTENTIAL NON DETERMISM: THIS STATE MAY BE CAUSED BY A NON DETERMINISTIC ACTION");
+				// copntext analysis invocata solo se all'inizio dell'episodio mi trovo in un nuovo stato
+				// richiamo l'analisi per la ricerca dei dati contestuali
+				// prima dell'updateAction per poterli eventualmente sfruttare
+				DataContextFinder.getInstance().doContextAnalysis(DataContextFinder.LOCAL_ANALYSIS);
+			}
+		}
+		
+		//Oliviero: Salvataggio stati con eccezzione 
+		String currentStdErr =getStdErr(); 
+		if (check_std_err && !message_err.equals(currentStdErr)){
+			double ts = getCurrentState().get(0);
+			saveErrorSate(ts, currentStdErr);
+		}
+		check_std_err=false;
+			
+		logger.info("Updating actual state done");
+	}
+
+	/**
+	 * start the application under test, string "application" must be set
+	 */
+	public void startApplication() {
+		TesterHelper.unregisterAll();
+		System.gc();
+		
+		RationalTestScript.shellExecute(System.getProperty("user.dir") + "\\AppScript\\AUT.bat");
+		
+		long delayTime = System.currentTimeMillis();
+		do {
+			root = getRootTestObject();
+		}while(root == null && (System.currentTimeMillis() - delayTime) < 30000 );
+	
+		lastExecutedTestObject = root;
+	}
+
+	/**
+	 * Close all application's windows and then kill its process.
+	 */
+	public void closeApplication() {
+		logger.debug("Closing application");
+
+		if (root == null) {
+			logger.error("Closing application failed due to: root is null");
+			return;
+		}
+
+		if (root.find(atChild("showing", "true", "enabled", "true")).length>0) {
+			
+			logger.info("Getting cobertura RMI binding");
+
+			try {
+				Registry registry = LocateRegistry.getRegistry(2007);
+				RemoteCoberturaInterface rmo = (RemoteCoberturaInterface) registry.lookup("RemoteCobertura");
+				rmo.getCoverage();
+
+			} catch (RemoteException e) {
+				logger.error(e.getMessage(), e.getCause());
+				return;
+			} catch (NotBoundException e) {
+				logger.error(e.getMessage(), e.getCause());
+				return;
+			}
+			
+			root.find(atChild("showing", "true", "enabled", "true"))[0].getProcess().kill();
+		}
+
+		logger.debug("Closing application done");
+	}
+	
+	public void killApplication() {
+		logger.debug("Closing application");
+
+		if (root == null) {
+			logger.error("Closing application failed due to: root is null");
+			return;
+		}
+
+		if (root.find(atChild("showing", "true", "enabled", "true")).length>0) {
+			root.find(atChild("showing", "true", "enabled", "true"))[0].getProcess().kill();
+		}
+
+		logger.debug("Closing application done");
+	}
+
+	public String getStdErr() {
+		// TODO Auto-generated method stub
+		String stdErr="";
+		BufferedReader br;
+		try {
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(new File(System.getProperty("user.dir")+"\\stdOut_Err\\error.log"))));
+			System.out.println(br.toString());
+			String strLine;
+			
+            while ((strLine = br.readLine()) != null){
+            	stdErr=stdErr.concat(strLine);
+            }
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return stdErr;
+	}
+	
+	private void saveErrorSate(double ts, String currentStdErr) {
+
+		FileOutputStream file;
+		String s = currentStdErr.substring(message_err.length(), currentStdErr.length());
+		String t=s;
+		s=t.replaceAll("[A-Z][a-z][a-z](\\s)?(?i)([1-3][0-9]|[1-9])\\, ([0-9][0-9][0-9][0-9])(\\s)?(?i)(1[012]|[1-9]):[0-5][0-9]:[0-5][0-9](\\s)?(?i)(AM|PM)", "Error:");
+		if (errorMap.containsKey(s)){
+			String p = errorMap.get(s);
+			Double state=ts;
+			String a = "#"+(getEpisodeNumber())+"," +state.intValue();
+			if (!(p.contains(a))){
+				p=p.concat(a);
+				errorMap.put(s, p);
+			}
+		}else{
+			Double state=ts;
+			String a = "#"+(getEpisodeNumber())+"," +state.intValue();
+			errorMap.put(s, a);
+		}
+		try {
+			
+			String path = ExperimentDirectories.getInstance().getExperimentDirectory();
+			file = new FileOutputStream(path+"\\errorStates.txt");
+			PrintStream output = new PrintStream(file);
+			Set<Entry<String, String>> set = errorMap.entrySet();
+			Iterator<Entry<String, String>> iterator = set.iterator();
+			while (iterator.hasNext()) {
+				String k =iterator.next().getKey();
+				String v = errorMap.get(k);
+				output.println("Episodes, States:");
+				output.println(v);
+				output.println("Error");
+				output.println(k);
+				
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}			
+	}
+	
+}

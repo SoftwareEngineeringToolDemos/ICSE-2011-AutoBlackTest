@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="25" version="2.0">
+<workbenchAdvisor/>
+<window height="679" maximized="true" width="1024" x="70" y="239">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.ibm.test.terminal.actionSet" itemType="typeToolBarContribution" x="37" y="22"/>
+<coolItem id="com.rational.test.ft.wswplugin.TestActionSet.AMain" itemType="typeToolBarContribution" x="157" y="22"/>
+<coolItem id="com.rational.test.ft.wswplugin.TestActionSet.BRecord" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="com.rational.test.ft.wswplugin.TestActionSet.CLaunch" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="com.rational.test.ft.wswplugin.TestActionSet.DConfigure" itemType="typeToolBarContribution" x="109" y="22"/>
+<coolItem id="com.rational.test.ft.wswplugin.TestActionSet.EScript" itemType="typeToolBarContribution" x="109" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="161" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.team.ui.actionSet" itemType="typeToolBarContribution" x="50" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="185" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.hyades.test.ui.editor.TestSuiteEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.pde.ui.buildEditor" itemType="typePlaceholder" x="39" y="22"/>
+<coolItem id="org.eclipse.ant.ui.internal.editor.AntEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.rational.test.ft.ScriptEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.ibm.rational.test.ft.visualscript.ui.editors.SimplifiedScriptEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="com.ibm.cic.licensing.common.ui.controlContribution" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1331740646078" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestExperimentByTime.java" partName="TestExperimentByTime.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/TestExperimentByTime.java" title="TestExperimentByTime.java" tooltip="AutoBlackTest/autoblacktest/TestExperimentByTime.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/TestExperimentByTime.java"/>
+<editorState selectionLength="0" selectionOffset="2957"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RandomStrategyFromEpisodes.java" partName="RandomStrategyFromEpisodes.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/RandomStrategyFromEpisodes.java" title="RandomStrategyFromEpisodes.java" tooltip="AutoBlackTest/autoblacktest/RandomStrategyFromEpisodes.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/RandomStrategyFromEpisodes.java"/>
+<editorState selectionLength="0" selectionOffset="984"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestExecutionTraces.java" partName="TestExecutionTraces.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/TestExecutionTraces.java" title="TestExecutionTraces.java" tooltip="AutoBlackTest/autoblacktest/TestExecutionTraces.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/TestExecutionTraces.java"/>
+<editorState selectionLength="0" selectionOffset="662"/>
+</editor>
+<editor id="com.rational.test.ft.ScriptEditor" name="TestSuiteExecutor.java" partName="TestSuiteExecutor.java" path="C:/workspaceDist/AutoBlackTest/abtRun/TestSuiteExecutor.java" title="TestSuiteExecutor.java" tooltip="AutoBlackTest/abtRun/TestSuiteExecutor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/abtRun/TestSuiteExecutor.java"/>
+<editorState selectionLength="0" selectionOffset="1751"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestState.java" partName="TestState.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/TestState.java" title="TestState.java" tooltip="AutoBlackTest/autoblacktest/TestState.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/TestState.java"/>
+<editorState selectionLength="29" selectionOffset="8227"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TreeUI.java" partName="TreeUI.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/actions/simple/TreeUI.java" title="TreeUI.java" tooltip="AutoBlackTest/autoblacktest/actions/simple/TreeUI.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/actions/simple/TreeUI.java"/>
+<editorState selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PropertyManager.java" partName="PropertyManager.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/state/PropertyManager.java" title="PropertyManager.java" tooltip="AutoBlackTest/autoblacktest/state/PropertyManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/state/PropertyManager.java"/>
+<editorState selectionLength="5" selectionOffset="6976"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestExperimentByEpisode.java" partName="TestExperimentByEpisode.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/TestExperimentByEpisode.java" title="TestExperimentByEpisode.java" tooltip="AutoBlackTest/autoblacktest/TestExperimentByEpisode.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/TestExperimentByEpisode.java"/>
+<editorState selectionLength="55" selectionOffset="2407"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AUTMain.java" partName="AUTMain.java" path="C:/workspaceDist/AutoBlackTest/rmi/AUTMain.java" title="AUTMain.java" tooltip="AutoBlackTest/rmi/AUTMain.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/rmi/AUTMain.java"/>
+<editorState selectionLength="0" selectionOffset="736"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataContextFinder.java" partName="DataContextFinder.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java" title="DataContextFinder.java" tooltip="AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java"/>
+<editorState selectionLength="34" selectionOffset="14615"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestEnvironment.java" partName="TestEnvironment.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/TestEnvironment.java" title="TestEnvironment.java" tooltip="AutoBlackTest/autoblacktest/TestEnvironment.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/TestEnvironment.java"/>
+<editorState selectionLength="0" selectionOffset="11283"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="HashMap.class" partName="HashMap.class" title="HashMap.class" tooltip="java.util.HashMap" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=AutoBlackTest/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util(HashMap.class"/>
+<editorState selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionFilter.java" partName="ActionFilter.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/actions/ActionFilter.java" title="ActionFilter.java" tooltip="AutoBlackTest/autoblacktest/actions/ActionFilter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/actions/ActionFilter.java"/>
+<editorState selectionLength="0" selectionOffset="2915"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ExperimentFileManager.java" partName="ExperimentFileManager.java" path="C:/workspaceDist/AutoBlackTest/autoblacktest/util/ExperimentFileManager.java" title="ExperimentFileManager.java" tooltip="AutoBlackTest/autoblacktest/util/ExperimentFileManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/autoblacktest/util/ExperimentFileManager.java"/>
+<editorState selectionLength="0" selectionOffset="8717"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentalSetter.java" partName="EnvironmentalSetter.java" path="C:/workspaceDist/AutoBlackTest/abt/conf/EnvironmentalSetter.java" title="EnvironmentalSetter.java" tooltip="AutoBlackTest/abt/conf/EnvironmentalSetter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/abt/conf/EnvironmentalSetter.java"/>
+<editorState selectionLength="27" selectionOffset="5520"/>
+</editor>
+<editor focus="true" id="com.rational.test.ft.ScriptEditor" name="Tester.java" partName="Tester.java" path="C:/workspaceDist/AutoBlackTest/abtRun/Tester.java" title="Tester.java" tooltip="AutoBlackTest/abtRun/Tester.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/AutoBlackTest/abtRun/Tester.java"/>
+<editorState selectionLength="0" selectionOffset="2967"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.callhierarchy.view" partName="Call Hierarchy">
+<viewState search_scope_type="1"/>
+</view>
+<view id="com.rational.test.ft.wswplugin.dp.DatapoolPart" partName="Test Datapool">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState>
+<isTrackingSelection value="false"/>
+</viewState>
+</view>
+<view id="com.rational.test.ft.wswplugin.assets.ScriptAssetPart" partName="Script Explorer">
+<viewState DPT="1" SST="1" TOT="1" VPT="1" horizontalPosition="0" verticalPosition="0"/>
+</view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="254" org.eclipse.ui.ide.locationField="54" org.eclipse.ui.ide.markerType="79" org.eclipse.ui.ide.pathField="104" org.eclipse.ui.ide.priorityField="20" org.eclipse.ui.ide.resourceField="79"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="com.rational.test.ft.wswplugin.project.TestExplorerPart" partName="Functional Test Projects">
+<viewState horizontalPosition="0" verticalPosition="0">
+<expanded>
+<element path="/AutoBlackTest"/>
+<element path="/AutoBlackTest/abtRun"/>
+</expanded>
+<selection>
+<element path="/AutoBlackTest/abtRun/Tester.java"/>
+</selection>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" isWindowWorkingSet="false" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jet.javafilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="com.ibm.rational.test.ft.visualscript.ui.views.ApplicationViewPart" partName="Application View">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="com.rational.test.ft.wswplugin.rmt.KeywordViewPart" partName="Keyword View">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (100 of 161 items)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.rational.test.ft.wswplugin.TestPerspective" id="com.rational.test.ft.wswplugin.TestPerspective" label="Functional Test"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.helpSearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="com.ibm.ccl.help.preferenceharvester.actionSet1"/>
+<alwaysOnActionSet id="com.ibm.help.gallery.sampleGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.01.help.gallery.cat.tutorialGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.webResourcesActionSet"/>
+<alwaysOnActionSet id="com.ibm.cic.licensing.common.ui.actionSet"/>
+<alwaysOnActionSet id="com.ibm.process.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.AMain"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.BRecord"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.CLaunch"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.DConfigure"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.EScript"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.ibm.test.terminal.actionSet"/>
+<show_view_action id="com.ibm.rational.test.ft.visualscript.ui.views.ApplicationViewPart"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="com.rational.test.ft.wswplugin.assets.ScriptAssetPart"/>
+<show_view_action id="com.rational.test.ft.wswplugin.project.TestExplorerPart"/>
+<show_view_action id="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart"/>
+<show_view_action id="com.rational.test.ft.wswplugin.cm.ShowHistoryViewPart"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="com.rational.test.ft.wswplugin.rmt.KeywordViewPart"/>
+<show_in_time id="org.eclipse.jdt.ui.PackageExplorer" time="1348652016949"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.project.NewDatastoreWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.script.RecordScriptWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.script.NewScriptWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.folder.NewFolderWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.dp.NewDatapoolWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.map.NewMapWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.superscript.NewSuperScriptWizard"/>
+<perspective_action id="com.rational.test.ft.wswplugin.TestDebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
+<view id="com.rational.test.ft.wswplugin.dp.DatapoolPart"/>
+<view id="com.rational.test.ft.wswplugin.project.TestExplorerPart"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="com.rational.test.ft.wswplugin.assets.ScriptAssetPart"/>
+<view id="com.ibm.rational.test.ft.visualscript.ui.views.ApplicationViewPart"/>
+<view id="com.rational.test.ft.wswplugin.rmt.KeywordViewPart"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="com.rational.test.ft.wswplugin.project.TestExplorerFolder">
+<folder activePageID="com.rational.test.ft.wswplugin.project.TestExplorerPart" appearance="2" expanded="2">
+<page content="com.rational.test.ft.wswplugin.project.TestExplorerPart" label="Functional Test Projects"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@44f044f0" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="com.rational.test.ft.wswplugin.project.TestExplorerFolder">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.14893617" ratioLeft="189" ratioRight="1080" relationship="2" relative="com.rational.test.ft.wswplugin.project.TestExplorerFolder"/>
+<info folder="true" part="com.rational.test.ft.wswplugin.RightFolder" ratio="0.86165273" ratioLeft="928" ratioRight="149" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.rational.test.ft.wswplugin.assets.ScriptAssetPart" appearance="2" expanded="2">
+<page content="com.rational.test.ft.wswplugin.assets.ScriptAssetPart" label="Script Explorer"/>
+<page content="com.ibm.rational.test.ft.visualscript.ui.views.ApplicationViewPart" label="Application View"/>
+<page content="com.rational.test.ft.wswplugin.rmt.KeywordViewPart" label="Keyword View"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart" label="LabelNotFound"/>
+<page content="com.rational.test.ft.wswplugin.cm.ShowHistoryViewPart" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="com.rational.test.ft.wswplugin.OutputFolder" ratio="0.7496206" ratioLeft="494" ratioRight="165" relationship="4" relative="com.rational.test.ft.wswplugin.RightFolder">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@6f066f06" ratio="0.4614379" ratioLeft="353" ratioRight="412" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.rational.test.ft.wswplugin.dp.DatapoolPart" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
+<page content="com.rational.test.ft.wswplugin.dp.DatapoolPart" label="Test Datapool"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.helpSearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="com.ibm.ccl.help.preferenceharvester.actionSet1"/>
+<alwaysOnActionSet id="com.ibm.help.gallery.sampleGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.01.help.gallery.cat.tutorialGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.webResourcesActionSet"/>
+<alwaysOnActionSet id="com.ibm.cic.licensing.common.ui.actionSet"/>
+<alwaysOnActionSet id="com.ibm.process.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.hyades.ui.perspective.TestPerspective"/>
+<perspective_action id="org.eclipse.hyades.trace.internal.ui.tracePerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.17548455" ratioLeft="335" ratioRight="1574" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.8017719" ratioLeft="724" ratioRight="179" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@542a542a" ratio="0.83679897" ratioLeft="1328" ratioRight="259" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.4992658" ratioLeft="340" ratioRight="341" relationship="4" relative="org.eclipse.ui.internal.ViewStack@542a542a">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.team.internal.ui.synchronize.TeamSynchronizingPerspective" id="org.eclipse.team.ui.TeamSynchronizingPerspective" label="Team Synchronizing"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.helpSearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="com.ibm.ccl.help.preferenceharvester.actionSet1"/>
+<alwaysOnActionSet id="com.ibm.help.gallery.sampleGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.01.help.gallery.cat.tutorialGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.webResourcesActionSet"/>
+<alwaysOnActionSet id="com.ibm.cic.licensing.common.ui.actionSet"/>
+<alwaysOnActionSet id="com.ibm.process.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.team.ui.actionSet"/>
+<show_view_action id="org.eclipse.team.sync.views.SynchronizeView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.repositories"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.project"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.tigris.subversion.subclipse.ui.svnPerspective"/>
+<view id="org.eclipse.team.ui.GenericHistoryView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="top">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.sync.views.SynchronizeView" label="LabelNotFound"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<page content="org.tigris.subversion.subclipse.ui.repository.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="top">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.4497908" ratioLeft="860" ratioRight="1052" relationship="2" relative="top"/>
+<info folder="true" part="top2" ratio="0.7995595" ratioLeft="726" ratioRight="182" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.team.ui.GenericHistoryView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ui.GenericHistoryView" label="History"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.tigris.subversion.subclipse.ui.history.HistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@720a720a" ratio="0.6993392" ratioLeft="635" ratioRight="273" relationship="4" relative="top">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.mylyn.tasks.ui.views.repositories" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.rational.test.ft.wswplugin.TestDebugPerspective" id="com.rational.test.ft.wswplugin.TestDebugPerspective" label="Functional Test Debug"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.helpSearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="com.ibm.ccl.help.preferenceharvester.actionSet1"/>
+<alwaysOnActionSet id="com.ibm.help.gallery.sampleGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.01.help.gallery.cat.tutorialGalleryActionSet"/>
+<alwaysOnActionSet id="com.ibm.rational.welcome.core.webResourcesActionSet"/>
+<alwaysOnActionSet id="com.ibm.cic.licensing.common.ui.actionSet"/>
+<alwaysOnActionSet id="com.ibm.process.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.AMain"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.BRecord"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.CLaunch"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.DConfigure"/>
+<alwaysOnActionSet id="com.rational.test.ft.wswplugin.TestActionSet.EScript"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="com.rational.test.ft.wswplugin.assets.ScriptAssetPart"/>
+<show_view_action id="com.rational.test.ft.wswplugin.project.TestExplorerPart"/>
+<show_view_action id="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart"/>
+<show_view_action id="com.rational.test.ft.wswplugin.cm.ShowHistoryViewPart"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.project.NewDatastoreWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.script.RecordScriptWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.script.NewScriptWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.folder.NewFolderWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.dp.NewDatapoolWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.map.NewMapWizard"/>
+<new_wizard_action id="com.rational.test.ft.wswplugin.superscript.NewSuperScriptWizard"/>
+<perspective_action id="com.rational.test.ft.wswplugin.TestPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<view id="com.rational.test.ft.wswplugin.project.TestExplorerPart"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="com.rational.test.ft.wswplugin.assets.ScriptAssetPart"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="com.rational.test.ft.wswplugin.project.TestExplorerFolder">
+<folder activePageID="com.rational.test.ft.wswplugin.project.TestExplorerPart" appearance="2" expanded="2">
+<page content="com.rational.test.ft.wswplugin.project.TestExplorerPart" label="Functional Test Projects"/>
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="com.rational.test.ft.wswplugin.project.TestExplorerFolder">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="com.rational.test.ft.wswplugin.OutputFolder" ratio="0.7494481" ratioLeft="679" ratioRight="227" relationship="4" relative="com.rational.test.ft.wswplugin.project.TestExplorerFolder">
+<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart" ratio="0.29896906" ratioLeft="203" ratioRight="476" relationship="4" relative="com.rational.test.ft.wswplugin.project.TestExplorerFolder"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@31053105" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart">
+<folder activePageID="com.rational.test.ft.wswplugin.assets.ScriptAssetPart" appearance="2" expanded="2">
+<page content="com.rational.test.ft.wswplugin.assets.ScriptAssetPart" label="Script Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.views.ContentOutline" ratio="0.7496513" ratioLeft="1075" ratioRight="359" relationship="2" relative="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart"/>
+<info part="com.rational.test.ft.wswplugin.cm.ShowHistoryViewPart" ratio="0.5987395" ratioLeft="285" ratioRight="191" relationship="4" relative="com.rational.test.ft.wswplugin.cm.FindCheckoutsViewPart"/>
+<info part="org.eclipse.ui.editorss" ratio="0.5987395" ratioLeft="285" ratioRight="191" relationship="4" relative="com.rational.test.ft.wswplugin.cm.ShowHistoryViewPart"/>
+<info folder="true" part="com.rational.test.ft.wswplugin.ToolsFolder" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="com.rational.test.ft.wswplugin.project.TestExplorerFolder">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rational.test.ft.ScriptEditor" path="/AutoBlackTest/abtRun/Tester.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestEnvironment.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/actions/ActionFilter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/state/PropertyManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestExecutionTraces.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestExperimentByEpisode.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestExperimentByTime.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestExperimentByTime.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/RandomStrategyFromEpisodes.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestExecutionTraces.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rational.test.ft.ScriptEditor" path="/AutoBlackTest/abtRun/TestSuiteExecutor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/actions/simple/TreeUI.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/state/PropertyManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestExperimentByEpisode.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/rmi/AUTMain.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/TestEnvironment.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=AutoBlackTest/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util(HashMap.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/actions/ActionFilter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/autoblacktest/util/ExperimentFileManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/AutoBlackTest/abt/conf/EnvironmentalSetter.java"/>
+</editors>
+<item historyLabel="ActionFilter.java" index="4">
+<position info="not_deleted" x="2915" y="0"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="6983" y="0"/>
+</item>
+<item historyLabel="TestEnvironment.java" index="3">
+<position info="not_deleted" x="12102" y="17"/>
+</item>
+<item historyLabel="TestEnvironment.java" index="3">
+<position info="not_deleted" x="11004" y="15"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="3801" y="14"/>
+</item>
+<item historyLabel="TestEnvironment.java" index="3">
+<position info="not_deleted" x="11004" y="15"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="3801" y="14"/>
+</item>
+<item historyLabel="DataContextFinder.java" index="2">
+<position info="not_deleted" x="14615" y="34"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="4410" y="8"/>
+</item>
+<item historyLabel="Tester.java" index="1">
+<position info="not_deleted" x="1367" y="0"/>
+</item>
+<item historyLabel="TestState.java" index="0">
+<position info="not_deleted" x="1898" y="58"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="4410" y="8"/>
+</item>
+<item historyLabel="Tester.java" index="1">
+<position info="not_deleted" x="1367" y="0"/>
+</item>
+<item historyLabel="TestState.java" index="0">
+<position info="not_deleted" x="1898" y="58"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="6784" y="0"/>
+</item>
+<item historyLabel="TestState.java" index="0">
+<position info="not_deleted" x="8227" y="29"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="6784" y="0"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="6781" y="0"/>
+</item>
+<item historyLabel="PropertyManager.java" index="5">
+<position info="not_deleted" x="6976" y="5"/>
+</item>
+<item historyLabel="TestEnvironment.java" index="3">
+<position info="not_deleted" x="11004" y="15"/>
+</item>
+<item historyLabel="TestEnvironment.java" index="3">
+<position info="not_deleted" x="10591" y="0"/>
+</item>
+<item historyLabel="TestExecutionTraces.java" index="6">
+<position info="not_deleted" x="662" y="0"/>
+</item>
+<item historyLabel="TestExperimentByEpisode.java" index="7">
+<position info="not_deleted" x="2407" y="55"/>
+</item>
+<item historyLabel="TestExperimentByTime.java" index="8">
+<position info="not_deleted" x="2957" y="0"/>
+</item>
+<item historyLabel="Tester.java" index="1">
+<position info="not_deleted" x="1367" y="0"/>
+</item>
+<item historyLabel="TestExperimentByTime.java" index="9">
+<position info="not_deleted" x="2957" y="0"/>
+</item>
+<item historyLabel="RandomStrategyFromEpisodes.java" index="10">
+<position info="not_deleted" x="984" y="0"/>
+</item>
+<item historyLabel="TestExecutionTraces.java" index="11">
+<position info="not_deleted" x="662" y="0"/>
+</item>
+<item historyLabel="TestSuiteExecutor.java" index="12">
+<position info="not_deleted" x="1751" y="0"/>
+</item>
+<item historyLabel="TestState.java" index="13">
+<position info="not_deleted" x="8227" y="29"/>
+</item>
+<item historyLabel="TreeUI.java" index="14">
+<position/>
+</item>
+<item historyLabel="PropertyManager.java" index="15">
+<position info="not_deleted" x="6976" y="5"/>
+</item>
+<item historyLabel="TestExperimentByEpisode.java" index="16">
+<position info="not_deleted" x="2407" y="55"/>
+</item>
+<item historyLabel="AUTMain.java" index="17">
+<position info="not_deleted" x="736" y="0"/>
+</item>
+<item historyLabel="DataContextFinder.java" index="18">
+<position info="not_deleted" x="14615" y="34"/>
+</item>
+<item historyLabel="TestEnvironment.java" index="19">
+<position info="not_deleted" x="11283" y="0"/>
+</item>
+<item historyLabel="HashMap.class" index="20">
+<position/>
+</item>
+<item historyLabel="ActionFilter.java" index="21">
+<position info="not_deleted" x="2915" y="0"/>
+</item>
+<item historyLabel="PropertyManager.java" index="15">
+<position info="not_deleted" x="6976" y="5"/>
+</item>
+<item historyLabel="Tester.java" index="1">
+<position info="not_deleted" x="1564" y="0"/>
+</item>
+<item historyLabel="ExperimentFileManager.java" index="22">
+<position/>
+</item>
+<item historyLabel="EnvironmentalSetter.java" index="23">
+<position info="not_deleted" x="5520" y="27"/>
+</item>
+<item historyLabel="ExperimentFileManager.java" index="22">
+<position info="not_deleted" x="4547" y="27"/>
+</item>
+<item historyLabel="ExperimentFileManager.java" index="22">
+<position info="not_deleted" x="4737" y="8"/>
+</item>
+<item historyLabel="ExperimentFileManager.java" index="22">
+<position info="not_deleted" x="9381" y="8"/>
+</item>
+<item historyLabel="EnvironmentalSetter.java" index="23">
+<position info="not_deleted" x="5520" y="27"/>
+</item>
+<item historyLabel="ExperimentFileManager.java" index="22">
+<position info="not_deleted" x="8717" y="0"/>
+</item>
+<item historyLabel="Tester.java" index="1">
+<position info="not_deleted" x="1564" y="0"/>
+</item>
+<item historyLabel="ExperimentFileManager.java" index="22">
+<position info="not_deleted" x="8717" y="0"/>
+</item>
+<item active="true" historyLabel="Tester.java" index="1">
+<position info="not_deleted" x="1943" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="com.rational.test.ft.wswplugin.ToolsFolder"/>
+<trimItem IMemento.internal.id="com.rational.test.ft.wswplugin.OutputFolder"/>
+<trimItem IMemento.internal.id="com.rational.test.ft.wswplugin.project.TestExplorerFolder"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@31053105"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rational.test.ft.ScriptEditor" name="Tester.java" tooltip="AutoBlackTest/abtRun/Tester.java">
+<persistable path="/AutoBlackTest/abtRun/Tester.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EnvironmentalSetter.java" tooltip="AutoBlackTest/abt/conf/EnvironmentalSetter.java">
+<persistable path="/AutoBlackTest/abt/conf/EnvironmentalSetter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ExperimentFileManager.java" tooltip="AutoBlackTest/autoblacktest/util/ExperimentFileManager.java">
+<persistable path="/AutoBlackTest/autoblacktest/util/ExperimentFileManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonUI.java" tooltip="AutoBlackTest/autoblacktest/actions/simple/ButtonUI.java">
+<persistable path="/AutoBlackTest/autoblacktest/actions/simple/ButtonUI.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HashMap.class" tooltip="java.util.HashMap">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=AutoBlackTest/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.util(HashMap.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestEnvironment.java" tooltip="AutoBlackTest/autoblacktest/TestEnvironment.java">
+<persistable path="/AutoBlackTest/autoblacktest/TestEnvironment.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DataContextFinder.java" tooltip="AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java">
+<persistable path="/AutoBlackTest/autoblacktest/actions/parameters/text/DataContextFinder.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AUTMain.java" tooltip="AutoBlackTest/rmi/AUTMain.java">
+<persistable path="/AutoBlackTest/rmi/AUTMain.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UpdateStaticDataAction.java" tooltip="trunk/src/de/shandschuh/jaolt/gui/actions/UpdateStaticDataAction.java">
+<persistable path="/trunk/src/de/shandschuh/jaolt/gui/actions/UpdateStaticDataAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestExperimentByEpisode.java" tooltip="AutoBlackTest/autoblacktest/TestExperimentByEpisode.java">
+<persistable path="/AutoBlackTest/autoblacktest/TestExperimentByEpisode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PropertyManager.java" tooltip="AutoBlackTest/autoblacktest/state/PropertyManager.java">
+<persistable path="/AutoBlackTest/autoblacktest/state/PropertyManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TreeUI.java" tooltip="AutoBlackTest/autoblacktest/actions/simple/TreeUI.java">
+<persistable path="/AutoBlackTest/autoblacktest/actions/simple/TreeUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestState.java" tooltip="AutoBlackTest/autoblacktest/TestState.java">
+<persistable path="/AutoBlackTest/autoblacktest/TestState.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.rational.test.ft.ScriptEditor" name="TestSuiteExecutor.java" tooltip="AutoBlackTest/abtRun/TestSuiteExecutor.java">
+<persistable path="/AutoBlackTest/abtRun/TestSuiteExecutor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestExecutionTraces.java" tooltip="AutoBlackTest/autoblacktest/TestExecutionTraces.java">
+<persistable path="/AutoBlackTest/autoblacktest/TestExecutionTraces.java"/>
+</file>
+</mruList>
+</workbench>

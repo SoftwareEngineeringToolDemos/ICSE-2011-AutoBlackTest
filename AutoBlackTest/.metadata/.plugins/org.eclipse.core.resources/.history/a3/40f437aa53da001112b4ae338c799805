@@ -1,0 +1,9 @@
+package java.lang;
+
+public class System {
+	
+	public static long currentTimeMillis() {
+		return (long)1343658531312;
+	}
+
+}

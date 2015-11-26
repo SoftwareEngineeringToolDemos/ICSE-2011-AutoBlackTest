@@ -1,0 +1,107 @@
+package calculateFee;
+import resources.calculateFee.Script1Helper;
+import com.rational.test.ft.*;
+import com.rational.test.ft.object.interfaces.*;
+import com.rational.test.ft.object.interfaces.SAP.*;
+import com.rational.test.ft.object.interfaces.WPF.*;
+import com.rational.test.ft.object.interfaces.dojo.*;
+import com.rational.test.ft.object.interfaces.siebel.*;
+import com.rational.test.ft.object.interfaces.flex.*;
+import com.rational.test.ft.object.interfaces.generichtmlsubdomain.*;
+import com.rational.test.ft.script.*;
+import com.rational.test.ft.value.*;
+import com.rational.test.ft.vp.*;
+import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
+/**
+ * Description   : Functional Test Script
+ * @author lta
+ */
+public class Script1 extends Script1Helper
+{
+	/**
+	 * Script Name   : <b>Script1</b>
+	 * Generated     : <b>Sep 17, 2012 10:45:34 AM</b>
+	 * Description   : Functional Test Script
+	 * Original Host : WinNT Version 5.1  Build 2600 (S)
+	 * 
+	 * @since  2012/09/17
+	 * @author lta
+	 */
+	public void testMain(Object[] args) 
+	{
+		startApp("jaolt");
+		
+		TestObject[] tos = getRootTestObject().find(atProperty("uIClassID","ComboBoxUI"));
+		
+		for(int i=0;i<tos.length; i++)
+			System.out.println(tos[i].getProperty(".itemText"));
+		
+		// Frame: jAOLT {dev}
+		/*mainJMenuBar().click(atPath("New auction"));
+		
+		// 
+		search().click();
+		
+		// 
+		categoryJTree().click(atPath("Antiques"));
+		categoryJTree().click(atPath("Antiques->Antiquities"));
+		categoryJTree().click(atPath("Antiques->Antiquities->Celtic"));
+		ok().click();
+		
+		// 
+		title().click(atPoint(346,15));
+		editAuction().inputChars("Celtic Cookbook");
+		htmlBlockPanel().click(atPoint(264,19));
+		change().clickToState(SELECTED);
+		textHtml().click(atPoint(111,30));
+		editAuction().inputChars("Learn to cook food the celtic way with \"Celtic Cookbook\". This m");
+		editAuction().inputChars("uch-loved collection of over 160 recipes from the celtic world p");
+		editAuction().inputChars("resents dishes that are traditional and yet in still popular use");
+		editAuction().inputChars(".");
+		change().clickToState(NOT_SELECTED);
+		shippingServiceJComboBox().click();
+		shippingServiceJComboBox().click(atText("Standard Shipping"));
+		visaMasterCard().clickToState(SELECTED);
+		startprice().click(atPoint(12,15));
+		startprice().click(atPoint(29,12));
+		editAuction().inputKeys("{BKSP}{BKSP}{BKSP}{BKSP}1.99");
+		search2().click();
+		
+		// 
+		categoryJTree().setState(Action.vScroll(278));
+		categoryJTree().click(atPath("Books"));
+		categoryJTree().setState(Action.vScroll(422));
+		categoryJTree().click(atPath("Books->Cookbooks"));
+		ok().click();
+		
+		// 
+		subtitle().click(atPoint(66,7));
+		editAuction().inputKeys("Traditional Recipes from 6 Celtic Lands, Helen Smith");
+		manage().click();
+		
+		// 
+		selectFile().click();
+		
+		// 
+		filePane3().click(atText("picture1.JPG"));
+		open().click();
+		
+		// 
+		save().click();
+		
+		// 
+		select().click();
+		
+		// 
+		filePane3_2().click(atText("blue.html"));
+		open2().click();
+		
+		// 
+		shippingServiceJComboBox2().click();
+		shippingServiceJComboBox2().click(atText("UPS Ground"));
+		calculateFees().click();*/
+		
+
+	}
+}
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.ibm.rational.test.ft.rftScript">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/AutoBlackTest/abtRun/Tester.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\guava-r06.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\jgraph.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\jgrapht-jdk1.6.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\cobertura\lib\asm-3.0.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\cobertura\lib\asm-tree-3.0.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\cobertura\lib\jakarta-oro-2.0.8.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\cobertura\lib\log4j-1.2.9.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\cobertura\cobertura.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\jdom.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\jdbm-2.4.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\TeachingBoxAPI_build-650.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\powermock-easymock-1.4.12-full.jar"/>
+<listEntry value="C:\workspaceDist\AutoBlackTest\lib\jmockit\jmockit.jar"/>
+<listEntry value="C:\Program Files\IBM\SDP\FunctionalTester\bin\rational_ft.jar"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.rational.test.ft.rational_ft"/>
+<listAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS">
+<listEntry value="-projectpath"/>
+<listEntry value="&quot;C:\workspaceDist\AutoBlackTest&quot;"/>
+<listEntry value="-datastore"/>
+<listEntry value="&quot;C:\workspaceDist\AutoBlackTest&quot;"/>
+<listEntry value="-idemailslot"/>
+<listEntry value="wswplugin_*ide*_x3"/>
+<listEntry value="-idetype"/>
+<listEntry value="wswplugin"/>
+<listEntry value="-rt.interactive"/>
+<listEntry value="true"/>
+<listEntry value="-rt.log_format"/>
+<listEntry value="html"/>
+<listEntry value="-log"/>
+<listEntry value="abtRun.Tester"/>
+<listEntry value="-iterationcount"/>
+<listEntry value="ALL"/>
+<listEntry value="-rt.log_action"/>
+<listEntry value="false"/>
+<listEntry value="-playback"/>
+<listEntry value="abtRun.Tester"/>
+<listEntry value=""/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="AutoBlackTest"/>
+<listAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\workspaceDist\AutoBlackTest"/>
+</launchConfiguration>

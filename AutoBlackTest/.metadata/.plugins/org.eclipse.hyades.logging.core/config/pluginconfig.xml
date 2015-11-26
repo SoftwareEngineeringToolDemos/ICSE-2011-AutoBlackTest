@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration requires="org.eclipse.hyades.execution, org.eclipse.tptp.platform.logging.events">
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_LOGGING_CORE" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.logging.core_4.3.300.v200901090100\hl14.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_LOGGING_CORE" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.logging.core_4.3.300.v200901090100\hlcommons.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_LOGGING_CORE" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.logging.core_4.3.300.v200901090100\hlcore.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_LOGGING_CORE" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.logging.core_4.3.300.v200901090100\hllog4j.jar"/>
+	</AgentControllerEnvironment>
+	<Option name="org.eclipse.hyades.logging.core" type="version" value="4.3.300.v200901090100"/>
+</PluginConfiguration>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration requires="org.eclipse.hyades.execution, org.eclipse.hyades.logging.core">
+	<AgentControllerEnvironment configuration="default"/>
+	<Option name="org.eclipse.hyades.test.core" type="version" value="4.4.4.v200911041536"/>
+</PluginConfiguration>

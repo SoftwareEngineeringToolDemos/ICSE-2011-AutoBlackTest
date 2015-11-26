@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration>
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="JAVA_PROFILER_HOME" position="replace" value="%PLUGINS_HOME%\org.eclipse.tptp.platform.jvmti.runtime_4.4.204.v200910231232\agent_files\win_ia32"/>
+		<Variable name="PATH" position="prepend" value="%RASERVER_HOME%\bin"/>
+		<Variable name="PATH" position="prepend" value="%JAVA_PROFILER_HOME%"/>
+		<Variable name="PATH" position="prepend" value="%JAVA_PATH%"/>
+		<Variable name="CLASSPATH" position="prepend" value="%JAVA_PROFILER_HOME%"/>
+	</AgentControllerEnvironment>
+	<Variable name="org.eclipse.tptp.platform.jvmti.runtime" type="version" value="4.4.204.v200910231232"/>
+</PluginConfiguration>

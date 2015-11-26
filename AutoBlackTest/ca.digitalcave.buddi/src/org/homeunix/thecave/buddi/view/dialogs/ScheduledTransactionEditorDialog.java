@@ -133,9 +133,9 @@ public class ScheduledTransactionEditorDialog extends MossDialog implements Acti
 		cardHolder = new JPanel(cardLayout);
 	}
 
-	protected String getType(){
+	/*protected String getType(){
 		return TextFormatter.getTranslation(BuddiKeys.ACCOUNT);
-	}
+	}*/
 
 	public void init() {
 		if (PrefsModel.getInstance().isShowTooltips())

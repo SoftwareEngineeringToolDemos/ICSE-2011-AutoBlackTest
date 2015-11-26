@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item value="org.tigris.subversion.subclipse.ui.wizards.CheckoutWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.tigris.subversion.subclipse.ui.svn"/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="267" key="DIALOG_Y_ORIGIN"/>
+		<item value="750" key="DIALOG_X_ORIGIN"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="361" key="DIALOG_HEIGHT"/>
+		<item value="411" key="DIALOG_WIDTH"/>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="140" key="DIALOG_Y_ORIGIN"/>
+		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
+		<item value="745" key="DIALOG_X_ORIGIN"/>
+		<item value="552" key="DIALOG_HEIGHT"/>
+		<item value="438" key="DIALOG_WIDTH"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+	</section>
+</section>

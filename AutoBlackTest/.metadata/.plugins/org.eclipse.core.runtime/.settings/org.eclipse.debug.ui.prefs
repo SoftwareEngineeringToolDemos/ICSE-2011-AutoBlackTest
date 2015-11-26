@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8"?><launchPerspectives>\r\n<launchPerspective configurationType\="com.ibm.rational.test.ft.rftScript" mode\="debug" perspective\="com.rational.test.ft.wswplugin.TestDebugPerspective"/>\r\n</launchPerspectives>
+org.eclipse.debug.ui.user_view_bindings=<?xml version\="1.0" encoding\="UTF-8"?><viewBindings>\r\n<view id\="org.eclipse.debug.ui.DebugView">\r\n<perspective id\="com.rational.test.ft.wswplugin.TestDebugPerspective" userAction\="closed"/>\r\n</view>\r\n<view id\="org.eclipse.ui.console.ConsoleView">\r\n<perspective id\="com.rational.test.ft.wswplugin.TestPerspective" userAction\="opened"/>\r\n<perspective id\="org.eclipse.jdt.ui.JavaPerspective" userAction\="opened"/>\r\n<perspective id\="com.rational.test.ft.wswplugin.TestDebugPerspective" userAction\="closed"/>\r\n</view>\r\n</viewBindings>
+pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="139" org.eclipse.debug.ui.SASH_VIEW_PART\="860">\r\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.VariableView"/>\r\n</VariablesViewMemento>
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
+preferredTargets=default\:default|

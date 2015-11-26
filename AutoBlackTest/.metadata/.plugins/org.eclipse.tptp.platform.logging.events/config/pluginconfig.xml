@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration>
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="CLASSPATH_ORG_ECLIPSE_TPTP_PLATFORM_LOGGING_EVENTS" position="append" value="%PLUGINS_HOME%\org.eclipse.tptp.platform.logging.events_4.3.300.v200901090100\tlcore.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_TPTP_PLATFORM_LOGGING_EVENTS" position="append" value="%PLUGINS_HOME%\org.eclipse.tptp.platform.logging.events_4.3.300.v200901090100\hlcbe101.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_TPTP_PLATFORM_LOGGING_EVENTS" position="append" value="%PLUGINS_HOME%\org.eclipse.tptp.platform.logging.events_4.3.300.v200901090100\tlcbe101.jar"/>
+	</AgentControllerEnvironment>
+	<Option name="org.eclipse.tptp.platform.logging.events" type="version" value="4.3.300.v200901090100"/>
+</PluginConfiguration>

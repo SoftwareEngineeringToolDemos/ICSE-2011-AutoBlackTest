@@ -1,0 +1,54 @@
+//DOT: The clase manage the creation of Dot files
+package observers;
+
+import java.util.HashMap;
+
+import org.hswgt.teachingbox.core.rl.env.Action;
+import org.hswgt.teachingbox.core.rl.env.State;
+import org.hswgt.teachingbox.core.rl.experiment.ExperimentObserver;
+import org.hswgt.teachingbox.core.rl.tabular.TabularQFunction;
+import org.hswgt.teachingbox.core.rl.valuefunctions.QFunction;
+
+public class DotGenerator implements ExperimentObserver {
+
+	private QFunction qFunction;
+	private int episodeNumber=0;
+	private int sequenceNumber=0;
+	private HashMap <Integer, String[]> episodeTrace;
+	
+	
+	public DotGenerator(QFunction q) {
+		// TODO Auto-generated constructor stub
+		this.qFunction = qFunction;
+		
+	}
+
+	@Override
+	public void update(State arg0, Action arg1, State arg2, Action arg3,
+			double arg4, boolean arg5) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateExperimentStart() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateExperimentStop() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateNewEpisode(State arg0) {
+		// TODO Auto-generated method stub
+		if (episodeNumber >0){
+			
+		}
+
+	}
+
+}

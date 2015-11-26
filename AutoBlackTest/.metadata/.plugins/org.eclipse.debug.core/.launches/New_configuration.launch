@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.ibm.rational.test.ft.launch.javaTestSuite">
+<stringAttribute key="org.eclipse.hyades.test.ui.launch.deploymentURI" value=""/>
+<stringAttribute key="org.eclipse.hyades.test.ui.launch.deploymentURIFragment" value=""/>
+<stringAttribute key="org.eclipse.hyades.test.ui.launch.testURI" value=""/>
+<stringAttribute key="org.eclipse.hyades.test.ui.launch.testURIFragment" value=""/>
+<booleanAttribute key="org.eclipse.hyades.test.ui.launch.useDefaults" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.hyades.test.core.testSourcePathProvider"/>
+</launchConfiguration>

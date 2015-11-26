@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration requires="org.eclipse.hyades.execution, org.eclipse.hyades.logging.core">
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="CLASSPATH" position="prepend" value="%PLUGINS_HOME%\org.eclipse.tptp.platform.collection.framework_4.2.202.v200901090100\hcframe.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_TPTP_PLATFORM_COLLECTION_FRAMEWORK" position="append" value="%PLUGINS_HOME%\org.eclipse.tptp.platform.collection.framework_4.2.202.v200901090100\hcframe.jar"/>
+	</AgentControllerEnvironment>
+	<Agent client="DYNAMIC" configuration="default" dataChannelSize="64M" name="Java Profiling Agent" type="Profiler"/>
+	<Option name="Thread Analysis Agent" type="Profiler" value="hcthread"/>
+	<Option name="org.eclipse.tptp.platform.collection.framework" type="version" value="4.2.202.v200901090100"/>
+</PluginConfiguration>

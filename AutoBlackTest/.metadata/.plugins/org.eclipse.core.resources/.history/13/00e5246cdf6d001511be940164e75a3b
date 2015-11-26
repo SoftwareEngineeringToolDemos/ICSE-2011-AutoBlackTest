@@ -1,0 +1,9 @@
+#AUTOBLACKTEST CONFIGURATION OPTIONS
+
+#set up the execution time for testing
+hours = 0
+minutes = 1
+
+
+#set up the sleep time (second or fraction of second) between actions
+sleep_time = 0.5

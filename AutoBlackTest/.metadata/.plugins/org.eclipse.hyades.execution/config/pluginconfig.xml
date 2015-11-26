@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration>
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="CLASSPATH" position="prepend" value="%PLUGINS_HOME%\org.eclipse.hyades.execution_4.4.203.v200910021227\hexcore.jar"/>
+		<Variable name="CLASSPATH" position="prepend" value="%PLUGINS_HOME%\org.eclipse.hyades.execution_4.4.203.v200910021227\hexl.jar"/>
+		<Variable name="CLASSPATH" position="prepend" value="%PLUGINS_HOME%\org.eclipse.hyades.execution_4.4.203.v200910021227\hexr.jar"/>
+		<Variable name="CLASSPATH" position="append" value="%CLASSPATH_COM_IBM_ICU%"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_EXECUTION" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.execution_4.4.203.v200910021227\hexcore.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_EXECUTION" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.execution_4.4.203.v200910021227\hexl.jar"/>
+		<Variable name="CLASSPATH_ORG_ECLIPSE_HYADES_EXECUTION" position="append" value="%PLUGINS_HOME%\org.eclipse.hyades.execution_4.4.203.v200910021227\hexr.jar"/>
+	</AgentControllerEnvironment>
+	<Option name="org.eclipse.hyades.execution" type="version" value="4.4.203.v200910021227"/>
+</PluginConfiguration>

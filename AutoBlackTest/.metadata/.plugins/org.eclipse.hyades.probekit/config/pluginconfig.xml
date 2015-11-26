@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PluginConfiguration requires="org.eclipse.tptp.platform.collection.framework">
+	<AgentControllerEnvironment configuration="default">
+		<Variable name="PATH" position="prepend" value="%PLUGINS_HOME%\org.eclipse.hyades.probekit_4.2.403.v200911051408\os\win32\x86"/>
+	</AgentControllerEnvironment>
+	<Agent configuration="default" extends="default" name="Java Profiling Agent">
+		<Option name="piAgentExtension" type="libraryName" value="%PLUGINS_HOME%\org.eclipse.hyades.probekit_4.2.403.v200911051408\os\win32\x86\ProbeAgentExtension.dll"/>
+		<Option name="ProbeAgentExtension" type="BCILibraryName" value="%PLUGINS_HOME%\org.eclipse.hyades.probekit_4.2.403.v200911051408\os\win32\x86\BCIEngProbe.dll"/>
+		<Option name="ProbeAgentExtension" type="logFile" value="%PLUGINS_HOME%\org.eclipse.hyades.probekit_4.2.403.v200911051408\config\probekit.log"/>
+		<Option name="ProbeAgentExtension" type="logLevel" value="warning"/>
+	</Agent>
+</PluginConfiguration>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><libraryInfos>
+<libraryInfo home="C:\Program Files\Java\jre6" version="1.6.0_23">
+<bootpath>
+<entry path="C:\Program Files\Java\jre6\lib\resources.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\modules\jdk.boot.jar"/>
+<entry path="C:\Program Files\Java\jre6\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jre6\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jre6\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\IBM\SDP\jdk\jre" version="1.6.0">
+<bootpath>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\vm.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\annotation.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\beans.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\java.util.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\jndi.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\logging.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\security.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\sql.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmorb.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmorbapi.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmcfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\rt.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\resources.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmpkcs.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmcertpathfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjgssfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjssefw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmsaslfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjcefw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjgssprovider.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmxmlcrypto.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\management-agent.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\xml.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\jlm.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\javascript.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\Java\jre7" version="1.7.0_79">
+<bootpath>
+<entry path="C:\Program Files\Java\jre7\lib\resources.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\jfr.jar"/>
+<entry path="C:\Program Files\Java\jre7\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jre7\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jre7\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712" version="1.7.0">
+<bootpath>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\bin\default\jclSC170\vm.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\se-service.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\math.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\jlm.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmorb.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmorbapi.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmcfw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmpkcs.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmcertpathfw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmjgssfw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmjssefw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmsaslfw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmjcefw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmjgssprovider.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\xmldsigfw.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\xml.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\resources.jar"/>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\rt.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\IBM\Installation Manager\eclipse\jre_7.0.7001.20140909_1712\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\IBM\SDP\jdk" version="1.7.0">
+<bootpath>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\bin\default\jclSC170\vm.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\se-service.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\math.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\jlm.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmorb.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmorbapi.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmcfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmpkcs.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmcertpathfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjgssfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjssefw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmsaslfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjcefw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjgssprovider.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\xmldsigfw.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\xml.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\resources.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\rt.jar"/>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ibmgpu.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\IBM\SDP\jdk\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories-view>
+	<repository id=":pserver:santoro@ltasrv1.lta.disco.unimib.it:/home/cvsstud">
+		<module path="workspace_Autoblacktest/RMI" lastAcessTime="1331741280537">
+			<tag type="branch" name="preliminaryModel&amp;actionsDevelopment"/>
+			<tag type="version" name="Root_preliminaryModel&amp;actionsDevelopment"/>
+		</module>
+		<module path="workspace_Autoblacktest/TeachingBox" lastAcessTime="1331741423006">
+			<tag type="branch" name="preliminaryModel&amp;actionsDevelopment"/>
+			<tag type="version" name="Root_preliminaryModel&amp;actionsDevelopment"/>
+		</module>
+		<module path="workspace_Autoblacktest" lastAcessTime="1331742120050">
+			<tag type="branch" name="preliminaryModel&amp;actionsDevelopment"/>
+			<tag type="version" name="Root_preliminaryModel&amp;actionsDevelopment"/>
+			<tag type="branch" name="actionDevelopment"/>
+		</module>
+		<module path="workspace_Autoblacktest/AutoBlackTest" lastAcessTime="1331742715645">
+			<tag type="branch" name="preliminaryModelactionsDevelopment"/>
+			<tag type="branch" name="actionDevelopment"/>
+		</module>
+	</repository>
+</repositories-view>

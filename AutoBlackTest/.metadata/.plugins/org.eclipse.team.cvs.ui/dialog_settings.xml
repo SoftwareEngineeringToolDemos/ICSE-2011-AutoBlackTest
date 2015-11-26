@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_USERNAME_ID">
+			<item value="santoro"/>
+		</list>
+		<list key="ConfigurationWizardMainPage.STORE_PATH_ID">
+			<item value="/home/cvsstud"/>
+		</list>
+		<list key="ConfigurationWizardMainPage.STORE_HOSTNAME_ID">
+			<item value="ltasrv1.lta.disco.unimib.it"/>
+		</list>
+	</section>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight1"/>
+		<item value="500" key="VWeight2"/>
+		<item value="400" key="width"/>
+		<item value="430" key="height"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="CheckoutAsWizard">
+	</section>
+	<section name="SharingWizard">
+		<item value="480" key="SyncPageHeight"/>
+		<item value="640" key="SyncPageWidth"/>
+	</section>
+	<section name="IgnoreResourcesDialog">
+		<item value="0" key="Action"/>
+	</section>
+</section>

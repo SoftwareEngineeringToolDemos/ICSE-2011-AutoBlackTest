@@ -1,0 +1,281 @@
+package autoblacktest.util;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Arrays;
+
+import net.sourceforge.cobertura.coveragedata.CoverageDataFileHandler;
+import net.sourceforge.cobertura.coveragedata.ProjectData;
+
+import org.apache.log4j.Logger;
+
+import results.analysis.TestCasesFromCoverage;
+
+import abt.conf.EnvironmentalSetter;
+import abt.conf.ExperimentDirectories;
+import autoblacktest.TestExecutionTraces;
+import autoblacktest.TestState;
+
+public class ExperimentFileManager {
+
+	private static String coberturaDirectory = System.getProperty("user.dir") + File.separator + "cobertura";
+	
+	private static Logger logger = Logger.getLogger(ExperimentFileManager.class);
+
+	public static void initExperiment() {
+
+		//instrument the application for cobertura analysis
+		String args[] = {"--destination", (new File(EnvironmentalSetter.getAutBinDirectory()).getParent()+"\\instrumented"), EnvironmentalSetter.getAutBinDirectory()};
+		net.sourceforge.cobertura.instrument.Main.main(args);
+		
+		//generate the file application.bat to run the AUT
+		FileWriter autBatFile;
+		try {
+			autBatFile = new FileWriter(System.getProperty("user.dir") + File.separator + "AppScript\\AUT.bat");
+			BufferedWriter out = new BufferedWriter(autBatFile);
+			out.write("call AppScript\\userAdditionalReset.bat");
+			out.newLine();
+			out.write("java -Xbootclasspath/p:" +
+					  System.getProperty("user.dir") + File.separator + "AppScript\\lib\\abtJFileChooser.jar;" + 
+					  " -cp %CLASSPATH%;" +
+					  System.getProperty("user.dir") + ";" +
+					  System.getProperty("user.dir") + File.separator + "cobertura\\cobertura.jar;" +
+					  EnvironmentalSetter.getAutClasspath() + ";" +
+					  new File(EnvironmentalSetter.getAutBinDirectory()).getParent()+"\\instrumented" + ";" +
+					  EnvironmentalSetter.getAutBinDirectory() + ";" +
+					  System.getProperty("user.dir") + File.separator + "lib\\jmockit\\jmockit.jar" + ";" + 
+					  " -javaagent:" + System.getProperty("user.dir") + File.separator + "lib\\jmockit\\jmockit.jar" +
+					  " -Dnet.sourceforge.cobertura.datafile=\"" + System.getProperty("user.dir") + File.separator + "cobertura\\cobertura.ser\"" +
+					  " " + "rmi.AUTMain" +
+					  " " + EnvironmentalSetter.getAutMainCLass() +
+					  " 1> \"" + System.getProperty("user.dir") + File.separator + "stdOut_Err\\output.log\"" + 
+					  " 2> \"" + System.getProperty("user.dir") + File.separator + "stdOut_Err\\error.log\""
+					  );
+			out.flush();
+			out.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//delete old cobertura.ser from the cobertura directory
+		File oldCoberturaFile = new File(coberturaDirectory + File.separator + "cobertura.ser");
+		if(oldCoberturaFile.exists()) {
+			oldCoberturaFile.delete();
+		}
+		
+		//move and rename the generated cobertura.ser file from the working directory into the cobertura dir
+		//the file is generated during the instrument process. The code is above in this method
+		ExperimentFileManager.copyFile(System.getProperty("user.dir") + File.separator + "cobertura.ser", coberturaDirectory + File.separator + "cobertura.ser");
+		
+		//delete old cobertura.ser from the working directory. (delete the file generated during the instrumentation process)
+		oldCoberturaFile = new File(System.getProperty("user.dir") + File.separator + "cobertura.ser");
+		if(oldCoberturaFile.exists()) {
+			oldCoberturaFile.delete();
+		}
+		
+		// manage the file cobertura.ser to be used during the experiments
+		String coverageDirectory = ExperimentDirectories.getInstance().getCoverageExperimentDirectory();
+		ExperimentFileManager.copyFile(coberturaDirectory + File.separator + "cobertura.ser", 
+				coverageDirectory + File.separator + "ser" + File.separator + "cobertura.ser");
+		ExperimentFileManager.copyFile(coberturaDirectory + File.separator + "cobertura.ser",
+				coverageDirectory + File.separator + "ser" + File.separator + "totalCobertura.ser");
+		
+		//manage the files to be used by the AUT during the execution:
+		//1 backup of the files listed in "aut_configuation_file_path" and "aut_working_file_path" 
+		//the backup files will be used at the beginning of each experiment
+		String [] autConfFiles = EnvironmentalSetter.getAutConfigurationFilePath().split(";");
+		for(String autConfFile : autConfFiles) {
+			String fileName = autConfFile.substring(autConfFile.lastIndexOf("\\")+1);
+			ExperimentFileManager.copyFile(autConfFile, System.getProperty("user.dir") + File.separator + "autResources\\confFiles" + File.separator + fileName);
+		}
+		File abtMyDocumentsDir = new File(System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments");
+		if(!abtMyDocumentsDir.exists())
+			abtMyDocumentsDir.mkdir();
+		File[] oldWorkFiles = abtMyDocumentsDir.listFiles();
+		for (File oldWorkFile : oldWorkFiles)
+			ExperimentFileManager.delDir(oldWorkFile);
+		String [] autWorkFiles = EnvironmentalSetter.getAutWorkingFilePath().split(";");
+		for(String autWorkFile : autWorkFiles) {
+			String fileName = autWorkFile.substring(autWorkFile.lastIndexOf("\\")+1);
+			ExperimentFileManager.copyFile(autWorkFile, System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments" + File.separator + fileName);
+			ExperimentFileManager.copyFile(autWorkFile, System.getProperty("user.dir") + File.separator + "autResources\\workingFiles" + File.separator + fileName);
+		}	
+	}
+	
+	public static void initEpisode(int episode) {
+		episode--;
+		
+		String coverageDirectory = ExperimentDirectories.getInstance().getCoverageExperimentDirectory();
+		String stdOutDirectory = ExperimentDirectories.getInstance().getStdOutExperimentDirectory();
+		String stdErrDirectory = ExperimentDirectories.getInstance().getStdErrExperimentDirectory();
+		String experimentDirectory = ExperimentDirectories.getInstance().getExperimentDirectory();
+		String testCasesDirectory = ExperimentDirectories.getInstance().getTestCasesDirectory();
+		
+		// manage the file cobertura.ser used during the experiments
+		ExperimentFileManager.copyFile(coberturaDirectory + File.separator + "cobertura.ser", 
+				coverageDirectory + File.separator + "ser" + File.separator + "cobertura" + episode + ".ser");
+		ExperimentFileManager.copyFile(coverageDirectory + File.separator + "ser" + File.separator + "cobertura.ser", 
+				coberturaDirectory + File.separator + "cobertura.ser");
+
+		//per copiare i file di output e di error
+		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\output.log", stdOutDirectory+ "\\outputEpisode" + episode +".log");
+		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\error.log", stdErrDirectory+ "\\errorEpisode" + episode +".log");
+		
+		//generate test case
+		try {
+			FileWriter testCase = new FileWriter(testCasesDirectory + File.separator + "TestCase_" + episode + ".tc");
+			BufferedWriter out = new BufferedWriter(testCase);
+			out.write(TestExecutionTraces.getInstance().getEpisodeTrace());
+			out.flush();
+			out.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//manage the file used by the AUT during the execution:
+		//1 delete the file in "aut_configuation_file_path" and "aut_working_file_path" used in the previous episode
+		//2 restore the files in "aut_configuation_file_path" and "aut_working_file_path" by using the backup files
+		String [] autConfFiles = EnvironmentalSetter.getAutConfigurationFilePath().split(";");
+		for(String autConfFile : autConfFiles) {
+			ExperimentFileManager.delDir(new File(autConfFile));
+		}
+		File autResourcesDir = new File(System.getProperty("user.dir") + File.separator + "autResources\\confFiles");
+		File[] autBackupConfFiles = autResourcesDir.listFiles();
+		for (File autBackupConfFile : autBackupConfFiles) {
+			String fileName = autBackupConfFile.getAbsolutePath().substring(autBackupConfFile.getAbsolutePath().lastIndexOf("\\")+1);
+			for(String autConfFile : autConfFiles) {
+				if (fileName.equals(autConfFile.substring(autConfFile.lastIndexOf("\\")+1)))
+					ExperimentFileManager.copyFile(autBackupConfFile.getAbsolutePath(), autConfFile);
+			}
+		}
+		File abtMyDocumentsDir = new File(System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments");
+		File[] oldWorkFiles = abtMyDocumentsDir.listFiles();
+		for (File oldWorkFile : oldWorkFiles)
+			ExperimentFileManager.delDir(oldWorkFile);
+		autResourcesDir = new File(System.getProperty("user.dir") + File.separator + "autResources\\workingFiles");
+		File[] autBackupWorkFiles = autResourcesDir.listFiles();
+		for (File autBackupWorkFile : autBackupWorkFiles) {
+			String fileName = autBackupWorkFile.getAbsolutePath().substring(autBackupWorkFile.getAbsolutePath().lastIndexOf("\\")+1);
+			ExperimentFileManager.copyFile(autBackupWorkFile.getAbsolutePath(), System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments" + File.separator + fileName);
+		}
+	}
+
+	public static void copyFile(String filenameFrom, String filenameTo){
+		try {
+			File f1 = new File(filenameFrom);
+			File f2 = new File(filenameTo);
+			InputStream in = new FileInputStream(f1);
+			
+			//For Overwrite the file.
+			OutputStream out = new FileOutputStream(f2);
+
+			byte[] buf = new byte[1024];
+			int len;
+			while ((len = in.read(buf)) > 0){
+				out.write(buf, 0, len);
+			}
+			
+			in.close();
+			out.close();
+		}
+		catch(FileNotFoundException e){
+			logger.error(e.getMessage() + " in the specified directory.", e.getCause());
+			return;
+		}
+		catch(IOException e){
+			logger.error(e.getMessage(), e.getCause());
+		}
+	}
+
+	public static boolean delDir(File dir)
+	  {
+	    if (dir.isDirectory())
+	    {
+	      String[] contenuto = dir.list();
+	      for (int i=0; i<contenuto.length; i++)
+	      {
+	        boolean success = delDir(new File(dir, contenuto[i]));
+	        if (!success) { return false; }
+	      }
+	    }
+	    return dir.delete();
+	  }
+	
+	public static void closeExperiment(int episode) {
+		String coverageDirectory = ExperimentDirectories.getInstance().getCoverageExperimentDirectory();
+		String stdOutDirectory = ExperimentDirectories.getInstance().getStdOutExperimentDirectory();
+		String stdErrDirectory = ExperimentDirectories.getInstance().getStdErrExperimentDirectory();
+		String experimentDirectory = ExperimentDirectories.getInstance().getExperimentDirectory();
+		String testCasesDirectory = ExperimentDirectories.getInstance().getTestCasesDirectory();
+		
+		ExperimentFileManager.copyFile(coberturaDirectory + File.separator + "cobertura.ser", 
+				coverageDirectory + File.separator + "ser" + File.separator + "cobertura" + episode + ".ser");
+		
+		//generate test case
+		try {
+			FileWriter testCase = new FileWriter(testCasesDirectory + File.separator + "TestCase_" + episode + ".tc");
+			BufferedWriter out = new BufferedWriter(testCase);
+			out.write(TestExecutionTraces.getInstance().getEpisodeTrace());
+			out.flush();
+			out.close();
+			String coberturaArgument = "--format html --datafile C:\\workspaceDist\\AutoBlackTest\\outputs\\experiment_"+ExperimentDirectories.sharedDate+"\\coverage\\ser\\totalCobertura.ser --destination C:\\workspaceDist\\AutoBlackTest\\CoberturaOutput";
+			String[] argument = {coberturaArgument};
+			try {
+				net.sourceforge.cobertura.reporting.Main.main(argument);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//the next instruction generate the oracle of the experiment that is the properties map
+		SerializeObject.serialize(ExperimentDirectories.getInstance().getStateExperimentDirectory()+"\\propertiesSet.ser", TestState.getInstance().getPropertiesSet());
+		TestCasesFromCoverage.generateTestCases();
+		
+		//per copiare i file di output e di error
+		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\output.log", stdOutDirectory+"\\outputEpisode" + episode + ".log");
+		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\error.log", stdErrDirectory+"\\errorEpisode" + episode + ".log");
+		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\log\\exploration.log", experimentDirectory +"\\exploration.log");
+		
+		//manage the file used by the AUT during the execution:
+		//1 delete the file in "aut_configuation_file_path" and "aut_working_file_path" used in the previous episode
+		//2 restore the files in "aut_configuation_file_path" and "aut_working_file_path" by using the backup files
+		String [] autConfFiles = EnvironmentalSetter.getAutConfigurationFilePath().split(";");
+		for(String autConfFile : autConfFiles) {
+			ExperimentFileManager.delDir(new File(autConfFile));
+		}
+		File autResourcesDir = new File(System.getProperty("user.dir") + File.separator + "autResources\\confFiles");
+		File[] autBackupConfFiles = autResourcesDir.listFiles();
+		for (File autBackupConfFile : autBackupConfFiles) {
+			String fileName = autBackupConfFile.getAbsolutePath().substring(autBackupConfFile.getAbsolutePath().lastIndexOf("\\")+1);
+			for(String autConfFile : autConfFiles) {
+				if (fileName.equals(autConfFile.substring(autConfFile.lastIndexOf("\\")+1)))
+					ExperimentFileManager.copyFile(autBackupConfFile.getAbsolutePath(), autConfFile);
+			}
+		}
+		File abtMyDocumentsDir = new File(System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments");
+		File[] oldWorkFiles = abtMyDocumentsDir.listFiles();
+		for (File oldWorkFile : oldWorkFiles)
+			ExperimentFileManager.delDir(oldWorkFile);
+		autResourcesDir = new File(System.getProperty("user.dir") + File.separator + "autResources\\workingFiles");
+		File[] autBackupWorkFiles = autResourcesDir.listFiles();
+		for (File autBackupWorkFile : autBackupWorkFiles) {
+			String fileName = autBackupWorkFile.getAbsolutePath().substring(autBackupWorkFile.getAbsolutePath().lastIndexOf("\\")+1);
+			ExperimentFileManager.copyFile(autBackupWorkFile.getAbsolutePath(), System.getProperty("user.home") + System.getProperty("file.separator")+ "abtMyDocuments" + File.separator + fileName);
+		}
+	}
+
+	
+}

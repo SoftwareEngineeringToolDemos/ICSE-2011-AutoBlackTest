@@ -87,7 +87,7 @@ public class Tester extends TesterHelper {
 		
 		//DOT: Dot file creation
 		//experiment.addObserver(new DotGenerator(Q));
-		experiment.addObserver(new DotGenerator(Q));
+		
 		experiment.run();
 		
 	}	

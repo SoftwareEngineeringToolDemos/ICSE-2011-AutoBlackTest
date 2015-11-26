@@ -1,0 +1,3 @@
+PREF_VM_INSTALL_SYSTEM_PROPERTY.org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType.1444279869318.os.arch=x86
+eclipse.preferences.version=1
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8"?><vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1444279869318" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1331740534578" name\="jdk" path\="C\:\\Program Files\\IBM\\SDP\\jdk"/>\r\n<vm id\="1444279869298" name\="jre_7.0.7001.20140909_1712" path\="C\:\\Program Files\\IBM\\Installation Manager\\eclipse\\jre_7.0.7001.20140909_1712"/>\r\n<vm id\="1444279869318" name\="jre7" path\="C\:\\Program Files\\Java\\jre7"/>\r\n</vmType>\r\n</vmSettings>
