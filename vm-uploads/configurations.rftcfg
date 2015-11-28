@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigFile L=".ConfigFile">
+	<Section L=".ConfigFileSection">
+		<Name>configurations</Name>
+		<Val L=".ConfigurationList">
+			<Configuration L=".Configuration">
+				<Name>windows</Name>
+				<ApplicationList L=".ApplicationList">
+					<Application L=".Application">
+						<Name>ClassicsJavaA</Name>
+						<Kind>java</Kind>
+						<Path>$R(HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rational Test\8\Rational FT Samples)</Path>
+						<Command>ClassicsJavaA.jar</Command>
+						<Jvm></Jvm>
+						<Classpath></Classpath>
+						<Args></Args>
+						<WorkingDir>$R(HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rational Test\8\Rational FT Samples)</WorkingDir>
+					</Application>
+					<Application L=".Application">
+						<Name>ClassicsJavaB</Name>
+						<Kind>java</Kind>
+						<Path>$R(HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rational Test\8\Rational FT Samples)</Path>
+						<Command>ClassicsJavaB.jar</Command>
+						<Jvm></Jvm>
+						<Classpath></Classpath>
+						<Args></Args>
+						<WorkingDir>$R(HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rational Test\8\Rational FT Samples)</WorkingDir>
+					</Application>
+					<Application L=".Application">
+						<Name>Extension for Terminal Applications</Name>
+						<Kind>executable</Kind>
+						<Path>C:\Program Files\IBM\SDP\jdk\jre\bin</Path>
+						<Command>javaw.exe</Command>
+						<Jvm></Jvm>
+						<Classpath></Classpath>
+						<Args>-classpath &quot;C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.test.terminal_8.5.0.v20130730_1046\TerminalTester.jar;C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.eNetwork.beans.HOD_11.0.11.201411111123\habeansnlv2.jar;C:\Program Files\IBM\IBMIMShared\plugins\org.eclipse.help.base_3.6.101.v201302041200.jar;hasslite.jar;icons.jar;ITLMToolkit.jar;jhall.jar;jlog.jar&quot; com.ibm.terminal.tester.gui.panel.MainTerminalPanel</Args>
+						<WorkingDir>C:\Program Files\IBM\IBMIMShared\plugins\com.ibm.test.terminal_8.5.0.v20130730_1046</WorkingDir>
+					</Application>
+				</ApplicationList>
+				<JVMList L=".JVMList">
+					<JVM L=".JVM">
+						<Name>IBM Rational SDP JRE</Name>
+						<Path>$R(HKEY_LOCAL_MACHINE\SOFTWARE\Rational Software\Rational Test\8\Rational FT JRE)\lib</Path>
+						<RunCommand>javaw</RunCommand>
+						<RunOptions></RunOptions>
+					</JVM>
+					<JVM L=".JVM">
+						<Name>JAVA7</Name>
+						<Path>C:\Program Files\Java\jre7\lib</Path>
+						<RunCommand>javaw</RunCommand>
+						<RunOptions></RunOptions>
+					</JVM>
+				</JVMList>
+				<BrowserList L=".BrowserList">
+					<Browser L=".Browser">
+						<Name>Internet Explorer</Name>
+						<Path>C:\Program Files\Internet Explorer</Path>
+						<Command>iexplore</Command>
+						<enabled>false</enabled>
+					</Browser>
+				</BrowserList>
+				<EclipseShellList L=".EclipseShellList">
+				</EclipseShellList>
+				<Defaults L=".Defaults">
+					<DefaultJVM>IBM Rational SDP JRE</DefaultJVM>
+					<DefaultJavac>IBM Rational SDP JRE</DefaultJavac>
+					<DefaultBrowser>Internet Explorer</DefaultBrowser>
+				</Defaults>
+			</Configuration>
+		</Val>
+	</Section>
+</ConfigFile>

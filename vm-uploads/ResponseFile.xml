@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The "acceptLicense" attribute has been deprecated. Use "-acceptLicense" command line option to accept license agreements.-->
+<agent-input acceptLicense='true'>
+<server>
+<repository location='C:\RFT_SETUP_GUEST\RFT_8.6.0.3_EVL_CORE\RFT\disk1'/>
+</server>
+<profile id='IBM Software Delivery Platform' installLocation='C:\Program Files\IBM\SDP'>
+<data key='eclipseLocation' value='C:\Program Files\IBM\SDP'/>
+<data key='user.import.profile' value='false'/>
+<data key='cic.selector.os' value='win32'/>
+<data key='cic.selector.ws' value='win32'/>
+<data key='cic.selector.arch' value='x86'/>
+<data key='user.help.option' value='remote'/>
+<data key='user.help.url' value=''/>
+<data key='cic.selector.nl' value='en'/>
+</profile>
+<install modify='false'>
+<offering id='com.ibm.rational.functional.tester' profile='IBM Software Delivery Platform' features='com.ibm.rft.agent,com.ibm.rft.java' installFixes='none'/>
+<!--Other features: com.ibm.rft.net2003 for Visual Studio .NET 2003 Integration, com.ibm.rft.net2005 for Visual Studio .NET 2005 Integration and com.ibm.rft.rtc for installing the Jazz client. ,com.ibm.rft.net2010 -->
+</install>
+
+<preference value='C:\Program Files\IBM\IBMIMShared' name='com.ibm.cic.common.core.preferences.eclipseCache'/>
+<preference value='30' name='com.ibm.cic.common.core.preferences.connectTimeout'/>
+<preference value='30' name='com.ibm.cic.common.core.preferences.readTimeout'/>
+<preference value='0' name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount'/>
+<preference value='true' name='offering.service.repositories.areUsed'/>
+<preference value='false' name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode'/>
+<preference value='true' name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts'/>
+<preference value='false' name='PassportAdvantageIsEnabled'/>
+
+
+<preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='C:\Program Files\IBM\IBMIMShared'/>
+<preference name='com.ibm.cic.common.core.preferences.connectTimeout' value='30'/>
+<preference name='com.ibm.cic.common.core.preferences.readTimeout' value='30'/>
+<preference name='com.ibm.cic.common.core.preferences.downloadAutoRetryCount' value='0'/>
+<preference name='offering.service.repositories.areUsed' value='true'/>
+<preference name='com.ibm.cic.common.core.preferences.ssl.nonsecureMode' value='false'/>
+<preference name='com.ibm.cic.common.core.preferences.http.disablePreemptiveAuthentication' value='false'/>
+<!-- <preference name='http.ntlm.auth.kind' value='NTLM'/>
+<preference name='http.ntlm.auth.enableIntegrated.win32' value='true'/> -->
+<preference name='com.ibm.cic.common.core.preferences.preserveDownloadedArtifacts' value='true'/>
+<preference name='com.ibm.cic.common.core.preferences.keepFetchedFiles' value='false'/>
+<preference name='PassportAdvantageIsEnabled' value='false'/>
+<preference name='com.ibm.cic.common.core.preferences.searchForUpdates' value='false'/>
+<preference name='com.ibm.cic.agent.ui.displayInternalVersion' value='false'/>
+</agent-input>
