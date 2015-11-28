@@ -62,8 +62,8 @@
 				<EclipseShellList L=".EclipseShellList">
 				</EclipseShellList>
 				<Defaults L=".Defaults">
-					<DefaultJVM>IBM Rational SDP JRE</DefaultJVM>
-					<DefaultJavac>IBM Rational SDP JRE</DefaultJavac>
+					<DefaultJVM>JAVA7</DefaultJVM>
+					<DefaultJavac>JAVA7</DefaultJavac>
 					<DefaultBrowser>Internet Explorer</DefaultBrowser>
 				</Defaults>
 			</Configuration>
