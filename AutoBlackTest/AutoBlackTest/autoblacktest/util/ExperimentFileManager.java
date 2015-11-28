@@ -56,9 +56,7 @@ public class ExperimentFileManager {
 					  " -javaagent:" + System.getProperty("user.dir") + File.separator + "lib\\jmockit\\jmockit.jar" +
 					  " -Dnet.sourceforge.cobertura.datafile=\"" + System.getProperty("user.dir") + File.separator + "cobertura\\cobertura.ser\"" +
 					  " " + "rmi.AUTMain" +
-					  " " + EnvironmentalSetter.getAutMainCLass() +
-					  " 1> \"" + System.getProperty("user.dir") + File.separator + "stdOut_Err\\output.log\"" + 
-					  " 2> \"" + System.getProperty("user.dir") + File.separator + "stdOut_Err\\error.log\""
+					  " " + EnvironmentalSetter.getAutMainCLass()
 					  );
 			out.flush();
 			out.close();
@@ -128,8 +126,8 @@ public class ExperimentFileManager {
 				coberturaDirectory + File.separator + "cobertura.ser");
 
 		//per copiare i file di output e di error
-		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\output.log", stdOutDirectory+ "\\outputEpisode" + episode +".log");
-		ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\error.log", stdErrDirectory+ "\\errorEpisode" + episode +".log");
+		// ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\output.log", stdOutDirectory+ "\\outputEpisode" + episode +".log");
+		// ExperimentFileManager.copyFile(System.getProperty("user.dir")+"\\stdOut_Err\\error.log", stdErrDirectory+ "\\errorEpisode" + episode +".log");
 		
 		//generate test case
 		try {
