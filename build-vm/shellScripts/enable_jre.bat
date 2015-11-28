@@ -1,0 +1,2 @@
+move /Y C:\vm_uploads\configurations.rftcfg %ALLUSERSPROFILE%\IBM\RFT\configuration\
+java -classpath "C:\Program Files\IBM\SDP\FunctionalTester\bin\rational_ft.jar" com.rational.test.ft.rational_ft -enableName "JAVA7"
