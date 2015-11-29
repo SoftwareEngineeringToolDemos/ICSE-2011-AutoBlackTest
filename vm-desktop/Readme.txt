@@ -3,7 +3,7 @@ The tool runs an automation script for analysis. Hence, on startup, an instance 
 
 Steps to Run:
 --------------------------------------------------------------------------------------------------------
-1) Open IBM Rational Functional Tester. Could be done from the 'Tester.java-RFT' shortcut available on desktop. The tool would be opened.
+1) Open IBM Rational Functional Tester. Could be done from the 'App-starter.bat' shortcut available on desktop. The tool would be opened.
 
 2) Click on 'Run Functional Test Script' in the toolbar, or press Ctrl+Shift+F11
 

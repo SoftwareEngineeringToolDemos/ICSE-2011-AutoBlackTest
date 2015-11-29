@@ -6,6 +6,9 @@ The tool has following pre-requisites:
 2) JRE Version 1.6 or 1.7
 3) Windows XP, 7
 
+IBM Rational Functional Tester Trial Version
+----------------------------------------------------------
+You would need to sign up for an IBM id and download the trial version of RFT, v8.6 is used for the tool. You need to place folders RFT_8.6.0.3_EVL_CORE RFT_8.6.0.3_EVL_Setup to build-vm\syncedFolder\. This is the folder which is used in VagrantFile as Synced folder.
 
 IBM Rational Functional Tester configuration
 
@@ -16,7 +19,7 @@ We released AutoBlackTest as an Eclipse-based Java project. To import the projec
 1) Workspace is set to 'C:\workspaceDist\'
 2) The source code for the tool and example app buddi should all be inside the workspaceDist folder.
 3) Select 'Functional Test' perspective.
-4) Goto 'Configure'>'Enable Environments for Testing '>'Java Environments'. Make sure Javajre7 (or 6,8) is selected, enabled and set to default.
+4) Goto 'Configure'>'Enable Environments for Testing '>'Java Environments'. Make sure Java7 (or 6,8) is selected, enabled and set to default.
 5) Go to Java perspective and make sure the projects AutoBlackTest and ca.digitalcave.buddi are included in the Package Explorer.
 6) Check the JRE version is set to workspace default of JRE7(or 6,8) by going to project 'Properties'>'Java Build Path'>'Libraries'
  
@@ -51,7 +54,7 @@ aut_classpath: it represents the classpath of the application under test. All li
 	o aut_classpath = C: \\buddi\\lib\\qua-6.5.jar; C:\\buddi\\lib\\Browser2- 1_3.jar;
 
 aut _bin_directory: it represents the path containing the compiled files of the application under test. The special character "\" must be replaced by "\\". 	Configuration example:
-		o aut_bin_directory = C:\\buddi\\bin
+	o aut_bin_directory = C:\\buddi\\bin
 aut_main_class: it represents the main class of the application under test plus the arguments of the class. The class name and arguments must be separated by one 	space. The special character "\" must be replaced by "\\". 
 	Configuration examples:
 	o aut_main_class = org.homeunix.thecave.buddi.Buddi
