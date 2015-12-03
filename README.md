@@ -8,6 +8,9 @@ This repository _is not_ the original repository for this tool. Here are some li
 In this repository, for AutoBlackTest you will find:
 * :white_check_mark: [Source code](http://www.lta.disco.unimib.it/tools/AutoBlackTest/AutoBlackTest/Download_files/workspaceDist.zip) (available)
 * :x: The original tool (no binary version available - RFT Application)
+* :x: Binary (no binary version)
+* :white_check_mark: [build-vm](https://github.com/SoftwareEngineeringToolDemos/ICSE-2011-AutoBlackTest/tree/master/build-vm) containing Vagrant Script to build the VM
+* :x: Virtual Machine containing tool(not available, not authorized to redistribute)
 
 Internal Link:
 * [Source Code](https://github.com/hmansari/ICSE-2011-AutoBlackTest/tree/master/AutoBlackTest)
