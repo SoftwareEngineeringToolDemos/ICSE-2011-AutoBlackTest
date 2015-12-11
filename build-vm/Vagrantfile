@@ -85,8 +85,9 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "shellScripts/install_java.bat"
   config.vm.provision :shell, path: "shellScripts/install_clone_git.bat" 
   config.vm.provision :shell, path: "shellScripts/copy_setup.bat" 
-  config.vm.provision :shell, path: "shellScripts/install_rft.bat"   
-  config.vm.provision :shell, path: "shellScripts/enable_jre.bat"   
+  config.vm.provision :shell, path: "shellScripts/install_rft.bat"
+  config.vm.provision :shell, inline: "shutdown -r -f"
+  config.vm.provision :shell, path: "shellScripts/enable_jre.bat"    
   config.vm.provision :shell, path: "shellScripts/bootstrap.bat" 
   config.vm.provision :shell, inline: "shutdown -r -f"
   
