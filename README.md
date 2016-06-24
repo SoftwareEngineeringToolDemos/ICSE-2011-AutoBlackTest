@@ -10,7 +10,7 @@ In this repository, for AutoBlackTest you will find:
 * :x: The original tool (no binary version available - RFT Application)
 * :x: Binary (no binary version)
 * :white_check_mark: [build-vm](https://github.com/SoftwareEngineeringToolDemos/ICSE-2011-AutoBlackTest/tree/master/build-vm) containing Vagrant Script to build the VM
-* :x: Virtual Machine containing tool(not available, not authorized to redistribute)
+* :x: Virtual machine containing tool (not available)
 
 Internal Link:
 * [Source Code](https://github.com/hmansari/ICSE-2011-AutoBlackTest/tree/master/AutoBlackTest)
